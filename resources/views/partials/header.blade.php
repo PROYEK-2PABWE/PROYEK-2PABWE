@@ -1,5 +1,4 @@
 <script src="{{ asset('js/TweenMax.min.js') }}"></script>
-<div class="super_container">
     <!-- Header -->
     <header class="header">
         <!-- Top Bar -->
@@ -188,4 +187,3 @@
             </div>
         </div>
     </header>
-</div>
