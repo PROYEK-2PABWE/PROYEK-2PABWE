@@ -119,12 +119,13 @@
                                             <li><a href="#">Obat<i class="fas fa-chevron-down"></i></a></li>
                                             <li><a href="#">Alat Kesehatan<i class="fas fa-chevron-down"></i></a></li>
                                             <li><a href="#">Obat Herbal<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="#">Suplemen<i class="fas fa-chevron-down"></i></a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Informasi<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="#">Kirim Resep<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="blog.html">Usulkan Produk<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="contact.html">Keluhan<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="">Usulkan Produk<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="">Keluhan<i class="fas fa-chevron-down"></i></a></li>
                                 </ul>
                             </div> <!-- Menu Trigger -->
                             <div class="menu_trigger_container ml-auto">
@@ -152,74 +153,33 @@
                                         class="page_menu_search_input" placeholder="Search for products..."> </form>
                             </div>
                             <ul class="page_menu_nav">
-                                <li class="page_menu_item has-children"> <a href="#">Language<i
+                                <li class="page_menu_item"> <a href="#">Beranda<i class="fa fa-angle-down"></i></a> </li>
+                                <li class="page_menu_item has-children"> <a href="#">Kategori<i
                                             class="fa fa-angle-down"></i></a>
                                     <ul class="page_menu_selection">
-                                        <li><a href="#">English<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Italian<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Spanish<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Japanese<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Semua<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Obat<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Alat Kesehatan<i class="fa fa-angle-down"></i></a></li>
+                                        <li><a href="#">Obat Herbal<i class="fa fa-angle-down"></i></a></li>
                                     </ul>
                                 </li>
-                                <li class="page_menu_item has-children"> <a href="#">Currency<i
-                                            class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">US Dollar<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">EUR Euro<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">GBP British Pound<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">JPY Japanese Yen<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="page_menu_item"> <a href="#">Home<i class="fa fa-angle-down"></i></a> </li>
-                                <li class="page_menu_item has-children"> <a href="#">Super Deals<i
-                                            class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>
-                                        <li class="page_menu_item has-children"> <a href="#">Menu Item<i
-                                                    class="fa fa-angle-down"></i></a>
-                                            <ul class="page_menu_selection">
-                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="page_menu_item has-children"> <a href="#">Featured Brands<i
-                                            class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">Featured Brands<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="page_menu_item has-children"> <a href="#">Trending Styles<i
-                                            class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">Trending Styles<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="page_menu_item"><a href="blog.html">blog<i
+                                <li class="page_menu_item"> <a href="#">Informasi<i 
+                                            class="fa fa-angle-down"></i></a> </li>
+                                <li class="page_menu_item"><a href="">Kirim Resep<i
                                             class="fa fa-angle-down"></i></a></li>
-                                <li class="page_menu_item"><a href="contact.html">contact<i
+                                <li class="page_menu_item"><a href="">Usulkan Produk<i
+                                            class="fa fa-angle-down"></i></a></li>
+                                <li class="page_menu_item"><a href="">Keluhan<i
                                             class="fa fa-angle-down"></i></a></li>
                             </ul>
                             <div class="menu_contact">
                                 <div class="menu_contact_item">
                                     <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>+38
-                                    068 005 3570
+                                    + 3333 4444 5555
                                 </div>
                                 <div class="menu_contact_item">
                                     <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a
-                                        href="mailto:fastsales@gmail.com">fastsales@gmail.com</a>
+                                        href="mailto:fastsales@gmail.com">info@DelApotek.com</a>
                                 </div>
                             </div>
                         </div>
