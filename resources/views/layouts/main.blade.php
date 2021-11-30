@@ -9,7 +9,6 @@
     <link rel="stylesheet" href={{ asset('css/all.css') }}>
     <link rel="stylesheet" href={{ asset('css/style.css') }}>
     <title>Document</title>
-    <script src="{{ asset('js/a076d05399.js') }}" crossorigin='anonymous'></script>
 </head>
 
 <body>
