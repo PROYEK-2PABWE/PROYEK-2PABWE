@@ -20,3 +20,21 @@ Route::get('/', function () {
 Route::get('/Beranda', function () {
     return view('beranda');
 });
+Route::get('/Kategori', function () {
+    return view('kategori');
+});
+Route::get('/Produk', function () {
+    return view('produk');
+});
+Route::get('/Informasi', function () {
+    return view('informasi');
+});
+Route::get('/KirimResep', function () {
+    return view('kirim_resep');
+});
+Route::get('/UsulkanProduk', function () {
+    return view('usulkan_produk');
+});
+Route::get('/Keluhan', function () {
+    return view('keluhan');
+});
