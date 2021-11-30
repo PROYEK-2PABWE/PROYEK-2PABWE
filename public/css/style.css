@@ -1001,7 +1001,7 @@ select option {
 
 .page_menu_content {
     height: 0px;
-    background: #0e8ce4;
+    background: #009DAE;
     padding-left: 15px;
     padding-right: 15px;
     overflow: hidden
@@ -1175,7 +1175,8 @@ select option {
     }
 
     .main_nav_content {
-        background: #0e8ce4
+        background:  #009DAE;
+
     }
 
     .menu_trigger_container {
@@ -1378,4 +1379,8 @@ select option {
 
 .bg-color-main {
     background-color: #009DAE;
+}
+
+a:hover {
+    color: #009DAE !important;
 }
