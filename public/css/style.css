@@ -1371,3 +1371,11 @@ select option {
 .text-justify {
     text-align: justify;
 }
+
+.color-main {
+    color: #009DAE !important;
+}
+
+.bg-color-main {
+    background-color: #009DAE;
+}

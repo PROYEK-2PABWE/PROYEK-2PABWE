@@ -118,7 +118,7 @@
     <!-- Section: Links  -->
 
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center p-4 text-white" style="background-color: #009DAE;">
         © 2021 Copyright:
         <a class="text-reset fw-bold" href="https://mdbootstrap.com/">11S19005 11S19013 11S19017 11S19020 11S19021
             11S19025 11S19050</a>
