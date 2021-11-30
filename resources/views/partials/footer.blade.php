@@ -5,7 +5,7 @@
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block">
-            <span>Get connected with us on social networks:</span>
+            <span>Terhubung dengan kami di jejaring sosial:</span>
         </div>
         <!-- Left -->
 
@@ -43,11 +43,13 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3"></i>Company name
+                        <i class="fas fa-gem me-3"></i>Del Apotek
                     </h6>
-                    <p>
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
+                    <p class="text-justify">
+                        Del Apotek merupakan apotek yang dapat melayani pembelian produk kesehatan secara online.
+                        Del Apotek juga sebagai media penyedia informasi yang memuat berbagai macam informasi penyakit,
+                        informasi obat, dan artikel kesehatan.
+
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -98,15 +100,15 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Contact
+                        Kontak
                     </h6>
-                    <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                    <p><i class="fas fa-home me-3"></i> Sitoluama, Laguboti</p>
                     <p>
                         <i class="fas fa-envelope me-3"></i>
-                        info@example.com
+                        info@DelApotek.com
                     </p>
-                    <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    <p><i class="fas fa-phone me-3"></i> + 3333 4444 5555</p>
+                    <p><i class="fas fa-print me-3"></i> + 1234 2345 3456</p>
                 </div>
                 <!-- Grid column -->
             </div>

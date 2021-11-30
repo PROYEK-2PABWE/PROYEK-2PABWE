@@ -1367,3 +1367,7 @@ select option {
         padding-right: 25px
     }
 }
+
+.text-justify {
+    text-align: justify;
+}
