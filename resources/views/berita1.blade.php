@@ -32,7 +32,7 @@
         tersamar ganda untuk folat dan beta karoten.</p>
         
         <center>
-        <img src="/images/1.JPG">
+        <img src="{{url('/images/1.jpg')}}">
     </center>
 
         <p>Sekarang kami mengetahuinya, itu adalah vitamin E dan selenium," 
@@ -42,7 +42,7 @@
         percobaan setelah menemukan dampak negatif selenium dosis 
         tinggi. </p>
 
-        Selain itu, para peneliti percaya beberapa suplemen tidak 
+        <p>Selain itu, para peneliti percaya beberapa suplemen tidak 
         menawarkan manfaat apapun.
         Selama uji coba, para peneliti 
         <br>juga menemukan vitamin E dapat merugikan, khususnya 
@@ -53,7 +53,7 @@
         <br>Temuan mengungkapkan bahwa selenium tidak menimbulkan 
         risiko bagi individu yang kekurangan mineral. <br>Tetapi, ketika 
         dikonsumsi oleh individu yang kadarnya sudah tinggi, risiko 
-        kanker tingkat tinggi naik hingga 91 persen. 
+        kanker tingkat tinggi naik hingga 91 persen.</p>
 
         <p>Para peneliti juga menemukan, individu dengan selenium 
         tinggi pada awal penelitian yang mengonsumsi suplemen 

@@ -39,7 +39,7 @@
           <!-- row 1 collumns 1-->
           <div class="row">
             <div class="col-sm-4 text-center">
-                    <a href="informasi/berita1.html"><img src="3.JPG" alt="" width="200" height="140" > </a><br><br>
+                    <a href="Informasi/berita1"><img src="images/3.JPG" alt="" width="200" height="140" > </a><br><br>
                     <h4 class="text-left">Kelebihan Konsumsi Suplemen Vitamin E Picu Kanker Prostat</h4>
                       <p class="text-left">Studi mengungkapkan bahwa suplemen tertentu memiliki 
                         efek samping yang berbahaya bagi tubuh. Efek samping 
@@ -64,9 +64,7 @@
                         Saat ini banyak sekali diet yang beredar di masyarakat dengan 
                         tujuan untuk menurunkan berat badan.
                         Beberapa jenis diet 
-                        mungkin mempengaruhi perubahan berat badan seseorng, tetapi 
-                        akan berdampak pada penurunan kesehatan akibat turunnya berat 
-                        badan secara drastis</p>
+                        mungkin mem...</p>
                 </div>
             <!-- row3 collumns 1-->
             <div class="col-sm-4 text-center">
@@ -96,32 +94,20 @@
           <div class="col-sm-4 text-center">
             <a href="Berita4.html"><img src="7.JPG" alt="" width="200" height="140" > <br></a><br>
             <h4 class="text-left">Manfaat Daun Pepaya untuk Kesehatan, Tak Sekadar Pahit</h4>
-              <p class="text-left">Studi mengungkapkan bahwa suplemen tertentu memiliki 
-                efek samping yang berbahaya bagi tubuh. Efek samping 
-                tersebut bisa membuat seseorang terkena kanker. 
-                
-                Dilansir dari dailyrecord, pada Senin (22/11), penelitian yang 
-                diterbitkan dalam Journal of National Cancer Institute 
-                menunjukkan bahwa beberapa vitamin dan mineral yang 
-                populer bisa memicu penyakit.</p>
+              <p class="text-left">Pepaya merupakan buah yang kaya 
+                    antioksidan, vitamin, mineral, dan enzim yang dapat membantu melancarkan sistem 
+                    pencernaan. Selain itu, daunnya pun mengandung protein, serat, kalsium hingga 
+                    vitamin B1, B3, B3 hingga vitamin c. Mengutip dari laman 
+                    Healthline, manfaat daun pepaya yaitu: ...</p>
           </div>
   <!-- row2 collumns 2-->
     <div class="col-sm-4 text-center">
         <a href="Berita5.html"><img src="1.JPG" alt="" width="200" height="140"> <br></a><br>
         <h4 class="text-left">3 Cara Menurunkan Berat Badan Tanpa Diet Ketat Menurut Ahli ... </h4>
-              <p class="text-left">Diet yang biasa kita pahami adalah mengurangi makanan.
-                Banyak 
-                yang beranggapan bahwa diet adalah pola makan dengan cara 
-                mengurangi porsi dan jenis makanan yang dikonsumsi.
-                Padahal, 
-                sebenarnya menjalankan diet lebih dari kedua poin tersebut.
-                
-                Saat ini banyak sekali diet yang beredar di masyarakat dengan 
-                tujuan untuk menurunkan berat badan.
-                Beberapa jenis diet 
-                mungkin mempengaruhi perubahan berat badan seseorng, tetapi 
-                akan berdampak pada penurunan kesehatan akibat turunnya berat 
-                badan secara drastis</p>
+              <p class="text-left">Penyakit jantung dikenal memang bisa sangat 
+                berbahaya, bahkan bisa menyebabkan kematian. Meskipun demikian, bukan berarti 
+                mereka yang memiliki diagnosis dengan penyakit jantung tidak bisa memiliki umur yang 
+                panjang dan kehidupan yang sehat.</p>
         </div>
     <!-- row3 collumns 2-->
     <div class="col-sm-4 text-center">
