@@ -4,7 +4,7 @@
         <!-- Optional JavaScript; choose one of the two! -->
     <section class="about" id="about">  
         <div class="container">
-            <h2>Informasi/Artikel ________</h2>
+            <h2>Informasi/Artikel</h2>
             <hr>
               <h2>Artikel populer</h2><br>
           <div class="row">
@@ -98,12 +98,12 @@
                     antioksidan, vitamin, mineral, dan enzim yang dapat membantu melancarkan sistem 
                     pencernaan. Selain itu, daunnya pun mengandung protein, serat, kalsium hingga 
                     vitamin B1, B3, B3 hingga vitamin c. Mengutip dari laman 
-                    Healthline, manfaat daun pepaya yaitu: ...</p>
+                    Healthline, manfaat d...</p>
           </div>
   <!-- row2 collumns 2-->
     <div class="col-sm-4 text-center">
-        <a href="Informasi/berita5.html"><img src="images/1.JPG" alt="" width="200" height="140"> <br></a><br>
-        <h4 class="text-left">3 Cara Menurunkan Berat Badan Tanpa Diet Ketat Menurut Ahli ... </h4>
+        <a href="Informasi/berita5"><img src="images/1.JPG" alt="" width="200" height="140"> <br></a><br>
+        <h4 class="text-left">Makanan yang Baik Dikonsumsi oleh Pasien Penyakit Jantung </h4>
               <p class="text-left">Penyakit jantung dikenal memang bisa sangat 
                 berbahaya, bahkan bisa menyebabkan kematian. Meskipun demikian, bukan berarti 
                 mereka yang memiliki diagnosis dengan penyakit jantung tidak bisa memiliki umur yang 
@@ -112,16 +112,11 @@
     <!-- row3 collumns 2-->
     <div class="col-sm-4 text-center">
         <a href="Informasi/berita6.html"><img src="images/5.JPG" alt="" width="200" height="140"> <br></a><br>
-        <h4 class="text-left">Khasiat Ketumbar, Turunkan Kolesterol Hingga Baik Untuk ...</h4>
-      <p class="text-left">Ketumbar menjadi salah satu bumbu dapur yang ternyata 
-        memiliki manfaat bagi kesehatan tubuh. Ketumbar memiliki 
-        kandungan protein, lemak, magnesium, kalsium, kalium, dan 
-        karbohidrat. Kandungan tersebut sangat efektif untuk menjaga 
-        kesehatan tubuh.
-        
-        Selain itu, ketumbar disebut-sebut memiliki manfaat untuk 
-        menurunkan kolesterol, gangguan fungsi jantung dan diabetes. 
-        Benarkah demikian? </p>
+        <h4 class="text-left">3 Cara Menurunkan Berat Badan Tanpa Diet Ketat Menurut Ahli Gizi </h4>
+      <p class="text-left">Menurunkan berat badan merupakan perjuangan berat bagi sebagian orang. 
+            Dari olahraga sampai diet ketat, semua di lakukan untuk mencapainya. 
+            Tapi, para ahli diet mengatakan bahwa penurunan berat badan seharusnya tidak menyiksa, apalagi 
+            sampai mengorbankan kesehatan.  </p>
     </div>
         </div>
         </div>
