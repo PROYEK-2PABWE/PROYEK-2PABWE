@@ -92,7 +92,7 @@
         <!-- row1 collumns 2-->
         <div class="row">
           <div class="col-sm-4 text-center">
-            <a href="Informasi/berita4.html"><img src="images/7.JPG" alt="" width="200" height="140" > <br></a><br>
+            <a href="Informasi/berita4"><img src="images/7.JPG" alt="" width="200" height="140" > <br></a><br>
             <h4 class="text-left">Manfaat Daun Pepaya untuk Kesehatan, Tak Sekadar Pahit</h4>
               <p class="text-left">Pepaya merupakan buah yang kaya 
                     antioksidan, vitamin, mineral, dan enzim yang dapat membantu melancarkan sistem 
