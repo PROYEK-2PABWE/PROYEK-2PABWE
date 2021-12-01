@@ -10,6 +10,7 @@
             </div>
             <textarea rows="10" cols="120" style="max-width:100%">    Tuliskan isi pesan anda</textarea>
         </div>
-        <input type="submit" value="Kirim" class="btn btn-primary bg-color-main py-3">
+        <br>
+        <input type="submit" value="Kirim" class="btn btn-primary bg-color-main">
     </div>
 @endsection
