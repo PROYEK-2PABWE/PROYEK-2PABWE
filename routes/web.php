@@ -29,6 +29,9 @@ Route::get('/Produk', function () {
 Route::get('/Informasi', function () {
     return view('informasi');
 });
+Route::get('/Informasi/berita1', function () {
+    return view('informasi/berita1');
+});
 Route::get('/KirimResep', function () {
     return view('kirim_resep');
 });
