@@ -23,7 +23,7 @@
 				   </div></b>
                     <br><br>
 					
-                   <b><div style="text-align:left;width:  100%;"><a href="Pop3.html"><img src="images/15.jpg" style="float: left; width: 90px;"/></a>
+                   <b><div style="text-align:left;width:  100%;"><a href="Informasi/top3"><img src="images/15.jpg" style="float: left; width: 90px;"/></a>
 				   Gejala Infeksi Para-paru yang Perlu Diwaspadai
 				   </div></b>
                    <br><br>
