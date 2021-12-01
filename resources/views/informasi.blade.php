@@ -13,7 +13,7 @@
 			</div>
 				
 			<div class="col-sm-4">
-                    <b><div style="text-align:left;width:  100%;"><a href="Pop1.html"><img src="images/17.jpg" style="float: left; width: 90px;"/></a>
+                    <b><div style="text-align:left;width:  100%;"><a href="Informasi/top1"><img src="images/17.jpg" style="float: left; width: 90px;"/></a>
 					9 Cara Mengatasi Asam Lambung Naik Tanpa Minum Obat
 					</div></b>
                     <br><br>
