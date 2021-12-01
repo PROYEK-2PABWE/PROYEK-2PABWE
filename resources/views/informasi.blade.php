@@ -18,7 +18,7 @@
 					</div></b>
                     <br><br>
 					
-                   <b><div style="text-align:left;width:  100%;"><a href="Pop2.html"><img src="images/16.jpg" style="float: left; width: 90px;"/></a>
+                   <b><div style="text-align:left;width:  100%;"><a href="Informasi/top2"><img src="images/16.jpg" style="float: left; width: 90px;"/></a>
 				   Meski Bermanfaat, Waspadai 4 Hal dari Kacang Hijau
 				   </div></b>
                     <br><br>
