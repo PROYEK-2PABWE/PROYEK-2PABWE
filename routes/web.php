@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApotekController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,10 +30,12 @@ Route::get('/Produk', function () {
 Route::get('/Informasi', function () {
     return view('informasi');
 });
-Route::get('/KirimResep', function () {
-    return view('kirim_resep');
-});
-Route::get('/UsulkanProduk', function () {
+
+Route::get('/KirimResep', [ApotekController::class, 'kirimResep']);
+
+Route::post('/SimpanResep', [ApotekController::class, 'simpanResep']);
+
+Route::post('/UsulkanProduk', function () {
     return view('usulkan_produk');
 });
 Route::get('/Keluhan', function () {

@@ -21,6 +21,23 @@
                 <textarea class="form-control" name="keterangan" rows="5rem"></textarea>
             </div>
             <br>
-            <input type="submit" value="Kirim" class="btn btn-primary bg-color-main">
+            <input type="submit" name="proses" value="Kirim" class="btn btn-primary bg-color-main">
         </div>
-    @endsection
+    </form>
+
+    <?php
+    $koneksi = mysqli_connect('localhost', 'root', '', 'del_apotek');
+    
+    if (isset($_POST['proses'])) {
+        $direktori = 'berkasUsulkanProduk/';
+        $file_name = $_FILES['filename']['name'];
+        move_uploaded_file($_FILES['filename']['tmp_name'], $direktori . $file_name);
+    
+        $sql = "insert into usulkan_produk (file, ket) values ('$file_name', '" . $_POST['keterangan'] . "')";
+    
+        mysqli_query($koneksi, $sql);
+    
+        echo "<script>alert('File Berhasil diupload !');history.go(-1);</script>";
+    }
+    ?>
+@endsection;
