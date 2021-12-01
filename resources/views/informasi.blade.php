@@ -111,7 +111,7 @@
         </div>
     <!-- row3 collumns 2-->
     <div class="col-sm-4 text-center">
-        <a href="Informasi/berita6.html"><img src="images/5.JPG" alt="" width="200" height="140"> <br></a><br>
+        <a href="Informasi/berita6"><img src="images/5.JPG" alt="" width="200" height="140"> <br></a><br>
         <h4 class="text-left">3 Cara Menurunkan Berat Badan Tanpa Diet Ketat Menurut Ahli Gizi </h4>
       <p class="text-left">Menurunkan berat badan merupakan perjuangan berat bagi sebagian orang. 
             Dari olahraga sampai diet ketat, semua di lakukan untuk mencapainya. 
