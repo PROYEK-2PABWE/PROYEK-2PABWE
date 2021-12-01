@@ -28,7 +28,7 @@
 				   </div></b>
                    <br><br>
 				   
-                   <b><div style="text-align:left;width:  100%;"><a href="Pop4.html"><img src="images/18.jpg" style="float: left; width: 90px;"/></a>
+                   <b><div style="text-align:left;width:  100%;"><a href="Informasi/top4"><img src="images/18.jpg" style="float: left; width: 90px;"/></a>
 				   Supaya Jalan Kaki Tambah Bermanfaat untuk Tubuh Tingkatkan
 				   </div></b>
                    <br><br>
