@@ -68,7 +68,7 @@
                 </div>
             <!-- row3 collumns 1-->
             <div class="col-sm-4 text-center">
-                <a href="Informasi/berita3.html"><img src="images/6.JPG" alt="" width="200" height="140"> <br></a><br>
+                <a href="Informasi/berita3"><img src="images/6.JPG" alt="" width="200" height="140"> <br></a><br>
                 <h4 class="text-left">Khasiat Ketumbar, Turunkan Kolesterol Hingga Baik Untuk ...</h4>
               <p class="text-left">Ketumbar menjadi salah satu bumbu dapur yang ternyata 
                 memiliki manfaat bagi kesehatan tubuh. Ketumbar memiliki 
