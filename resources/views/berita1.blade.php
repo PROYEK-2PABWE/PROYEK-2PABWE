@@ -33,7 +33,7 @@
         
         <center>
         <img src="{{url('/images/1.jpg')}}">
-    </center>
+    </center><br>
 
         <p>Sekarang kami mengetahuinya, itu adalah vitamin E dan selenium," 
         kata dia. Penelitian secara khusus menemukan <br>bahwa selenium dan 

@@ -9,26 +9,26 @@
               <h2>Artikel populer</h2><br>
           <div class="row">
 			<div class="col-sm-8">
-				<img src="40.jpg" style="width: 620px; height: 340px">
+				<img src="images/40.jpg" style="width: 620px; height: 340px">
 			</div>
 				
 			<div class="col-sm-4">
-                    <b><div style="text-align:left;width:  100%;"><a href="Pop1.html"><img src="17.jpg" style="float: left; width: 90px;"/></a>
+                    <b><div style="text-align:left;width:  100%;"><a href="Pop1.html"><img src="images/17.jpg" style="float: left; width: 90px;"/></a>
 					9 Cara Mengatasi Asam Lambung Naik Tanpa Minum Obat
 					</div></b>
                     <br><br>
 					
-                   <b><div style="text-align:left;width:  100%;"><a href="Pop2.html"><img src="16.jpg" style="float: left; width: 90px;"/></a>
+                   <b><div style="text-align:left;width:  100%;"><a href="Pop2.html"><img src="images/16.jpg" style="float: left; width: 90px;"/></a>
 				   Meski Bermanfaat, Waspadai 4 Hal dari Kacang Hijau
 				   </div></b>
                     <br><br>
 					
-                   <b><div style="text-align:left;width:  100%;"><a href="Pop3.html"><img src="15.jpg" style="float: left; width: 90px;"/></a>
+                   <b><div style="text-align:left;width:  100%;"><a href="Pop3.html"><img src="images/15.jpg" style="float: left; width: 90px;"/></a>
 				   Gejala Infeksi Para-paru yang Perlu Diwaspadai
 				   </div></b>
                    <br><br>
 				   
-                   <b><div style="text-align:left;width:  100%;"><a href="Pop4.html"><img src="18.jpg" style="float: left; width: 90px;"/></a>
+                   <b><div style="text-align:left;width:  100%;"><a href="Pop4.html"><img src="images/18.jpg" style="float: left; width: 90px;"/></a>
 				   Supaya Jalan Kaki Tambah Bermanfaat untuk Tubuh Tingkatkan
 				   </div></b>
                    <br><br>
@@ -52,7 +52,7 @@
                   </div>
           <!-- row2 collumns 1-->
             <div class="col-sm-4 text-center">
-                <a href="Berita2.html"><img src="4.JPG" alt="" width="200" height="140"> <br></a><br>
+                <a href="Informasi/berita2"><img src="images/4.JPG" alt="" width="200" height="140"> <br></a><br>
                 <h4 class="text-left">Benarkah Diet Bertujuan Untuk Menurunkan Berat Badan? Be...</h4>
                       <p class="text-left">Diet yang biasa kita pahami adalah mengurangi makanan.
                         Banyak 
@@ -68,7 +68,7 @@
                 </div>
             <!-- row3 collumns 1-->
             <div class="col-sm-4 text-center">
-                <a href="Berita3.html"><img src="6.JPG" alt="" width="200" height="140"> <br></a><br>
+                <a href="Informasi/berita3.html"><img src="images/6.JPG" alt="" width="200" height="140"> <br></a><br>
                 <h4 class="text-left">Khasiat Ketumbar, Turunkan Kolesterol Hingga Baik Untuk ...</h4>
               <p class="text-left">Ketumbar menjadi salah satu bumbu dapur yang ternyata 
                 memiliki manfaat bagi kesehatan tubuh. Ketumbar memiliki 
@@ -92,7 +92,7 @@
         <!-- row1 collumns 2-->
         <div class="row">
           <div class="col-sm-4 text-center">
-            <a href="Berita4.html"><img src="7.JPG" alt="" width="200" height="140" > <br></a><br>
+            <a href="Informasi/berita4.html"><img src="images/7.JPG" alt="" width="200" height="140" > <br></a><br>
             <h4 class="text-left">Manfaat Daun Pepaya untuk Kesehatan, Tak Sekadar Pahit</h4>
               <p class="text-left">Pepaya merupakan buah yang kaya 
                     antioksidan, vitamin, mineral, dan enzim yang dapat membantu melancarkan sistem 
@@ -102,7 +102,7 @@
           </div>
   <!-- row2 collumns 2-->
     <div class="col-sm-4 text-center">
-        <a href="Berita5.html"><img src="1.JPG" alt="" width="200" height="140"> <br></a><br>
+        <a href="Informasi/berita5.html"><img src="images/1.JPG" alt="" width="200" height="140"> <br></a><br>
         <h4 class="text-left">3 Cara Menurunkan Berat Badan Tanpa Diet Ketat Menurut Ahli ... </h4>
               <p class="text-left">Penyakit jantung dikenal memang bisa sangat 
                 berbahaya, bahkan bisa menyebabkan kematian. Meskipun demikian, bukan berarti 
@@ -111,7 +111,7 @@
         </div>
     <!-- row3 collumns 2-->
     <div class="col-sm-4 text-center">
-        <a href="Berita6.html"><img src="5.JPG" alt="" width="200" height="140"> <br></a><br>
+        <a href="Informasi/berita6.html"><img src="images/5.JPG" alt="" width="200" height="140"> <br></a><br>
         <h4 class="text-left">Khasiat Ketumbar, Turunkan Kolesterol Hingga Baik Untuk ...</h4>
       <p class="text-left">Ketumbar menjadi salah satu bumbu dapur yang ternyata 
         memiliki manfaat bagi kesehatan tubuh. Ketumbar memiliki 
