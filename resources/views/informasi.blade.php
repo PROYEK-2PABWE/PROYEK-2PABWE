@@ -4,7 +4,7 @@
         <!-- Optional JavaScript; choose one of the two! -->
     <section class="about" id="about">  
         <div class="container">
-            <h2>Informasi/Artikel ____________________________</h2>
+            <h2>Informasi/Artikel ________</h2>
             <hr>
               <h2>Artikel populer</h2><br>
           <div class="row">
@@ -13,12 +13,12 @@
 			</div>
 				
 			<div class="col-sm-4">
-                    <b><div style="text-align:left;width:  115%;"><a href="Pop1.html"><img src="17.jpg" style="float: left; width: 90px;"/></a>
+                    <b><div style="text-align:left;width:  100%;"><a href="Pop1.html"><img src="17.jpg" style="float: left; width: 90px;"/></a>
 					9 Cara Mengatasi Asam Lambung Naik Tanpa Minum Obat
 					</div></b>
                     <br><br>
 					
-                   <b><div style="text-align:left;width:  110%;"><a href="Pop2.html"><img src="16.jpg" style="float: left; width: 90px;"/></a>
+                   <b><div style="text-align:left;width:  100%;"><a href="Pop2.html"><img src="16.jpg" style="float: left; width: 90px;"/></a>
 				   Meski Bermanfaat, Waspadai 4 Hal dari Kacang Hijau
 				   </div></b>
                     <br><br>
@@ -28,7 +28,7 @@
 				   </div></b>
                    <br><br>
 				   
-                   <b><div style="text-align:left;width:  115%;"><a href="Pop4.html"><img src="18.jpg" style="float: left; width: 90px;"/></a>
+                   <b><div style="text-align:left;width:  100%;"><a href="Pop4.html"><img src="18.jpg" style="float: left; width: 90px;"/></a>
 				   Supaya Jalan Kaki Tambah Bermanfaat untuk Tubuh Tingkatkan
 				   </div></b>
                    <br><br>
@@ -39,7 +39,7 @@
           <!-- row 1 collumns 1-->
           <div class="row">
             <div class="col-sm-4 text-center">
-                    <a href="Berita1.html"><img src="3.JPG" alt="" width="200" height="140" > </a><br><br>
+                    <a href="informasi/berita1.html"><img src="3.JPG" alt="" width="200" height="140" > </a><br><br>
                     <h4 class="text-left">Kelebihan Konsumsi Suplemen Vitamin E Picu Kanker Prostat</h4>
                       <p class="text-left">Studi mengungkapkan bahwa suplemen tertentu memiliki 
                         efek samping yang berbahaya bagi tubuh. Efek samping 

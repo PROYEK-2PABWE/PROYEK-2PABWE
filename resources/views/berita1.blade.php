@@ -32,7 +32,7 @@
         tersamar ganda untuk folat dan beta karoten.</p>
         
         <center>
-        <img src="1.JPG">
+        <img src="/images/1.JPG">
     </center>
 
         <p>Sekarang kami mengetahuinya, itu adalah vitamin E dan selenium," 
