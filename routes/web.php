@@ -25,7 +25,9 @@ Route::get('/Beranda', function () {
 Route::get('/Kategori', function () {
     return view('kategori');
 });
+
 Route::get('/Produk', [ApotekController::class, 'detailProduk']);
+
 Route::get('/Informasi', function () {
     return view('informasi');
 });
