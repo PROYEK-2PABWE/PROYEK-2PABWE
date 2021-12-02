@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApotekController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,12 +60,28 @@ Route::get('/Informasi/top3', function () {
 Route::get('/Informasi/top4', function () {
     return view('top4');
 });
-Route::get('/KirimResep', function () {
-    return view('kirim_resep');
+
+Route::get('/KirimResep', [ApotekController::class, 'kirimResep']);
+
+Route::post('/SimpanResep', [ApotekController::class, 'simpanResep']);
+
+
+Route::get('/UsulkanProduk', [ApotekController::class, 'usulkanProduk']);
+
+Route::post('/SimpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk']);
+
+
+Route::get('/Keluhan', [ApotekController::class, 'keluhan']);
+
+Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan']);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/Login', function () {
+    return view('login');
 });
-Route::get('/UsulkanProduk', function () {
-    return view('usulkan_produk');
-});
-Route::get('/Keluhan', function () {
-    return view('keluhan');
+
+Route::get('/Register', function () {
+    return view('register');
 });

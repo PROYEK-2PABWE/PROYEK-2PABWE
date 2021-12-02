@@ -13,7 +13,7 @@
                     <p class="ps-5">Brand: -</p>
                 </div>
 
-                <h6 class="fs-6">Pilih Kemasan</h6>
+                <!-- <h6 class="fs-6">Pilih Kemasan</h6>
                 <div class="d-flex flex-row">
                     <button type="button" class="btn btn-color-main mx-2 px-4 text-uppercase fw-bold">
                         Tablet
@@ -21,14 +21,17 @@
                     <button type="button" class="btn btn-color-main mx-2 px-4 text-uppercase fw-bold">
                         Box
                     </button>
-                </div>
+                </div> -->
 
                 <p class="fs-6 mt-3">Harga</p>
                 <h4 class="fs-3 mx-3">Rp 19.658,00</h4>
                 <p class="fst-italic fs-6">*Harga sesuai kemasan yang dipilih</p>
 
-                <p class="fs-6 mt-3">Jumlah</p>
-                <div class="d-flex flex-row mx-3">
+                <div class="d-flex flex-row mt-3">
+                    <p class="fs-6 my-auto">Jumlah</p>
+                    <input class="form-control mx-3" type="number" min="1" value="1" max="" name="qty" style="width:70px;">
+                </div>
+                <!-- <div class="d-flex flex-row mx-3">
                     <button type="button" class="border-0"> 
                         <i class="fas fa-minus-circle fs-3" style="color: #D27C2C"></i>
                     </button>
@@ -36,22 +39,25 @@
                     <button type="button" class="border-0">
                         <i class="fas fa-plus-circle fs-3" style="color: #D27C2C"></i>
                     </button>
-                </div>
+                </div> -->
 
-                <p class="fs-6 mt-3">Total Harga</p>
-                <h4 class="fs-3 mx-3">Rp 19.658,00</h4>
+                <!-- <p class="fs-6 mt-3">Total Harga</p>
+                <h4 class="fs-3 mx-3">Rp 19.658,00</h4> -->
 
-                <div class="d-flex flex-row my-2">
-                    <button type="button" class="btn btn-danger px-4 text-capitalize">
+                <!-- <div class="d-flex flex-row">
+                    <button type="submit" class="btn btn-danger px-4 text-capitalize">
                         <i class="fas fa-cart-plus"></i> Beli</button>
-                    <button type="button" class="btn btn-secondary  mx-2 text-capitalize">
+                    <button type="submit" class="btn btn-secondary  mx-2 text-capitalize">
                         <i class="fas fa-heart"></i> Wishlist</button>
-                </div>                
+                </div>                 -->
+
+                <button type="submit" class="btn btn-success my-4" style="width: fit-content"><i class="fas fa-shopping-cart"></i> Add To Cart</button>
+
             </div>
         </div>
     </div>
   
-    <div class="d-flex flex-row fs-3">
+    <!-- <div class="d-flex flex-row fs-3">
         <i class="fas fa-info-circle"></i>
         <h4 class=" text-capitalize mx-2">Info Produk</h4>
     </div>
@@ -76,5 +82,5 @@
         
         <dt>Pabrik</dt>
         <dd class="mx-3">Deskripsi Pabrik</dd>
-    </dl>
+    </dl> -->
 @endsection
