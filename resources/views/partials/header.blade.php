@@ -203,3 +203,5 @@
                 </div>
             </div>
         </nav> 
+
+        <script src="{{ asset('js/header.js') }}"></script>
