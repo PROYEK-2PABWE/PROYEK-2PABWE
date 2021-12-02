@@ -30,6 +30,36 @@ Route::get('/Produk', function () {
 Route::get('/Informasi', function () {
     return view('informasi');
 });
+Route::get('/Informasi/berita1', function () {
+    return view('berita1');
+});
+Route::get('/Informasi/berita2', function () {
+    return view('berita2');
+});
+Route::get('/Informasi/berita3', function () {
+    return view('berita3');
+});
+Route::get('/Informasi/berita4', function () {
+    return view('berita4');
+});
+Route::get('/Informasi/berita5', function () {
+    return view('berita5');
+});
+Route::get('/Informasi/berita6', function () {
+    return view('berita6');
+});
+Route::get('/Informasi/top1', function () {
+    return view('top1');
+});
+Route::get('/Informasi/top2', function () {
+    return view('top2');
+});
+Route::get('/Informasi/top3', function () {
+    return view('top3');
+});
+Route::get('/Informasi/top4', function () {
+    return view('top4');
+});
 
 Route::get('/KirimResep', [ApotekController::class, 'kirimResep']);
 
