@@ -81,3 +81,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/Login', function () {
     return view('login');
 });
+
+Route::get('/Register', function () {
+    return view('register');
+});
