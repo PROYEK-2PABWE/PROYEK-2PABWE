@@ -47,3 +47,7 @@ Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/Login', function () {
+    return view('login');
+});
