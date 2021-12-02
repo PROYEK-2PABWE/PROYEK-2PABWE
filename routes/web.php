@@ -40,10 +40,10 @@ Route::get('/UsulkanProduk', [ApotekController::class, 'usulkanProduk']);
 
 Route::post('/SimpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk']);
 
+
 Route::get('/Keluhan', [ApotekController::class, 'keluhan']);
 
 Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan']);
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

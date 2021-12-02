@@ -71,7 +71,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div> <!-- Wishlist -->
+                    </div> 
+                    <!-- Wishlist
                     <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
                         <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
                             <div class="wishlist d-flex flex-row align-items-center justify-content-end">
@@ -82,7 +83,8 @@
                                     <div class="wishlist_text"><a href="#">Wishlist</a></div>
                                     <div class="wishlist_count">10</div>
                                 </div>
-                            </div> <!-- Cart -->
+                            </div> 
+                            Cart
                             <div class="cart">
                                 <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                     <div class="cart_icon"> <img
@@ -97,51 +99,24 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- Main Navigation -->
-        <nav class="main_nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="main_nav_content d-flex flex-row">
-                            <!-- Categories Menu -->
-                            <!-- Main Nav Menu -->
-                            <div class="main_nav_menu">
-                                <ul class="standard_dropdown main_nav_dropdown">
-                                    <li><a href="#">Beranda<i class="fas fa-chevron-down"></i></a></li>
-                                    <li class="hassubs"> <a href="#">Kategori<i
-                                                class="fas fa-chevron-down"></i></a>
-                                        <ul>
-                                            <li><a href="#">Semua<i class="fas fa-chevron-down"></i></a></li>
-                                            <li><a href="#">Obat<i class="fas fa-chevron-down"></i></a></li>
-                                            <li><a href="#">Alat Kesehatan<i class="fas fa-chevron-down"></i></a></li>
-                                            <li><a href="#">Obat Herbal<i class="fas fa-chevron-down"></i></a></li>
-                                            <li><a href="#">Suplemen<i class="fas fa-chevron-down"></i></a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Informasi<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="#">Kirim Resep<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="">Usulkan Produk<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="">Keluhan<i class="fas fa-chevron-down"></i></a></li>
-                                </ul>
-                            </div> <!-- Menu Trigger -->
-                            <div class="menu_trigger_container ml-auto">
-                                <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
-                                    <div class="menu_burger">
-                                        <div class="menu_trigger_text">menu</div>
-                                        <div class="cat_burger menu_burger_inner">
-                                            <span></span><span></span><span></span>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div> -->
+                    <!-- Cart -->
+                    <div class="cart">
+                        <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                            <div class="cart_icon"> 
+                                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/cart.png" alt="">
+                                <div class="cart_count bg-color-main"><span>3</span></div>
+                            </div>
+                            <div class="cart_content">
+                                <div class="cart_text"><a href="#">Cart</a></div>
+                                <!-- <div class="cart_price">$185</div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </nav> <!-- Menu -->
+        </div> <!-- Main Navigation -->
+       <!-- Menu -->
         <div class="page_menu">
             <div class="container">
                 <div class="row">
@@ -164,11 +139,11 @@
                                 </li>
                                 <li class="page_menu_item"> <a href="#">Informasi<i 
                                             class="fa fa-angle-down"></i></a> </li>
-                                <li class="page_menu_item"><a href="">Kirim Resep<i
+                                <li class="page_menu_item"><a href="KirimResep">Kirim Resep<i
                                             class="fa fa-angle-down"></i></a></li>
-                                <li class="page_menu_item"><a href="">Usulkan Produk<i
+                                <li class="page_menu_item"><a href="UsulkanProduk">Usulkan Produk<i
                                             class="fa fa-angle-down"></i></a></li>
-                                <li class="page_menu_item"><a href="">Keluhan<i
+                                <li class="page_menu_item"><a href="Keluhan">Keluhan<i
                                             class="fa fa-angle-down"></i></a></li>
                             </ul>
                             <div class="menu_contact">
@@ -187,3 +162,44 @@
             </div>
         </div>
     </header>
+    <nav class="main_nav sticky-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="main_nav_content d-flex flex-row">
+                            <!-- Categories Menu -->
+                            <!-- Main Nav Menu -->
+                            <div class="main_nav_menu">
+                                <ul class="standard_dropdown main_nav_dropdown">
+                                    <li><a href="#">Beranda<i class="fas fa-chevron-down"></i></a></li>
+                                    <li class="hassubs"> <a href="#">Kategori<i
+                                                class="fas fa-chevron-down"></i></a>
+                                        <ul>
+                                            <li><a href="#">Semua<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="#">Obat<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="#">Alat Kesehatan<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="#">Obat Herbal<i class="fas fa-chevron-down"></i></a></li>
+                                            <li><a href="#">Suplemen<i class="fas fa-chevron-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Informasi<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="KirimResep">Kirim Resep<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="UsulkanProduk">Usulkan Produk<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="Keluhan">Keluhan<i class="fas fa-chevron-down"></i></a></li>
+                                </ul>
+                            </div> <!-- Menu Trigger -->
+                            <div class="menu_trigger_container ml-auto">
+                                <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
+                                    <div class="menu_burger">
+                                        <div class="menu_trigger_text">menu</div>
+                                        <div class="cat_burger menu_burger_inner">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav> 
