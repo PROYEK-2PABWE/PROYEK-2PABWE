@@ -137,7 +137,7 @@
                                         <li><a href="#">Obat Herbal<i class="fa fa-angle-down"></i></a></li>
                                     </ul>
                                 </li>
-                                <li class="page_menu_item"> <a href="#">Informasi<i 
+                                <li class="page_menu_item"> <a href="Informasi">Informasi<i 
                                             class="fa fa-angle-down"></i></a> </li>
                                 <li class="page_menu_item"><a href="KirimResep">Kirim Resep<i
                                             class="fa fa-angle-down"></i></a></li>
@@ -182,7 +182,7 @@
                                             <li><a href="#">Suplemen<i class="fas fa-chevron-down"></i></a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Informasi<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="Informasi">Informasi<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="KirimResep">Kirim Resep<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="UsulkanProduk">Usulkan Produk<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="Keluhan">Keluhan<i class="fas fa-chevron-down"></i></a></li>
