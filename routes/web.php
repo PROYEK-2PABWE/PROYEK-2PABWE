@@ -24,6 +24,18 @@ Route::get('/Beranda', function () {
 Route::get('/Kategori', function () {
     return view('kategori');
 });
+Route::get('/Kategori1', function () {
+    return view('kategori');
+});
+Route::get('/Kategori2', function () {
+    return view('kategori');
+});
+Route::get('/AlatKesehatan', function () {
+    return view('kategori');
+});
+Route::get('/Obat', function () {
+    return view('kategori');
+});
 Route::get('/Produk', function () {
     return view('produk');
 });
