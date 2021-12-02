@@ -35,12 +35,14 @@ Route::get('/KirimResep', [ApotekController::class, 'kirimResep']);
 
 Route::post('/SimpanResep', [ApotekController::class, 'simpanResep']);
 
-Route::post('/UsulkanProduk', function () {
-    return view('usulkan_produk');
-});
-Route::get('/Keluhan', function () {
-    return view('keluhan');
-});
+
+Route::get('/UsulkanProduk', [ApotekController::class, 'usulkanProduk']);
+
+Route::post('/SimpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk']);
+
+Route::get('/Keluhan', [ApotekController::class, 'keluhan']);
+
+Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan']);
 
 Auth::routes();
 
