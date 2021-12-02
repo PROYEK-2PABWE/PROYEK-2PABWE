@@ -41,3 +41,7 @@ Route::post('/UsulkanProduk', function () {
 Route::get('/Keluhan', function () {
     return view('keluhan');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

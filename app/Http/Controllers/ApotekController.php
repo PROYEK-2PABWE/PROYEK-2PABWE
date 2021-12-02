@@ -6,6 +6,8 @@ use App\Models\KirimResep;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
+use RealRashid\SweetAlert\Facades\Alert;
+
 class ApotekController extends Controller
 {
     public function kirimResep()
@@ -15,42 +17,24 @@ class ApotekController extends Controller
 
     public function simpanResep(Request $request)
     {
-        $this->validate($request, [
-            'file' => 'required',
-            'ket' => 'required',
-        ]);
 
-        // menyimpan data file yang diupload ke variabel $file
-        $file = $request->file('file');
+        //mengambil data file yang diupload
+        $file           = $request->file('file');
+        //mengambil nama file
+        $nama_file      = $file->getClientOriginalName();
 
-        // nama file
-        echo 'File Name: ' . $file->getClientOriginalName();
-        echo '<br>';
+        //memindahkan file ke folder tujuan
+        $file->move('berkasKirimResep', $file->getClientOriginalName());
 
-        // ekstensi file
-        echo 'File Extension: ' . $file->getClientOriginalExtension();
-        echo '<br>';
-
-        // real path
-        echo 'File Real Path: ' . $file->getRealPath();
-        echo '<br>';
-
-        // ukuran file
-        echo 'File Size: ' . $file->getSize();
-        echo '<br>';
-
-        // tipe mime
-        echo 'File Mime Type: ' . $file->getMimeType();
-
-        // isi dengan nama folder tempat kemana file diupload
-        $tujuan_upload = 'berkasKirimResep';
-
-        // upload file
-        $file->move($tujuan_upload, $file->getClientOriginalName());
 
         KirimResep::create([
-            'file' => $request->file,
-            'ket' => $request->ket
+            'file' => $nama_file,
+            'ket' => $request->input('ket')
         ]);
+
+        Alert::success('Congrats', 'You\'ve Successfully Upload File');
+
+        //kembali ke halaman sebelumnya
+        return back();
     }
 }

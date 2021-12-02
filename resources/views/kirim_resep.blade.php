@@ -1,15 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    @include('sweetalert::alert')
 
     <form action="SimpanResep" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
@@ -31,7 +23,7 @@
                 <textarea class="form-control" name="ket" rows="5rem"></textarea>
             </div>
             <br>
-            <input type="submit" value="Kirim" class="btn btn-primary bg-color-main">
+            <input type="submit" value="Kirim" class="btn btn-primary bg-color-main" php artisan sweetalert:publish>
         </div>
     </form>
 
