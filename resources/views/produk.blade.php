@@ -2,15 +2,17 @@
 
 @section('container')
     <div class="row my-5">
+
         <div class="col-4 m-auto text-center">
             <i class="fas fa-image" style="font-size: 10rem"></i>
         </div>
+        @foreach ($data as $detail)
         <div class="col-8">
             <div class="d-flex flex-column">
-                <h1 class="fs-1">Nama Produk</h1>
+                <h1 class="fs-1">{{ $detail->namaProduk }}</h1>
                 <div class="d-flex">
-                    <p class="pe-5">Stock: - </p>
-                    <p class="ps-5">Brand: -</p>
+                    <p class="pe-5">Stock: {{ $detail->stokProduk }} </p>
+                    <p class="ps-5">Brand: {{ $detail->brand }} </p>
                 </div>
 
                 <!-- <h6 class="fs-6">Pilih Kemasan</h6>
@@ -24,9 +26,9 @@
                 </div> -->
 
                 <p class="fs-6 mt-3">Harga</p>
-                <h4 class="fs-3 mx-3">Rp 19.658,00</h4>
+                <h4 class="fs-3 mx-3">Rp {{ $detail->hargaProduk }} </h4>
                 <p class="fst-italic fs-6">*Harga sesuai kemasan yang dipilih</p>
-
+                @endforeach
                 <div class="d-flex flex-row mt-3">
                     <p class="fs-6 my-auto">Jumlah</p>
                     <input class="form-control mx-3" type="number" min="1" value="1" max="" name="qty" style="width:70px;">

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ApotekController;
 
 /*
@@ -24,9 +25,7 @@ Route::get('/Beranda', function () {
 Route::get('/Kategori', function () {
     return view('kategori');
 });
-Route::get('/Produk', function () {
-    return view('produk');
-});
+Route::get('/Produk', [ApotekController::class, 'detailProduk']);
 Route::get('/Informasi', function () {
     return view('informasi');
 });

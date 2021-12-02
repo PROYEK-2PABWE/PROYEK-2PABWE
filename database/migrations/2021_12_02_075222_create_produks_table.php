@@ -13,9 +13,15 @@ class CreateProduksTable extends Migration
      */
     public function up()
     {
-        Schema::create('produks', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('produk', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('namaProduk');
+            $table->decimal('hargaProduk');
+            $table->integer('stokProduk');
+            $table->string('brand');
+            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+        
         });
     }
 
@@ -26,6 +32,6 @@ class CreateProduksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produks');
+        Schema::dropIfExists('produk');
     }
 }

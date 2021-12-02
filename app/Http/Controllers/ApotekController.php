@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produk;
 use App\Models\Keluhan;
 use App\Models\KirimResep;
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
 use App\Models\UsulkanProduk;
 use Illuminate\Routing\Controller;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -87,5 +88,11 @@ class ApotekController extends Controller
 
         //kembali ke halaman sebelumnya
         return back();
+    }
+
+    // DETAIL PRODUK
+    public function detailProduk() {
+        $data = Produk::all();
+        return view('produk', ['data' => $data]);
     }
 }
