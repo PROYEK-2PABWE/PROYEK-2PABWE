@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ApotekController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,21 +22,68 @@ Route::get('/', function () {
 Route::get('/Beranda', function () {
     return view('beranda');
 });
+
 Route::get('/Kategori', function () {
     return view('kategori');
 });
-Route::get('/Produk', function () {
-    return view('produk');
-});
+
+Route::get('/Produk', [ApotekController::class, 'detailProduk']);
+
 Route::get('/Informasi', function () {
     return view('informasi');
 });
-Route::get('/KirimResep', function () {
-    return view('kirim_resep');
+Route::get('/Informasi/berita1', function () {
+    return view('berita1');
 });
-Route::get('/UsulkanProduk', function () {
-    return view('usulkan_produk');
+Route::get('/Informasi/berita2', function () {
+    return view('berita2');
 });
-Route::get('/Keluhan', function () {
-    return view('keluhan');
+Route::get('/Informasi/berita3', function () {
+    return view('berita3');
+});
+Route::get('/Informasi/berita4', function () {
+    return view('berita4');
+});
+Route::get('/Informasi/berita5', function () {
+    return view('berita5');
+});
+Route::get('/Informasi/berita6', function () {
+    return view('berita6');
+});
+Route::get('/Informasi/top1', function () {
+    return view('top1');
+});
+Route::get('/Informasi/top2', function () {
+    return view('top2');
+});
+Route::get('/Informasi/top3', function () {
+    return view('top3');
+});
+Route::get('/Informasi/top4', function () {
+    return view('top4');
+});
+
+Route::get('/KirimResep', [ApotekController::class, 'kirimResep']);
+
+Route::post('/SimpanResep', [ApotekController::class, 'simpanResep']);
+
+
+Route::get('/UsulkanProduk', [ApotekController::class, 'usulkanProduk']);
+
+Route::post('/SimpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk']);
+
+
+Route::get('/Keluhan', [ApotekController::class, 'keluhan']);
+
+Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan']);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/Login', function () {
+    return view('login');
+});
+
+Route::get('/Register', function () {
+    return view('register');
 });

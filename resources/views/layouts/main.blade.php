@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href={{ asset('css/bootstrap.min.css') }}>
     <link rel="stylesheet" href={{ asset('css/all.css') }}>
+    <link rel="stylesheet" href={{ asset('css\font-awesome.min.css') }}>
     <link rel="stylesheet" href={{ asset('css/style.css') }}>
     <title>Document</title>
 </head>
@@ -22,8 +23,7 @@
 
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/script.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>    
 </body>
 
 </html>
