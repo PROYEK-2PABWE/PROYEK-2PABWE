@@ -87,3 +87,7 @@ Route::get('/Login', function () {
 Route::get('/Register', function () {
     return view('register');
 });
+
+Route::get('/Keranjang', function () {
+    return view('keranjang');
+});
