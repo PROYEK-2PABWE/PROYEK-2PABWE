@@ -1368,3 +1368,19 @@ select option {
         padding-right: 25px
     }
 }
+
+.text-justify {
+    text-align: justify;
+}
+
+.color-main {
+    color: #009DAE;
+}
+
+.bg-color-main {
+    background-color: #009DAE;
+}
+
+a:hover {
+    color: #27baca !important;
+}
