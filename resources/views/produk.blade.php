@@ -2,11 +2,11 @@
 
 @section('container')
     <div class="row my-5">
-
+    @foreach ($data as $detail)
         <div class="col-4 m-auto text-center">
-            <i class="fas fa-image" style="font-size: 10rem"></i>
+            {{ Storage::url('public/blogs/').$blog->image }}
+            <!-- <i class="fas fa-image" style="font-size: 10rem"></i> -->
         </div>
-        @foreach ($data as $detail)
         <div class="col-8">
             <div class="d-flex flex-column">
                 <h1 class="fs-1">{{ $detail->namaProduk }}</h1>
@@ -27,7 +27,7 @@
 
                 <p class="fs-6 mt-3">Harga</p>
                 <h4 class="fs-3 mx-3">Rp {{ $detail->hargaProduk }} </h4>
-                <p class="fst-italic fs-6">*Harga sesuai kemasan yang dipilih</p>
+                <!-- <p class="fst-italic fs-6">*Harga sesuai kemasan yang dipilih</p> -->
                 @endforeach
                 <div class="d-flex flex-row mt-3">
                     <p class="fs-6 my-auto">Jumlah</p>

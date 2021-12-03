@@ -1,3 +1,5 @@
+<link rel="stylesheet" href={{ asset('css/header.css') }}>
+
 <script src="{{ asset('js/TweenMax.min.js') }}"></script>
     <!-- Header -->
     <header class="header">

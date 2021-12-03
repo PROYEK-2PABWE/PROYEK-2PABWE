@@ -22,10 +22,11 @@ Route::get('/', function () {
 Route::get('/Beranda', function () {
     return view('beranda');
 });
-
 Route::get('/Kategori', function () {
     return view('kategori');
 });
+
+Route::get('/Produk', [ApotekController::class, 'detailProduk']);
 
 Route::get('/Produk', [ApotekController::class, 'detailProduk']);
 
@@ -86,4 +87,16 @@ Route::get('/Login', function () {
 
 Route::get('/Register', function () {
     return view('register');
+});
+Route::get('/Kategori1', function () {
+    return view('kategori');
+});
+Route::get('/Kategori2', function () {
+    return view('kategori');
+});
+Route::get('/AlatKesehatan', function () {
+    return view('kategori');
+});
+Route::get('/Obat', function () {
+    return view('kategori');
 });
