@@ -2,11 +2,11 @@
 
 @section('container')
     <form action="" method="">
-        <div style="background-color: #618EB5;">
+        <div style="background-image:url(images/imgg.png)">
             <div class="container py-5">
                 <div class="d-flex justify-content-center">
                     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                        <div class="card shadow-2-strong" style="border-radius: 3rem;">
+                        <div class="card shadow-2-strong" style="border-radius: 3rem; background-color: rgb(142, 184, 184)">
                             <div class="card-body p-5 text-center">
                                 <h3 class="mb-5">Daftar</h3>
 
@@ -27,8 +27,8 @@
 
                                 <button class="btn btn-primary btn-lg btn-block" type="submit">Daftar</button>
 
-                                <p class="text-center text-muted mt-5 mb-0">Sudah punya akun? <a href="login.blade.php"
-                                        class="fw-bold text-body">Login</a></p>
+                                <p class="text-center text-muted mt-5 mb-0">Sudah punya
+                                    akun? <a href="login.blade.php" class="fw-bold text-body">Login</a></p>
                             </div>
                         </div>
                     </div>
