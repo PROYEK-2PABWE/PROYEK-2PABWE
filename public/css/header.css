@@ -1374,7 +1374,7 @@ select option {
 }
 
 .color-main {
-    color: #009DAE;
+    color: #009DAE !important;
 }
 
 .bg-color-main {

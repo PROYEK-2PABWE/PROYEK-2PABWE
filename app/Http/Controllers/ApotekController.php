@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Produk;
 use App\Models\Keluhan;
 use App\Models\KirimResep;
+use App\Models\UsulkanProduk;
 
 use Illuminate\Http\Request;
-use App\Models\UsulkanProduk;
 use Illuminate\Routing\Controller;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Hash;
 
 class ApotekController extends Controller
 {

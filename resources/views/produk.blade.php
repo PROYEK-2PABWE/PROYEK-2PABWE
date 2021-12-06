@@ -2,11 +2,13 @@
 
 @section('container')
     <div class="row my-5">
-    @foreach ($data as $detail)
         <div class="col-4 m-auto text-center">
-            {{ Storage::url('public/blogs/').$blog->image }}
-            <!-- <i class="fas fa-image" style="font-size: 10rem"></i> -->
+            <!-- <a href="{{ asset('storage/'.$data->gambarProduk->first()->full) }}" data-fancybox="">
+                <img src="{{ asset('storage/'.$data->gambarProduk->first()->full) }}" alt="">  
+            </a> -->
+            <i class="fas fa-image" style="font-size: 10rem"></i>
         </div>
+    @foreach ($data as $detail)
         <div class="col-8">
             <div class="d-flex flex-column">
                 <h1 class="fs-1">{{ $detail->namaProduk }}</h1>
@@ -30,7 +32,7 @@
                 <!-- <p class="fst-italic fs-6">*Harga sesuai kemasan yang dipilih</p> -->
                 @endforeach
                 <div class="d-flex flex-row mt-3">
-                    <p class="fs-6 my-auto">Jumlah</p>
+                    <p class="fs-6 my-auto">{{ $detail->hargaProduk * $detail->stokProduk }}</p>
                     <input class="form-control mx-3" type="number" min="1" value="1" max="" name="qty" style="width:70px;">
                 </div>
                 <!-- <div class="d-flex flex-row mx-3">
