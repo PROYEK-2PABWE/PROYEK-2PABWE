@@ -12,4 +12,19 @@ class Produk extends Model
     protected $guarded = ['id'];
     protected $primaryKey = 'id';
     public $timestamps = false;
+
+    
+    function image()
+    {
+        if ($this->image && file_exists(public_path('images/post/' . $this->gambarProduk)))
+            return asset('images/post/' . $this->gambarProduk);
+        else
+            return asset('images/no_image.png');
+    }
+
+    function delete_image()
+    {
+        if ($this->image && file_exists(public_path('images/post/' . $this->gambarProduk)))
+            return unlink(public_path('images/post/' . $this->gambarProduk));
+    }
 }
