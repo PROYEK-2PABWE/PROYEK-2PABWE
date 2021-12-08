@@ -7,91 +7,79 @@
             <div class="row">
                 <div class="col-sm-6 col-lg-4 mb-4">
                     <div class=" mb-3">
-                        <img src="images/gusi.jpg" class="card-img-top" alt="gambar1">
+                        <img src="images/gusi.jpg" class="card-img-top" width="200" height="140" alt="gambar1">
                         <div class="card-body">
-                            <h5 class="card-title">Pentingnya Menjaga Kesehatan</h5>
-                            <p class="card-text text">Kesehatan adalah kondisi kesejahteraan fisik, mental, dan sosial yang
-                                lengkap....</p>
+                            <h5 class="card-title"> {{ $beranda->find(1)->judulBeranda }}</h5>
+                            <p class="card-text text"> {{ $beranda->find(1)->excerptBody }}</p>
                             <p><a href="https://id.wikipedia.org/wiki/Kesehatan" class="color-main">Baca
                                     selengkapnya...</a></p>
-                            <p>Minggu, 05 Desember 2021</p>
+                            <p>{{ $beranda->find(1)->created_at }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4 mb-4">
                     <div class=" mb-3">
-                        <img src="images/1.jpg" class="card-img-top" alt="gambar2">
+                        <img src="images/1.jpg" class="card-img-top" width="200" height="140" alt="gambar2">
                         <div class="card-body">
-                            <h5 class="card-title">Makanan Sehat</h5>
-                            <p class="card-text text">Makanan sehat adalah makanan yang mengandung banyak gizi yang memang
-                                sudah seimbang sesuai
-                                dengan menu 4 sehat 5 sempurna.
+                            <h5 class="card-title">{{ $beranda->find(2)->judulBeranda }}</h5>
+                            <p class="card-text text">{{ $beranda->find(2)->excerptBody }}
                             </p>
                             <p><a href="https://www.gramedia.com/literasi/pengertian-makanan-4-sehat-5-sempurna-dan-jenis-jenisnya/"
                                     class="color-main">Baca
                                     selengkapnya...</a></p>
-                            <p>Senin, 06 Desember 2021</p>
+                            <p>{{ $beranda->find(2)->created_at }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4 mb-4">
                     <div class=" mb-3">
-                        <img src="images/olahraga.jpg" class="card-img-top" alt="gambar3">
+                        <img src="images/olahraga.jpg" class="card-img-top" width="200" height="140" alt="gambar3">
                         <div class="card-body">
-                            <h5 class="card-title">Olahraga Teratur</h5>
-                            <p class="card-text text">Olahraga dapar membantu mencegah penambahan berat badan berlebih atau
-                                membantu mempertahankan penurunan berat badan. Saat Anda melakukan aktivitas fisik, Anda
-                                membakar kalori. Semakin intens aktivitasnya, semakin banyak kalori yang terbakar.</p>
+                            <h5 class="card-title">{{ $beranda->find(3)->judulBeranda }}</h5>
+                            <p class="card-text text">{{ $beranda->find(3)->excerptBody }}</p>
                             <p><a href="https://health.detik.com/berita-detikhealth/d-5218823/7-manfaat-olahraga-untuk-kesehatan-yang-dilakukan-secara-teratur#:~:text=Olahraga%20teratur%20dapat%20membantu%20mencegah%20atau%20menangani%20banyak,membantu%20menurunkan%20risiko%20kematian%20dari%20semua%20penyebab.%203."
                                     class="color-main">Baca
                                     selengkapnya...</a></p>
-                            <p>Selasa, 07 Desember 2021</p>
+                            <p>{{ $beranda->find(3)->created_at }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4 mb-4">
                     <div class=" mb-3">
-                        <img src="images/7.jpg" class="card-img-top" alt="gambar4">
+                        <img src="images/7.jpg" class="card-img-top" width="200" height="140" alt="gambar4">
                         <div class="card-body">
-                            <h5>Obat Tradisional</h5>
-                            <p>Ada banyak sekali jenis tanaman obat tradisional atau yang biasa kita sebut dengan obat
-                                herbal yang ampuh mengobati penyakit ringan hingga penyakit kelas berat. Selain itu, Tanaman
-                                obat tradisional ini juga sudah teruji mampu menghilangkan penyakit dibandingkan dengan
-                                obat-obatan yang dicampur dengan zat kimia</p>
+                            <h5>{{ $beranda->find(4)->judulBeranda }}</h5>
+                            <p>{{ $beranda->find(4)->excerptBody }}</p>
                             <p><a href="https://bibitonline.com/artikel/10-macam-tanaman-obat-tradisional-dan-kegunaannya"
                                     class="color-main">Baca
                                     selengkapnya...</a></p>
-                            <p>Rabu, 08 Desember 2021</p>
+                            <p>{{ $beranda->find(4)->created_at }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4 mb-4">
                     <div class=" mb-3">
-                        <img src="images/imgg.png" class="card-img-top" alt="gamabar5">
+                        <img src="images/imgg.png" class="card-img-top" width="200" height="140" alt="gamabar5">
                         <div class="card-body">
-                            <h5>Alat Kesehatan</h5>
-                            <p>Alat Kesehatan adalah peralatan yang digunakan untuk tindakan medis
-                                dalam dunia kedokteran baik itu untuk mencegah, mendiagnosis, mengobati/menyembuhkan,
-                                meringankan, merawat serta memulihkan orang sakit atau bisa juga untuk memperbaiki fungsi
-                                tubuh manusia termasuk tindakan implan.
+                            <h5>{{ $beranda->find(5)->judulBeranda }}</h5>
+                            <p>{{ $beranda->find(5)->excerptBody }}
                             </p>
                             <p><a href="https://www.amesbostonhotel.com/alat-kesehatan-dan-fungsinya/"
                                     class="color-main">Baca
                                     selengkapnya...</a></p>
-                            <p>Kamis, 09 Desember 2021</p>
+                            <p>{{ $beranda->find(5)->created_at }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4 mb-4">
                     <div class=" mb-3">
-                        <img src="images/kosmetik.jpg" class="card-img-top" alt="gambar6">
+                        <img src="images/kosmetik.jpg" class="card-img-top" width="200" height="140" alt="gambar6">
                         <div class="card-body">
-                            <h5>Kosmetik</h5>
-                            <p>Kosmetik adalah zat perawatan yang digunakan untuk meningkatkan penampilan atau aroma tubuh
-                                manusia. Kosmetik umumnya merupakan campuran ...</p>
+                            <h5>{{ $beranda->find(6)->judulBeranda }}</h5>
+                            <p>{{ $beranda->find(6)->excerptBody }}</p>
                             <p><a href="https://id.wikipedia.org/wiki/Kosmetik" class="color-main">Baca
                                     selengkapnya...</a></p>
-                            <p>Jumat, 10 Desember 2021</p>
+                            <p>{{ $beranda->find(6)->created_at }}</p>
                         </div>
                     </div>
                 </div>
@@ -128,18 +116,17 @@
                     <div class="newsletter-header">
                         <h4 class="text-center">IKUTI NEWINFO</h4>
                     </div>
+
+                    <ul class="p-4">
+                        <li><a href="https://www.youtube.com/watch?v=x769gFb0vks">Penggolongan Jenis Obat</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=wT7v22T1bzA">Aturan Minum Obat</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Sn7NeoLfN4c">Pengobatan Alami</a></li>
+                    </ul>
                     <p class="newsletter-text mt-4 px-3">
                         Newinfo Del Apotek merupakan satu cara agar kamu tidak ketinggalan informasi seputar
                         apotek kami. Informasi terbaru akan dikirimkan kepadamu secara berkala melalui email.
                         Cantumkan emailmu sekarang juga dan informasi terbaru akan menunggumu.
                     </p>
-                    <form class="p-4">
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Alamat Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100 btn-subscribe">BERLANGGANAN</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -166,7 +153,8 @@
                         <blockquote class="blockquote">
                             <img class="img-circle img-responsive" src="images/15.jpg" alt="">
                             <blockquote class="blockquote">
-                                <p class="text-light">"Jangan menunggu sakit baru memulai pola hidup sehat. Budayakan
+                                <p class="text-light">"Jangan menunggu sakit baru memulai pola hidup sehat.
+                                    Budayakan
                                     hidup
                                     sehat untuk mencegah
                                     segala penyakit."</p>
@@ -182,7 +170,8 @@
                         <blockquote class="blockquote">
                             <img class="img-circle img-responsive" src="images/4.jpg" alt="">
                             <blockquote class="blockquote">
-                                <p class="text-light">"Luangkan waktumu sejenak untuk berolahraga karena kesehatanmu itu
+                                <p class="text-light">"Luangkan waktumu sejenak untuk berolahraga karena kesehatanmu
+                                    itu
                                     lebih bernilai
                                     daripada uang yang telah kamu hasilkan."</p>
                             </blockquote>
@@ -197,7 +186,8 @@
                         <blockquote class="blockquote">
                             <img class="img-circle img-responsive" src="images/18.jpg" alt="">
                             <blockquote class="blockquote">
-                                <p class="text-light">"Kebahagiaan terbesar kita tidak tergantung pada situasi hidup di
+                                <p class="text-light">"Kebahagiaan terbesar kita tidak tergantung pada situasi hidup
+                                    di
                                     mana kita berada, tapi
                                     selalu dari hasil dari kesadaran yang baik, kesehatan yang baik, pekerjaan, dan
                                     kebebasan dari semua tujuan."</p>
