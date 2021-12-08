@@ -16,6 +16,7 @@ class CreateInformasisTable extends Migration
         Schema::create('informasi', function (Blueprint $table) {
             $table->increments('id');
             $table->string('judulInformasi');
+            $table->string('gambar')->nullable();
             $table->text('excerptJudul');
             $table->text('excerptBody');
             $table->text('text1');
