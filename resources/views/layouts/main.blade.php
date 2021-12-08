@@ -9,7 +9,7 @@
     <link rel="stylesheet" href={{ asset('css/all.css') }}>
     <link rel="stylesheet" href={{ asset('css/font-awesome.min.css') }}>
     <link rel="stylesheet" href={{ asset('css/style.css') }}>
-    <title>Document</title>
+    <title>{{ $title }}</title>
 </head>
 
 <body>
