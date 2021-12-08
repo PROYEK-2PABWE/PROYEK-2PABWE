@@ -28,9 +28,7 @@ require __DIR__ . '/auth.php';
 
 Route::get('/Beranda', [ApotekController::class, 'beranda'])->name('beranda');
 
-Route::get('/Kategori', function () {
-    return view('kategori');
-});
+Route::get('/Kategori', [ApotekController::class, 'kategori'])->name('beranda');
 
 Route::get('/Produk', [ApotekController::class, 'detailProduk'])->name('produk');
 
@@ -39,19 +37,13 @@ Route::get('/Informasi',  [ApotekController::class, 'informasi'])->name('informa
 Route::get('/Informasi/{informasi:id}',  [ApotekController::class, 'detailInformasi']);
 
 Route::get('/KirimResep', [ApotekController::class, 'kirimResep'])->name('kirimResep');
-
 Route::post('/SimpanResep', [ApotekController::class, 'simpanResep'])->name('simpanResep');
 
-
 Route::get('/UsulkanProduk', [ApotekController::class, 'usulkanProduk'])->name('usulkanProduk');
-
 Route::post('/SimpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk'])->name('simpanUsulanProduk');
 
-
 Route::get('/Keluhan', [ApotekController::class, 'keluhan'])->name('keluhan');
-
 Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan'])->name('simpanKeluhan');
-
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

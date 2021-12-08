@@ -27,6 +27,14 @@ class ApotekController extends Controller
     }
 
     // INFORMASI
+    public function kategori()
+    {
+        return view('kategori', [
+            'title' => 'Kategori Produk',
+        ]);
+    }
+
+    // INFORMASI
     public function informasi()
     {
         return view('informasi', [
@@ -35,7 +43,7 @@ class ApotekController extends Controller
         ]);
     }
 
-    // INFORMASI
+    // DETAIL INFORMASI
     public function detailInformasi(Informasi $informasi)
     {
         return view('detailInformasi', [
