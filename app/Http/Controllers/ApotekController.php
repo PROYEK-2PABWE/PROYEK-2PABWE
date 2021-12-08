@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produk;
+use App\Models\Beranda;
 use App\Models\Keluhan;
 use App\Models\Informasi;
-use App\Models\KirimResep;
 
+use App\Models\KirimResep;
 use Illuminate\Http\Request;
 use App\Models\UsulkanProduk;
 use Illuminate\Routing\Controller;
@@ -20,7 +21,8 @@ class ApotekController extends Controller
     public function beranda()
     {
         return view('beranda', [
-            'title' => 'Beranda'
+            'title' => 'Beranda',
+            'beranda' => Beranda::all()
         ]);
     }
 
