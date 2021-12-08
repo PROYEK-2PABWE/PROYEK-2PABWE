@@ -73,34 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Wishlist
-                    <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
-                        <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-                            <div class="wishlist d-flex flex-row align-items-center justify-content-end">
-                                <div class="wishlist_icon"><img
-                                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918681/heart.png"
-                                        alt=""></div>
-                                <div class="wishlist_content">
-                                    <div class="wishlist_text"><a href="#">Wishlist</a></div>
-                                    <div class="wishlist_count">10</div>
-                                </div>
-                            </div> 
-                            Cart
-                            <div class="cart">
-                                <div class="cart_container d-flex flex-row align-items-center justify-content-end">
-                                    <div class="cart_icon"> <img
-                                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/cart.png"
-                                            alt="">
-                                        <div class="cart_count bg-color-main"><span>3</span></div>
-                                    </div>
-                                    <div class="cart_content">
-                                        <div class="cart_text"><a href="#">Cart</a></div>
-                                        <div class="cart_price">$185</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+
                 <!-- Cart -->
                 <div class="cart">
                     <div class="cart_container d-flex flex-row align-items-center justify-content-end">
