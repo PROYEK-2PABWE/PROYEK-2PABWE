@@ -377,20 +377,31 @@
 
         <div class="col-12 col-sm-12 col-md-3">
             <div class="card mb-3">
-                <div class="card-body">
+                <div class="card-body bg-secondary">
                     <div class="newsletter-header">
-                        <h4 class="text-center">IKUTI NEWINFO</h4>
+                        <h4 class="text-center text-bold fs-4">Tambahan Informasi</h4>
                     </div>
 
-                    <ul class="p-4">
-                        <li><a href="https://www.youtube.com/watch?v=x769gFb0vks">Penggolongan Jenis Obat</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=wT7v22T1bzA">Aturan Minum Obat</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=Sn7NeoLfN4c">Pengobatan Alami</a></li>
+                    <ul class="p-3 m-3 bg-light rounded-3">
+                        <li><a href="https://www.youtube.com/watch?v=x769gFb0vks" class="fs-6">Penggolongan Jenis
+                                Obat</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=wT7v22T1bzA" class="fs-6">Aturan Minum
+                                Obat</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=Sn7NeoLfN4c" class="fs-6">Pengobatan
+                                Alami</a></li>
                     </ul>
-                    <p class="newsletter-text mt-4 px-3">
-                        Newinfo Del Apotek merupakan satu cara agar kamu tidak ketinggalan informasi seputar
-                        apotek kami. Informasi terbaru akan dikirimkan kepadamu secara berkala melalui email.
-                        Cantumkan emailmu sekarang juga dan informasi terbaru akan menunggumu.
+                    <p class="newsletter-text mt-4 px-3 text-light text-justify">
+                        Secara umum, diabetes dibedakan menjadi dua jenis, yaitu diabetes tipe 1 dan tipe 2. Diabetes tipe 1
+                        terjadi karena sistem kekebalan tubuh penderita menyerang dan menghancurkan sel-sel pankreas yang
+                        memproduksi insulin. Hal ini mengakibatkan peningkatan kadar glukosa darah, sehingga terjadi
+                        kerusakan pada organ-organ tubuh. Diabetes tipe 1 dikenal juga dengan diabetes autoimun. Pemicu
+                        timbulnya keadaan autoimun ini masih belum diketahui dengan pasti. Dugaan paling kuat adalah
+                        disebabkan oleh faktor genetik dari penderita yang dipengaruhi juga oleh faktor lingkungan.
+
+                        Diabetes tipe 2 merupakan jenis diabetes yang lebih sering terjadi. Diabetes jenis ini disebabkan
+                        oleh sel-sel tubuh yang menjadi kurang sensitif terhadap insulin, sehingga insulin yang dihasilkan
+                        tidak dapat dipergunakan dengan baik (resistensi sel tubuh terhadap insulin). Sekitar 90-95% persen
+                        penderita diabetes di dunia menderita diabetes tipe ini.
                     </p>
                 </div>
             </div>
