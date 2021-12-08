@@ -28,7 +28,7 @@ require __DIR__ . '/auth.php';
 
 Route::get('/Beranda', [ApotekController::class, 'beranda'])->name('beranda');
 
-Route::get('/Kategori', [ApotekController::class, 'kategori'])->name('beranda');
+Route::get('/Kategori', [ApotekController::class, 'kategori'])->name('kategori');
 
 Route::get('/Produk', [ApotekController::class, 'detailProduk'])->name('produk');
 

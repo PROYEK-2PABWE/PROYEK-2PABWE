@@ -105,7 +105,7 @@
                         <ul class="page_menu_nav">
                             <li class="page_menu_item"> <a href="{{ route('beranda') }}">Beranda<i
                                         class="fa fa-angle-down"></i></a> </li>
-                            <li class="page_menu_item has-children"> <a href="#">Kategori<i
+                            <li class="page_menu_item has-children"> <a href="{{ route('kategori') }}">Kategori<i
                                         class="fa fa-angle-down"></i></a>
                                 <ul class="page_menu_selection">
                                     <li><a href="#">Semua<i class="fa fa-angle-down"></i></a></li>
@@ -148,11 +148,8 @@
                     <!-- Main Nav Menu -->
                     <div class="main_nav_menu">
                         <ul class="standard_dropdown main_nav_dropdown">
-                            <li><a href="{{ route('beranda') }}" class="text-light">Beranda<i
-                                        class="fas fa-chevron-down "></i></a>
-                            </li>
-                            <li class="hassubs"> <a href="#" class="text-light">Kategori<i
-                                        class="fas fa-chevron-down"></i></a>
+                            <li class="hassubs"> <a href="{{ route('kategori') }}"
+                                    class="text-light">Kategori<i class="fas fa-chevron-down"></i></a>
                                 <ul>
                                     <li><a href="#">Semua<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="#">Obat<i class="fas fa-chevron-down"></i></a></li>
