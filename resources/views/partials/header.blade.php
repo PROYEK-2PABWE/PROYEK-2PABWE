@@ -145,7 +145,8 @@
                     <!-- Main Nav Menu -->
                     <div class="main_nav_menu">
                         <ul class="standard_dropdown main_nav_dropdown">
-                            <li><a href="#" class="text-light">Beranda<i class="fas fa-chevron-down "></i></a></li>
+                            <li><a href="Beranda" class="text-light">Beranda<i class="fas fa-chevron-down "></i></a>
+                            </li>
                             <li class="hassubs"> <a href="#" class="text-light">Kategori<i
                                         class="fas fa-chevron-down"></i></a>
                                 <ul>
