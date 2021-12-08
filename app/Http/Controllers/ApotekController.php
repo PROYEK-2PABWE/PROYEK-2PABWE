@@ -16,7 +16,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 class ApotekController extends Controller
 {
     // INFORMASI
-    public function informasi() 
+    public function informasi()
     {
         return view('informasi', [
             'title' => 'Informasi Kesehatan',
@@ -25,12 +25,12 @@ class ApotekController extends Controller
     }
 
     // INFORMASI
-    public function detailInformasi(Informasi $informasi) 
+    public function detailInformasi(Informasi $informasi)
     {
         return view('detailInformasi', [
             'title' => 'Informasi Kesehatan',
             'informasi' => $informasi
-        ]);   
+        ]);
     }
 
     //KIRIM RESEP
@@ -117,7 +117,8 @@ class ApotekController extends Controller
     }
 
     // DETAIL PRODUK
-    public function detailProduk() {
+    public function detailProduk()
+    {
         return view('produk', [
             'title' => 'Produk',
             'data' => Produk::all()
