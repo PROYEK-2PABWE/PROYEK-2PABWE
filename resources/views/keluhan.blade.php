@@ -3,7 +3,7 @@
 @section('container')
     @include('sweetalert::alert')
 
-    <form action="SimpanKeluhan" method="POST">
+    <form action="{{ route('simpanKeluhan') }}" method="POST">
         {{ csrf_field() }}
         <div class="p-5">
             <h2>Anda Memiliki Keluhan</h2>
