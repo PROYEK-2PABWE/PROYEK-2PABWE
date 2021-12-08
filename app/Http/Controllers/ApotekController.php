@@ -15,6 +15,15 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class ApotekController extends Controller
 {
+
+    //Beranda
+    public function beranda()
+    {
+        return view('beranda', [
+            'title' => 'Beranda'
+        ]);
+    }
+
     // INFORMASI
     public function informasi()
     {
