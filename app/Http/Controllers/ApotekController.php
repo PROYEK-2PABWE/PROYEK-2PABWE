@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produk;
-use App\Models\Beranda;
 use App\Models\Keluhan;
 use App\Models\Informasi;
 
@@ -16,24 +14,6 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class ApotekController extends Controller
 {
-
-    //Beranda
-    public function beranda()
-    {
-        return view('beranda', [
-            'title' => 'Beranda',
-            'beranda' => Beranda::all()
-        ]);
-    }
-
-    // INFORMASI
-    public function kategori()
-    {
-        return view('kategori', [
-            'title' => 'Kategori Produk',
-        ]);
-    }
-
     // INFORMASI
     public function informasi()
     {
@@ -133,14 +113,5 @@ class ApotekController extends Controller
 
         //kembali ke halaman sebelumnya
         return back();
-    }
-
-    // DETAIL PRODUK
-    public function detailProduk()
-    {
-        return view('produk', [
-            'title' => 'Produk',
-            'data' => Produk::all()
-        ]);
     }
 }

@@ -1,16 +1,17 @@
 .sidenav {
-    width: 130px;
+    width: fit-content;
+    height: fit-content;
     position: -webkit-sticky;
     position: sticky;
-    z-index: 1020;
-    top: 10rem;
-    left: 5rem;
-    background: #eee;
+    z-index: 0;
+    top: 6rem;
+    background-image: linear-gradient(to right, #decba433, #3e515111);
     overflow-x: hidden;
-    padding: 8px 0;
 }
 
-.sidenav a {
+
+/*
+/* .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
@@ -20,21 +21,35 @@
 
 .sidenav a:hover {
     color: #064579;
-}
+} */
 
-.main {
-    margin-left: 140px;
-    /* Same width as the sidebar + left position in px */
-    font-size: 28px;
-    /* Increased text to enable scrolling */
-    padding: 0px 10px;
-}
 
-@media screen and (max-height: 450px) {
+/* .main { */
+
+
+/* margin-left: 140px; */
+
+
+/* Same width as the sidebar + left position in px */
+
+
+/* font-size: 28px; */
+
+
+/* Increased text to enable scrolling */
+
+
+/* padding: 0px 10px; */
+
+
+/* } */
+
+
+/* @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
     }
     .sidenav a {
         font-size: 18px;
     }
-}
+}  */

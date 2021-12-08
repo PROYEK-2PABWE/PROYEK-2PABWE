@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produk;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class ProdukController extends Controller
 {
@@ -14,7 +14,9 @@ class ProdukController extends Controller
      */
     public function index(Request $request)
     {
-        //
+        return view('produk.index', [
+            'title' => 'Produk'
+        ]);
     }
 
     /**
@@ -24,7 +26,9 @@ class ProdukController extends Controller
      */
     public function create()
     {
-        //
+        return view('produk.create', [
+            'title' => 'Form Produk Baru'
+        ]);
     }
 
     /**
@@ -44,9 +48,11 @@ class ProdukController extends Controller
      * @param  \App\Models\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function show(Produk $produk)
+    public function show($id)
     {
-        //
+        return view('produk.show', [
+            'title' => 'Foto Produk'
+        ]);
     }
 
     /**
@@ -55,9 +61,11 @@ class ProdukController extends Controller
      * @param  \App\Models\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function edit(Produk $produk)
+    public function edit($id)
     {
-        //
+        return view('produk.edit', [
+            'title' => 'Form Edit Produk'
+        ]);
     }
 
     /**
@@ -67,7 +75,7 @@ class ProdukController extends Controller
      * @param  \App\Models\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Produk $produk)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -78,7 +86,7 @@ class ProdukController extends Controller
      * @param  \App\Models\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Produk $produk)
+    public function destroy($id)
     {
         //
     }

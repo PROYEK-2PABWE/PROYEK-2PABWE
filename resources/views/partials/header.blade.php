@@ -28,7 +28,7 @@
                                     src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt="">
                             </div>
                             <div><a href="#">Register</a></div>
-                            <div><a href="#">Log in</a></div>
+                            <div><a href="{{ URL::to('login') }}">Log in</a></div>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,8 @@
                             <li class="page_menu_item has-children"> <a href="#">Kategori<i
                                         class="fa fa-angle-down"></i></a>
                                 <ul class="page_menu_selection">
-                                    <li><a href="{{ route('kategori') }}">Semua<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="{{ route('beranda.kategori') }}">Semua<i
+                                                class="fa fa-angle-down"></i></a>
                                     </li>
                                     <li><a href="#">Obat<i class="fa fa-angle-down"></i></a></li>
                                     <li><a href="#">Alat Kesehatan<i class="fa fa-angle-down"></i></a></li>
@@ -149,10 +150,10 @@
                     <!-- Main Nav Menu -->
                     <div class="main_nav_menu">
                         <ul class="standard_dropdown main_nav_dropdown">
-                            <li class="hassubs"> <a href="#"
-                                    class="text-light">Kategori<i class="fas fa-chevron-down"></i></a>
+                            <li class="hassubs"> <a href="#" class="text-light">Kategori<i
+                                        class="fas fa-chevron-down"></i></a>
                                 <ul>
-                                    <li><a href="{{ route('kategori') }}">Semua<i
+                                    <li><a href="{{ route('beranda.kategori') }}">Semua<i
                                                 class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="#">Obat<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="#">Alat Kesehatan<i class="fas fa-chevron-down"></i></a></li>
