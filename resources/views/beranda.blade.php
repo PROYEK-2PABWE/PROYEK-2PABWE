@@ -40,7 +40,7 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
                 <a href="{{ URL::to('kategori/satu') }}">
-                    <img src="{{ asset('images/slide1.jpg') }}" alt="foto kategori" class="card-img-top">
+                    <img src="{{ asset('images/kategori1.jpg') }}" alt="foto kategori" class="card-img-top">
                 </a>
                 <div class="card-body">
                     <a href="{{ URL::to('kategori/satu') }}" class="text-decoration-none">
@@ -53,7 +53,7 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
                 <a href="{{ URL::to('kategori/dua') }}">
-                    <img src="{{ asset('images/slide1.jpg') }}" alt="foto kategori" class="card-img-top">
+                    <img src="{{ asset('images/kategori2.jpg') }}" alt="foto kategori" class="card-img-top">
                 </a>
                 <div class="card-body">
                     <a href="{{ URL::to('kategori/dua') }}" class="text-decoration-none">
@@ -66,7 +66,7 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
                 <a href="{{ URL::to('kategori/tiga') }}">
-                    <img src="{{ asset('images/slide1.jpg') }}" alt="foto kategori" class="card-img-top">
+                    <img src="{{ asset('images/kategori3.jpg') }}" alt="foto kategori" class="card-img-top">
                 </a>
                 <div class="card-body">
                     <a href="{{ URL::to('kategori/tiga') }}" class="text-decoration-none">
@@ -87,12 +87,13 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
                 <a href="{{ URL::to('produk/satu') }}">
-                    <img src="{{ asset('images/slide3.jpg') }}" alt="foto produk" class="card-img-top">
+                    <img src="{{ asset('images/promo1.jpg') }}" alt="foto produk" class="card-img-top" width="200"
+                        height="200">
                 </a>
                 <div class="card-body">
                     <a href="{{ URL::to('produk/satu') }}" class="text-decoration-none">
                         <p class="card-text">
-                            Produk Pertama
+                            IbuProfen
                         </p>
                     </a>
                     <div class="row mt-4">
@@ -103,9 +104,9 @@
                         </div>
                         <div class="col-auto">
                             <p>
-                                <del>Rp. 15.000,00</del>
+                                <del>Rp. 90.000,00</del>
                                 <br />
-                                Rp. 10.000,00
+                                Rp. 60.000,00
                             </p>
                         </div>
                     </div>
@@ -116,12 +117,13 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
                 <a href="{{ URL::to('produk/dua') }}">
-                    <img src="{{ asset('images/slide3.jpg') }}" alt="foto produk" class="card-img-top">
+                    <img src="{{ asset('images/promo2.jpg') }}" alt="foto produk" class="card-img-top" width="200"
+                        height="200">
                 </a>
                 <div class="card-body">
                     <a href="{{ URL::to('produk/dua') }}" class="text-decoration-none">
                         <p class="card-text">
-                            Produk Kedua
+                            Oil Baby
                         </p>
                     </a>
                     <div class="row mt-4">
@@ -132,9 +134,9 @@
                         </div>
                         <div class="col-auto">
                             <p>
-                                <del>Rp. 15.000,00</del>
+                                <del>Rp. 60.000,00</del>
                                 <br />
-                                Rp. 10.000,00
+                                Rp. 45.000,00
                             </p>
                         </div>
                     </div>
@@ -145,12 +147,13 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
                 <a href="{{ URL::to('produk/tiga') }}">
-                    <img src="{{ asset('images/slide3.jpg') }}" alt="foto produk" class="card-img-top">
+                    <img src="{{ asset('images/promo3.jpg') }}" alt="foto produk" class="card-img-top" width="200"
+                        height="200">
                 </a>
                 <div class="card-body">
                     <a href="{{ URL::to('produk/tiga') }}" class="text-decoration-none">
                         <p class="card-text">
-                            Produk Ketiga
+                            Madu TJ
                         </p>
                     </a>
                     <div class="row mt-4">
@@ -161,9 +164,9 @@
                         </div>
                         <div class="col-auto">
                             <p>
-                                <del>Rp. 15.000,00</del>
+                                <del>Rp. 45.000,00</del>
                                 <br />
-                                Rp. 10.000,00
+                                Rp. 35.000,00
                             </p>
                         </div>
                     </div>
@@ -182,12 +185,12 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
                 <a href="{{ URL::to('produk/satu') }}">
-                    <img src="{{ asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
+                    <img src="{{ asset('images/terbaru0.jpg') }}" alt="foto produk" class="card-img-top">
                 </a>
                 <div class="card-body">
                     <a href="{{ URL::to('produk/satu') }}" class="text-decoration-none">
                         <p class="card-text">
-                            Produk Pertama
+                            HERSAGI
                         </p>
                     </a>
                     <div class="row mt-4">
@@ -198,7 +201,7 @@
                         </div>
                         <div class="col-auto">
                             <p>
-                                Rp. 10.000,00
+                                Rp. 50.000,00
                             </p>
                         </div>
                     </div>
@@ -209,12 +212,12 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
                 <a href="{{ URL::to('produk/dua') }}">
-                    <img src="{{ asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
+                    <img src="{{ asset('images/terbaru2.jpg') }}" alt="foto produk" class="card-img-top">
                 </a>
                 <div class="card-body">
                     <a href="{{ URL::to('produk/dua') }}" class="text-decoration-none">
                         <p class="card-text">
-                            Produk Kedua
+                            FERNLEAF
                         </p>
                     </a>
                     <div class="row mt-4">
@@ -225,7 +228,7 @@
                         </div>
                         <div class="col-auto">
                             <p>
-                                Rp. 10.000,00
+                                Rp. 65.000,00
                             </p>
                         </div>
                     </div>
@@ -236,12 +239,12 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
                 <a href="{{ URL::to('produk/tiga') }}">
-                    <img src="{{ asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
+                    <img src="{{ asset('images/terbaru4.jpg') }}" alt="foto produk" class="card-img-top">
                 </a>
                 <div class="card-body">
                     <a href="{{ URL::to('produk/tiga') }}" class="text-decoration-none">
                         <p class="card-text">
-                            Produk Ketiga
+                            TEA TREE OIL
                         </p>
                     </a>
                     <div class="row mt-4">
@@ -252,7 +255,7 @@
                         </div>
                         <div class="col-auto">
                             <p>
-                                Rp. 10.000,00
+                                Rp. 75.000,00
                             </p>
                         </div>
                     </div>
@@ -263,6 +266,7 @@
     <!-- end produk terbaru -->
 
     <div class="row my-4 justify-content-center pt-5">
+        <h2 class="text-center mb-5">Artikel Terbaru</h2>
         <div class="col-12 col-sm-12 col-md-8">
 
             <div class="row">
