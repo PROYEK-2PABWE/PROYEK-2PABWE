@@ -136,7 +136,7 @@
         </div>
     </div>
 </header>
-<nav class="main_nav sticky-top">
+<nav class="main_nav sticky-top bg-color-main">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -145,8 +145,9 @@
                     <!-- Main Nav Menu -->
                     <div class="main_nav_menu">
                         <ul class="standard_dropdown main_nav_dropdown">
-                            <li><a href="#">Beranda<i class="fas fa-chevron-down"></i></a></li>
-                            <li class="hassubs"> <a href="#">Kategori<i class="fas fa-chevron-down"></i></a>
+                            <li><a href="#" class="text-light">Beranda<i class="fas fa-chevron-down "></i></a></li>
+                            <li class="hassubs"> <a href="#" class="text-light">Kategori<i
+                                        class="fas fa-chevron-down"></i></a>
                                 <ul>
                                     <li><a href="#">Semua<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="#">Obat<i class="fas fa-chevron-down"></i></a></li>
@@ -155,10 +156,17 @@
                                     <li><a href="#">Suplemen<i class="fas fa-chevron-down"></i></a></li>
                                 </ul>
                             </li>
-                            <li><a href="Informasi">Informasi<i class="fas fa-chevron-down"></i></a></li>
-                            <li><a href="KirimResep">Kirim Resep<i class="fas fa-chevron-down"></i></a></li>
-                            <li><a href="UsulkanProduk">Usulkan Produk<i class="fas fa-chevron-down"></i></a></li>
-                            <li><a href="Keluhan">Keluhan<i class="fas fa-chevron-down"></i></a></li>
+                            <li><a href="Beranda" class="text-light">Beranda<i class="fas fa-chevron-down "></i></a>
+                            </li>
+                            <li><a href="Informasi" class="text-light">Informasi<i
+                                        class="fas fa-chevron-down"></i></a></li>
+                            <li><a href="KirimResep" class="text-light">Kirim Resep<i
+                                        class="fas fa-chevron-down"></i></a></li>
+                            <li><a href="UsulkanProduk" class="text-light">Usulkan Produk<i
+                                        class="fas fa-chevron-down"></i></a></li>
+                            <li><a href="Keluhan" class="text-light">Keluhan<i
+                                        class="fas fa-chevron-down"></i></a>
+                            </li>
                         </ul>
                     </div> <!-- Menu Trigger -->
                     <div class="menu_trigger_container ml-auto">
