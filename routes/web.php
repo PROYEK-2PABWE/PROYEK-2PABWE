@@ -26,45 +26,24 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 
-Route::get('/Beranda', [ApotekController::class, 'beranda']);
+Route::get('/Beranda', [ApotekController::class, 'beranda'])->name('beranda');
 
-Route::get('/Kategori', function () {
-    return view('kategori');
-});
+Route::get('/Kategori', [ApotekController::class, 'kategori'])->name('beranda');
 
-Route::get('/Produk', [ApotekController::class, 'detailProduk']);
+Route::get('/Produk', [ApotekController::class, 'detailProduk'])->name('produk');
 
-Route::get('/Informasi',  [ApotekController::class, 'informasi']);
+Route::get('/Informasi',  [ApotekController::class, 'informasi'])->name('informasi');
 
 Route::get('/Informasi/{informasi:id}',  [ApotekController::class, 'detailInformasi']);
 
-Route::get('/Informasi/top1', function () {
-    return view('top1');
-});
-Route::get('/Informasi/top2', function () {
-    return view('top2');
-});
-Route::get('/Informasi/top3', function () {
-    return view('top3');
-});
-Route::get('/Informasi/top4', function () {
-    return view('top4');
-});
+Route::get('/KirimResep', [ApotekController::class, 'kirimResep'])->name('kirimResep');
+Route::post('/SimpanResep', [ApotekController::class, 'simpanResep'])->name('simpanResep');
 
-Route::get('/KirimResep', [ApotekController::class, 'kirimResep']);
+Route::get('/UsulkanProduk', [ApotekController::class, 'usulkanProduk'])->name('usulkanProduk');
+Route::post('/SimpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk'])->name('simpanUsulanProduk');
 
-Route::post('/SimpanResep', [ApotekController::class, 'simpanResep']);
-
-
-Route::get('/UsulkanProduk', [ApotekController::class, 'usulkanProduk']);
-
-Route::post('/SimpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk']);
-
-
-Route::get('/Keluhan', [ApotekController::class, 'keluhan']);
-
-Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan']);
-
+Route::get('/Keluhan', [ApotekController::class, 'keluhan'])->name('keluhan');
+Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan'])->name('simpanKeluhan');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
