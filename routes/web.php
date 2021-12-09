@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ApotekController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,13 +48,19 @@ Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan'])->name(
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/Login', function () {
-    return view('login');
-});
+Route::post('/Login', [RegisterController::class, 'store'])->name('simpan.login');
+Route::get('/Login/proyek', [RegisterController::class, 'viewLogin'])->name('view.login');
 
-Route::get('/Register', function () {
-    return view('register');
-});
+// Route::get('/Login', function () {
+//     return view('login');
+// });
+
+Route::get('/Register',  [ApotekController::class, 'register'])->name('register');
+// Route::get('/Register', function () {
+//     return view('register', [
+//         'title' => 'Register'
+//     ]);
+// });
 
 Route::get('/Keranjang', function () {
     return view('keranjang');

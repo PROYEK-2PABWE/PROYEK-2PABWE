@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Produk;
 use App\Models\Beranda;
 use App\Models\Keluhan;
-use App\Models\Informasi;
+use App\Models\Register;
 
+use App\Models\Informasi;
 use App\Models\KirimResep;
 use Illuminate\Http\Request;
 use App\Models\UsulkanProduk;
@@ -16,6 +17,19 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class ApotekController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    //Register
+    public function register()
+    {
+        return view('register', [
+            'title' => 'Register',
+            'register' => Register::all()
+        ]);
+    }
 
     //Beranda
     public function beranda()
