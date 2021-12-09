@@ -24,9 +24,9 @@ use App\Http\Controllers\TransaksiController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -34,7 +34,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::group(['prefix' => 'admins'], function () {
+Route::group(['prefix' => 'admins', 'middleware' => 'auth'], function () {
     Route::get('/', [DashboardController::class, 'index']);
 
     // route kategori
@@ -62,7 +62,7 @@ Route::group(['prefix' => 'admins'], function () {
     Route::get('proseslaporan', [LaporanController::class, 'proses']);
 });
 
-Route::get('/Beranda', [BerandaController::class, 'index'])->name('beranda');
+Route::get('/', [BerandaController::class, 'index'])->name('beranda');
 
 Route::get('/Kategori', [BerandaController::class, 'kategori'])->name('beranda.kategori');
 Route::get('/Kategori/{slug}', [BerandaController::class, 'produkPerKategori'])->name('beranda.produkPerKategori');
@@ -73,23 +73,27 @@ Route::get('/Produk/{slug}', [BerandaController::class, 'produkDetail'])->name('
 Route::get('/Informasi',  [ApotekController::class, 'informasi'])->name('informasi');
 Route::get('/Informasi/{informasi:id}',  [ApotekController::class, 'detailInformasi']);
 
-Route::get('/KirimResep', [ApotekController::class, 'kirimResep'])->name('kirimResep');
+Route::get('/KirimResep', [ApotekController::class, 'kirimResep'])->name('kirimResep')->middleware('auth');
 Route::post('/SimpanResep', [ApotekController::class, 'simpanResep'])->name('simpanResep');
 
-Route::get('/UsulkanProduk', [ApotekController::class, 'usulkanProduk'])->name('usulkanProduk');
+Route::get('/UsulkanProduk', [ApotekController::class, 'usulkanProduk'])->name('usulkanProduk')->middleware('auth');
 Route::post('/SimpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk'])->name('simpanUsulanProduk');
 
-Route::get('/Keluhan', [ApotekController::class, 'keluhan'])->name('keluhan');
+Route::get('/Keluhan', [ApotekController::class, 'keluhan'])->name('keluhan')->middleware('auth');
 Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan'])->name('simpanKeluhan');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/Login', function () {
-    return view('login');
+Route::get('/Login1', function () {
+    return view('login1', [
+        'title' => 'login'
+    ]);
 });
 
-Route::get('/Register', function () {
-    return view('register');
+Route::get('/Register1', function () {
+    return view('register1', [
+        'title' => 'login'
+    ]);
 });
 
 Route::get('/Keranjang', function () {
