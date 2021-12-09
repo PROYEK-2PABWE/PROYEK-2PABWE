@@ -1,138 +1,192 @@
 @extends('layouts.main')
 
 @section('container')
-    <!-- kategori produk -->
-    <div class="row mt-4">
-        <div class="col col-md-12 col-sm-12 mb-4">
-            <h2 class="text-center">Kategori Produk</h2>
+    <link rel="stylesheet" href={{ asset('css/sideBar.css') }}>
+    <div class="row">
+        <div class="col-3 me-4 sidenav card p-3">
+            <a href=" {{ route('beranda.kategori') }}" class="text-dark p-1 fs-5">Semua</a>
+            <a href="#services" class="text-dark p-1 fs-5">Obat</a>
+            <a href="#clients" class="text-dark p-1 fs-5">Suplemen</a>
+            <a href="#contact" class="text-dark p-1 fs-5">Alat Kesehatan</a>
+            <a href="#contact" class="text-dark p-1 fs-5">Kosmetika</a>
+            <a href="#contact" class="text-dark p-1 fs-5">Obat Herbal</a>
+            <a href="#contact" class="text-dark p-1 fs-5">Produk Ibu dan Bayi</a>
+            <a href="#contact" class="text-dark p-1 fs-5">Susu</a>
         </div>
-        <!-- kategori pertama -->
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <a href="{{ URL::to('kategori/satu') }}">
-                    <img src="{{ asset('images/slide1.jpg') }}" alt="foto kategori" class="card-img-top">
-                </a>
-                <div class="card-body">
-                    <a href="{{ URL::to('kategori/satu') }}" class="text-decoration-none">
-                        <p class="card-text">Kategori Pertama</p>
-                    </a>
+
+        <div class="col-9 main">
+            <!-- produk Terbaru-->
+            <div class="row mt-4">
+                <!-- produk pertama -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <a href="{{ URL::to('produk/satu') }}">
+                            <img src="{{ asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <a href="{{ URL::to('produk/satu') }}" class="text-decoration-none">
+                                <p class="card-text">
+                                    Produk Pertama
+                                </p>
+                            </a>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <button class="btn btn-light">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="col-auto">
+                                    <p>
+                                        Rp. 10.000,00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- produk kedua -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <a href="{{ URL::to('produk/dua') }}">
+                            <img src="{{ asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <a href="{{ URL::to('produk/dua') }}" class="text-decoration-none">
+                                <p class="card-text">
+                                    Produk Kedua
+                                </p>
+                            </a>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <button class="btn btn-light">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="col-auto">
+                                    <p>
+                                        Rp. 10.000,00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- produk ketiga -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <a href="{{ URL::to('produk/tiga') }}">
+                            <img src="{{ asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <a href="{{ URL::to('produk/tiga') }}" class="text-decoration-none">
+                                <p class="card-text">
+                                    Produk Ketiga
+                                </p>
+                            </a>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <button class="btn btn-light">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="col-auto">
+                                    <p>
+                                        Rp. 10.000,00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- kategori kedua -->
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <a href="{{ URL::to('kategori/dua') }}">
-                    <img src="{{ asset('images/slide1.jpg') }}" alt="foto kategori" class="card-img-top">
-                </a>
-                <div class="card-body">
-                    <a href="{{ URL::to('kategori/dua') }}" class="text-decoration-none">
-                        <p class="card-text">Kategori Kedua</p>
-                    </a>
+            <!-- end produk terbaru -->
+
+            <!-- produk Terbaru-->
+            <div class="row mt-4">
+                <!-- produk pertama -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <a href="{{ URL::to('produk/satu') }}">
+                            <img src="{{ asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <a href="{{ URL::to('produk/satu') }}" class="text-decoration-none">
+                                <p class="card-text">
+                                    Produk Pertama
+                                </p>
+                            </a>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <button class="btn btn-light">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="col-auto">
+                                    <p>
+                                        Rp. 10.000,00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- produk kedua -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <a href="{{ URL::to('produk/dua') }}">
+                            <img src="{{ asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <a href="{{ URL::to('produk/dua') }}" class="text-decoration-none">
+                                <p class="card-text">
+                                    Produk Kedua
+                                </p>
+                            </a>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <button class="btn btn-light">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="col-auto">
+                                    <p>
+                                        Rp. 10.000,00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- produk ketiga -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <a href="{{ URL::to('produk/tiga') }}">
+                            <img src="{{ asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <a href="{{ URL::to('produk/tiga') }}" class="text-decoration-none">
+                                <p class="card-text">
+                                    Produk Ketiga
+                                </p>
+                            </a>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <button class="btn btn-light">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="col-auto">
+                                    <p>
+                                        Rp. 10.000,00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- kategori ketiga -->
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <a href="{{ URL::to('kategori/tiga') }}">
-                    <img src="{{ asset('images/slide1.jpg') }}" alt="foto kategori" class="card-img-top">
-                </a>
-                <div class="card-body">
-                    <a href="{{ URL::to('kategori/tiga') }}" class="text-decoration-none">
-                        <p class="card-text">Kategori Ketiga</p>
-                    </a>
-                </div>
-            </div>
+            <!-- end produk terbaru -->
         </div>
     </div>
-    <!-- end kategori produk -->
-    <!-- produk Terbaru-->
-    <div class="row mt-4">
-        <div class="col col-md-12 col-sm-12 mb-4">
-            <h2 class="text-center">Terbaru</h2>
-        </div>
-        <!-- produk pertama -->
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <a href="{{ URL::to('produk/satu') }}">
-                    <img src="{{ asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
-                </a>
-                <div class="card-body">
-                    <a href="{{ URL::to('produk/satu') }}" class="text-decoration-none">
-                        <p class="card-text">
-                            Produk Pertama
-                        </p>
-                    </a>
-                    <div class="row mt-4">
-                        <div class="col">
-                            <button class="btn btn-light">
-                                <i class="far fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="col-auto">
-                            <p>
-                                Rp. 10.000,00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- produk kedua -->
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <a href="{{ URL::to('produk/dua') }}">
-                    <img src="{{ asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
-                </a>
-                <div class="card-body">
-                    <a href="{{ URL::to('produk/dua') }}" class="text-decoration-none">
-                        <p class="card-text">
-                            Produk Kedua
-                        </p>
-                    </a>
-                    <div class="row mt-4">
-                        <div class="col">
-                            <button class="btn btn-light">
-                                <i class="far fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="col-auto">
-                            <p>
-                                Rp. 10.000,00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- produk ketiga -->
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <a href="{{ URL::to('produk/tiga') }}">
-                    <img src="{{ asset('images/slide2.jpg') }}" alt="foto produk" class="card-img-top">
-                </a>
-                <div class="card-body">
-                    <a href="{{ URL::to('produk/tiga') }}" class="text-decoration-none">
-                        <p class="card-text">
-                            Produk Ketiga
-                        </p>
-                    </a>
-                    <div class="row mt-4">
-                        <div class="col">
-                            <button class="btn btn-light">
-                                <i class="far fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="col-auto">
-                            <p>
-                                Rp. 10.000,00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end produk terbaru -->
+
 @endsection

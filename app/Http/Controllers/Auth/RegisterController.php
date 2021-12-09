@@ -68,6 +68,15 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'phone' => $data['phone'], //tambahan kolom phone (no tlp)
+
+        ]);
+    }
+
+    public function showRegistrationForm()
+    {
+        return view('auth.register', [
+            'title' => 'Register'
         ]);
     }
 }

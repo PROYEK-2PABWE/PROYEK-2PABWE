@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produk;
-use App\Models\Beranda;
 use App\Models\Keluhan;
 use App\Models\Register;
 
@@ -17,6 +15,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class ApotekController extends Controller
 {
+<<<<<<< HEAD
     public function __construct()
     {
         $this->middleware('auth');
@@ -48,6 +47,8 @@ class ApotekController extends Controller
         ]);
     }
 
+=======
+>>>>>>> f6432d218a45d7e766696e674b3a2121fc35fa44
     // INFORMASI
     public function informasi()
     {
@@ -147,14 +148,5 @@ class ApotekController extends Controller
 
         //kembali ke halaman sebelumnya
         return back();
-    }
-
-    // DETAIL PRODUK
-    public function detailProduk()
-    {
-        return view('produk', [
-            'title' => 'Produk',
-            'data' => Produk::all()
-        ]);
     }
 }

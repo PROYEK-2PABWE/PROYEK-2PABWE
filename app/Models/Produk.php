@@ -9,22 +9,27 @@ class Produk extends Model
 {
     use HasFactory;
     protected $table = 'produk';
-    protected $guarded = ['id'];
-    protected $primaryKey = 'id';
-    public $timestamps = false;
+    protected $fillable = [
+        'kategori_id',
+        'user_id',
+        'kode_produk',
+        'nama_produk',
+        'slug_produk',
+        'deskripsi_produk',
+        'foto',
+        'qty',
+        'satuan',
+        'harga',
+        'status',
+    ];
 
-    
-    function image()
+    public function kategori()
     {
-        if ($this->image && file_exists(public_path('images/post/' . $this->gambarProduk)))
-            return asset('images/post/' . $this->gambarProduk);
-        else
-            return asset('images/no_image.png');
+        return $this->belongsTo('App\Kategori', 'kategori_id');
     }
 
-    function delete_image()
+    public function user()
     {
-        if ($this->image && file_exists(public_path('images/post/' . $this->gambarProduk)))
-            return unlink(public_path('images/post/' . $this->gambarProduk));
+        return $this->belongsTo('App\User', 'user_id');
     }
 }
