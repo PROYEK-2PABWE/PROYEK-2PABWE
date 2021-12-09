@@ -23,11 +23,16 @@
 
                 <div class="top_bar_content ml-auto">
                     <div class="top_bar_user">
-                        <div class="user_icon"><img
-                                src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt="">
-                        </div>
-                        <div><a href="{{ URL::to('register') }}">Register</a></div>
-                        <div><a href="{{ URL::to('login') }}">Log in</a></div>
+                        <?php
+                        if (Auth::check()) {
+                            echo '<div class="dropdown"><button class="btn btn-default dropdown-toggle px-5 mt-2" type="button" data-toggle="dropdown" style="box-shadow: 0.5px 1px 0.5px 0.25px grey;">Trivena Panjaitan<span class="caret"></span></button><ul class="dropdown-menu"><li class="nav-item d-flex"><a href="#" class="nav-link d-flex" onclick="event.preventDefault(); document.getElementById(`logout-form`).submit();"><i class="nav-icon fas fa-sign-out-alt m-auto"></i><p class="ms-2 my-auto">Sign Out</p></a></li></ul></div>';
+                        } else {
+                            echo '<div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div><div><a href="register">Register</a></div><div><a href="login">Log in</a></div>';
+                        }
+                        ?>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </div>
                 </div>
             </div>
@@ -189,3 +194,4 @@
 
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/header.js') }}"></script>
+<script src="{{ asset('js/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
