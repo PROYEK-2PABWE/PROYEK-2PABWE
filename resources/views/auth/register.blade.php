@@ -33,13 +33,13 @@
                                         name="email" :value="old('email')" required />
                                 </div>
 
-                                <!-- No Telp -->
+                                {{-- <!-- No Telp -->
                                 <div class="mt-4">
                                     <x-label for="phone" :value="__('No tlp')" />
 
                                     <x-input id="phone" class="block mt-1 w-full form-control form-control-lg" type="text"
                                         name="phone" :value="old('phone')" required />
-                                </div>
+                                </div> --}}
 
                                 <!-- Password -->
                                 <div class="mt-4">

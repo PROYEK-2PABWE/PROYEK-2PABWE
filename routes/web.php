@@ -11,6 +11,7 @@ use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\TransaksiController;
 
 /*
@@ -60,6 +61,15 @@ Route::group(['prefix' => 'admins', 'middleware' => 'auth'], function () {
 
     // proses laporan
     Route::get('proseslaporan', [LaporanController::class, 'proses']);
+
+    // image
+    Route::get('image', [ImageController::class, 'index']);
+
+    // simpan image
+    Route::post('image', [ImageController::class, 'store']);
+
+    // hapus image by id
+    Route::delete('image/{id}', [ImageController::class, 'detroy']);
 });
 
 Route::get('/', [BerandaController::class, 'index'])->name('beranda');
