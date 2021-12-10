@@ -10,7 +10,6 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Controllers\ImageController;
 
 class ProdukController extends Controller
 {
@@ -166,7 +165,7 @@ class ProdukController extends Controller
     }
 
 
-    public function uploadimage(Request $request)
+    public function uploadImage(Request $request)
     {
         $request->validate([
             'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
@@ -189,7 +188,7 @@ class ProdukController extends Controller
         }
     }
 
-    public function deleteimage(Request $request, $id)
+    public function deleteImage(Request $request, $id)
     {
         // ambil data produk image by id
         $itemprodukimage = ProdukImage::findOrFail($id);
@@ -215,7 +214,7 @@ class ProdukController extends Controller
         return back()->with('success', 'Data berhasil dihapus');
     }
 
-    public function loadasync($id)
+    public function loadAsync($id)
     {
         $respon = [
             'status' => 'success',

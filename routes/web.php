@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\ApotekController;
@@ -62,7 +61,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('laporan', [LaporanController::class, 'index']);
 
     // proses laporan
-    Route::get('proseslaporan', [LaporanController::class, 'proses']);
+    Route::get('prosesLaporan', [LaporanController::class, 'proses']);
 
     // image
     Route::get('image', [ImageController::class, 'index']);
@@ -74,70 +73,47 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::delete('image/{id}', [ImageController::class, 'destroy']);
 
     // upload image kategori
-    Route::post('imagekategori',  [KategoriController::class, 'uploadimage']);
+    Route::post('imageKategori',  [KategoriController::class, 'uploadImage']);
 
     // hapus image kategori
-    Route::delete('imagekategori/{id}', [KategoriController::class, 'deleteimage']);
+    Route::delete('imageKategori/{id}', [KategoriController::class, 'deleteImage']);
 
     // upload image produk
-    Route::post('produkimage', [ProdukController::class, 'uploadimage']);
+    Route::post('produkImage', [ProdukController::class, 'uploadImage']);
 
     // hapus image produk
-    Route::delete('produkimage/{id}', [ProdukController::class, 'deleteimage']);
+    Route::delete('produkImage/{id}', [ProdukController::class, 'deleteImage']);
 
     // slideshow
-    Route::resource('slideshow', SlideshowController::class);
+    Route::resource('slideShow', SlideshowController::class);
 
     // produk promo
     Route::resource('promo', ProdukPromoController::class);
 
     // load async produk
-    Route::get('loadprodukasync/{id}', [ProdukController::class, 'loadasync']);
+    Route::get('loadProdukAsync/{id}', [ProdukController::class, 'loadAsync']);
 });
 
 Route::group(['prefix' => ''], function () {
-    Route::get('/', [BerandaController::class, 'index'])->name('beranda');
+    Route::get('/', [BerandaController::class, 'index'])->name('home');
 
-    Route::get('/Kategori', [BerandaController::class, 'kategori'])->name('beranda.kategori');
-    Route::get('/Kategori/{kategori:slug_kategori}', [BerandaController::class, 'produkPerKategori'])->name('beranda.produkPerKategori');
+    Route::get('/kategori', [BerandaController::class, 'kategori'])->name('home.kategori');
+    Route::get('/kategori/{slug}', [BerandaController::class, 'kategoriBySlug'])->name('home.kategoriBySlug');
 
-    Route::get('/Produk', [BerandaController::class, 'produk'])->name('produk');
-    Route::get('/Produk/{produk:slug_produk}', [BerandaController::class, 'produkDetail'])->name('beranda.produkDetail');
+    Route::get('/produk', [BerandaController::class, 'produk'])->name('home.produk');
+    Route::get('/produk/{id}', [BerandaController::class, 'produkDetail'])->name('home.produkDetail');
 
-    Route::get('/Informasi',  [ApotekController::class, 'informasi'])->name('informasi');
-    Route::get('/Informasi/{informasi:id}',  [ApotekController::class, 'detailInformasi']);
+    Route::get('/informasi',  [ApotekController::class, 'informasi'])->name('home.informasi');
+    Route::get('/informasi/{informasi:id}',  [ApotekController::class, 'informasiDetail'])->name('home.informasiDetail');
 
-    Route::get('/KirimResep', [ApotekController::class, 'kirimResep'])->name('kirimResep')->middleware('auth');
-    Route::post('/SimpanResep', [ApotekController::class, 'simpanResep'])->name('simpanResep');
+    Route::get('/kirimResep', [ApotekController::class, 'kirimResep'])->name('home.kirimResep')->middleware('auth');
+    Route::post('/simpanResep', [ApotekController::class, 'simpanResep'])->name('home.simpanResep');
 
-    Route::get('/UsulkanProduk', [ApotekController::class, 'usulkanProduk'])->name('usulkanProduk')->middleware('auth');
-    Route::post('/SimpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk'])->name('simpanUsulanProduk');
+    Route::get('/usulkanProduk', [ApotekController::class, 'usulkanProduk'])->name('home.usulkanProduk')->middleware('auth');
+    Route::post('/simpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk'])->name('home.simpanUsulanProduk')->name('home.');
 
-    Route::get('/Keluhan', [ApotekController::class, 'keluhan'])->name('keluhan')->middleware('auth');
-    Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan'])->name('simpanKeluhan');
+    Route::get('/keluhan', [ApotekController::class, 'keluhan'])->name('home.keluhan')->middleware('auth');
+    Route::post('/simpanKeluhan', [ApotekController::class, 'simpanKeluhan'])->name('home.simpanKeluhan');
 });
-
-
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/Login1', function () {
-    return view('login1', [
-        'title' => 'login'
-    ]);
-});
-
-Route::get('/Register1', function () {
-    return view('register1', [
-        'title' => 'login'
-    ]);
-});
-
-Route::get('/Keranjang', function () {
-    return view('keranjang');
-});
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();

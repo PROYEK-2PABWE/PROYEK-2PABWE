@@ -49,7 +49,7 @@
             <div class="col-lg-2 col-sm-3 col-3 order-1">
                 <div class="logo_container">
                     <div class="logo">
-                        <a href="{{ route('beranda') }}" class="color-main">Del Apotek</a>
+                        <a href="{{ route('home') }}" class="color-main">Del Apotek</a>
                     </div>
                 </div>
             </div> <!-- Search -->
@@ -110,7 +110,7 @@
                             <li class="hassubs"> <a href="#" class="text-light">Kategori<i
                                         class="fas fa-chevron-down"></i></a>
                                 <ul>
-                                    <li><a href="{{ route('beranda.kategori') }}">Semua<i
+                                    <li><a href="{{ route('home.kategori') }}">Semua<i
                                                 class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="#">Obat<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="#">Alat Kesehatan<i class="fas fa-chevron-down"></i></a></li>
@@ -118,15 +118,15 @@
                                     <li><a href="#">Suplemen<i class="fas fa-chevron-down"></i></a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ route('beranda') }}" class="text-light">Beranda<i
+                            <li><a href="{{ route('home') }}" class="text-light">Beranda<i
                                         class="fas fa-chevron-down "></i></a></li>
-                            <li><a href="{{ route('informasi') }}" class="text-light">Informasi<i
+                            <li><a href="{{ route('home.informasi') }}" class="text-light">Informasi<i
                                         class="fas fa-chevron-down"></i></a></li>
-                            <li><a href="{{ route('kirimResep') }}" class="text-light">Kirim Resep<i
+                            <li><a href="{{ route('home.kirimResep') }}" class="text-light">Kirim Resep<i
                                         class="fas fa-chevron-down"></i></a></li>
-                            <li><a href="{{ route('usulkanProduk') }}" class="text-light">Usulkan Produk<i
+                            <li><a href="{{ route('home.usulkanProduk') }}" class="text-light">Usulkan Produk<i
                                         class="fas fa-chevron-down"></i></a></li>
-                            <li><a href="{{ route('keluhan') }}" class="text-light">Keluhan<i
+                            <li><a href="{{ route('home.keluhan') }}" class="text-light">Keluhan<i
                                         class="fas fa-chevron-down"></i></a>
                             </li>
                         </ul>
@@ -157,26 +157,25 @@
                                 placeholder="Search for products..."> </form>
                     </div>
                     <ul class="page_menu_nav">
-                        <li class="page_menu_item"> <a href="{{ route('beranda') }}">Beranda<i
+                        <li class="page_menu_item"> <a href="{{ route('home') }}">Beranda<i
                                     class="fa fa-angle-down"></i></a> </li>
                         <li class="page_menu_item has-children"> <a href="#">Kategori<i
                                     class="fa fa-angle-down"></i></a>
                             <ul class="page_menu_selection">
-                                <li><a href="{{ route('beranda.kategori') }}">Semua<i
-                                            class="fa fa-angle-down"></i></a>
+                                <li><a href="{{ route('home.kategori') }}">Semua<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li><a href="#">Obat<i class="fa fa-angle-down"></i></a></li>
                                 <li><a href="#">Alat Kesehatan<i class="fa fa-angle-down"></i></a></li>
                                 <li><a href="#">Obat Herbal<i class="fa fa-angle-down"></i></a></li>
                             </ul>
                         </li>
-                        <li class="page_menu_item"> <a href="{{ route('informasi') }}">Informasi<i
+                        <li class="page_menu_item"> <a href="{{ route('home.informasi') }}">Informasi<i
                                     class="fa fa-angle-down"></i></a> </li>
-                        <li class="page_menu_item"><a href="{{ route('kirimResep') }}">Kirim Resep<i
+                        <li class="page_menu_item"><a href="{{ route('home.kirimResep') }}">Kirim Resep<i
                                     class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item"><a href="{{ route('usulkanProduk') }}">Usulkan Produk<i
+                        <li class="page_menu_item"><a href="{{ route('home.usulkanProduk') }}">Usulkan Produk<i
                                     class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item"><a href="{{ route('keluhan') }}">Keluhan<i
+                        <li class="page_menu_item"><a href="{{ route('home.keluhan') }}">Keluhan<i
                                     class="fa fa-angle-down"></i></a></li>
                     </ul>
                     <div class="menu_contact">

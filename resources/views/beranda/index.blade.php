@@ -51,7 +51,7 @@
             <!-- kategori pertama -->
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                    <a href="{{ URL::to('Kategori/' . $kategori->slug_kategori) }}">
+                    <a href="{{ URL::to('kategori/' . $kategori->slug_kategori) }}">
                         @if ($kategori->foto != null)
                             <img src="{{ Storage::url($kategori->foto) }}" alt="{{ $kategori->nama_kategori }}"
                                 class="card-img-top">
@@ -61,7 +61,7 @@
                         @endif
                     </a>
                     <div class="card-body">
-                        <a href="{{ URL::to('Kategori/' . $kategori->slug_kategori) }}" class="text-decoration-none">
+                        <a href="{{ URL::to('kategori/' . $kategori->slug_kategori) }}" class="text-decoration-none">
                             <p class="card-text">{{ $kategori->nama_kategori }}</p>
                         </a>
                     </div>
@@ -78,7 +78,7 @@
                 <!-- produk pertama -->
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <a href="{{ URL::to('Produk/' . $promo->produk->slug_produk) }}">
+                        <a href="{{ URL::to('produk/' . $promo->produk->slug_produk) }}">
                             @if ($promo->produk->foto != null)
                                 <img src="{{ Storage::url($promo->produk->foto) }}"
                                     alt="{{ $promo->produk->nama_produk }}" class="card-img-top">
@@ -88,7 +88,7 @@
                             @endif
                         </a>
                         <div class="card-body">
-                            <a href="{{ URL::to('Produk/' . $promo->produk->slug_produk) }}"
+                            <a href="{{ URL::to('produk/' . $promo->produk->slug_produk) }}"
                                 class="text-decoration-none">
                                 <p class="card-text">
                                     {{ $promo->produk->nama_produk }}
@@ -122,7 +122,7 @@
                     <!-- produk pertama -->
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
-                            <a href="{{ URL::to('Produk/' . $produk->slug_produk) }}">
+                            <a href="{{ URL::to('produk/' . $produk->slug_produk) }}">
                                 @if ($produk->foto != null)
                                     <img src="{{ Storage::url($produk->foto) }}" alt="{{ $produk->nama_produk }}"
                                         class="card-img-top">
@@ -132,7 +132,7 @@
                                 @endif
                             </a>
                             <div class="card-body">
-                                <a href="{{ URL::to('Produk/' . $produk->slug_produk) }}" class="text-decoration-none">
+                                <a href="{{ URL::to('produk/' . $produk->slug_produk) }}" class="text-decoration-none">
                                     <p class="card-text">
                                         {{ $produk->nama_produk }}
                                     </p>

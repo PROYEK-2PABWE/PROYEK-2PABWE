@@ -82,16 +82,16 @@
                         Useful links
                     </h6>
                     <p>
-                        <a href="{{ route('beranda') }}" class="text-reset">Beranda</a>
+                        <a href="{{ route('home') }}" class="text-reset">Beranda</a>
                     </p>
                     <p>
-                        <a href="{{ route('produk') }}" class="text-reset">Produk</a>
+                        <a href="{{ route('home.produk') }}" class="text-reset">Produk</a>
                     </p>
                     <p>
-                        <a href="{{ route('informasi') }}" class="text-reset">Informasi</a>
+                        <a href="{{ route('home.informasi') }}" class="text-reset">Informasi</a>
                     </p>
                     <p>
-                        <a href="{{ route('kirimResep') }}" class="text-reset">Kirim Resep</a>
+                        <a href="{{ route('home.kirimResep') }}" class="text-reset">Kirim Resep</a>
                     </p>
                 </div>
                 <!-- Grid column -->

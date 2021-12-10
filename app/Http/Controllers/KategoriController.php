@@ -8,9 +8,7 @@ use App\Models\Kategori;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Controllers\ImageController;
 
 class KategoriController extends Controller
 {
@@ -148,7 +146,7 @@ class KategoriController extends Controller
         }
     }
 
-    public function uploadimage(Request $request)
+    public function uploadImage(Request $request)
     {
         $request->validate([
             'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
@@ -170,7 +168,7 @@ class KategoriController extends Controller
         }
     }
 
-    public function deleteimage(Request $request, $id)
+    public function deleteImage(Request $request, $id)
     {
         $itemkategori = Kategori::where('user_id', $request->user()->id)
             ->where('id', $id)
