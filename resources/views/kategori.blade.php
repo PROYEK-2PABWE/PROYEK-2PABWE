@@ -4,16 +4,11 @@
     <link rel="stylesheet" href={{ asset('css/sideBar.css') }}>
     <div class="row">
         <div class="col-3 me-4 sidenav card p-3">
-            <a href=" {{ route('beranda.kategori') }}" class="text-dark p-1 fs-5">Semua</a>
-            <a href="#services" class="text-dark p-1 fs-5">Obat</a>
-            <a href="#clients" class="text-dark p-1 fs-5">Suplemen</a>
-            <a href="#contact" class="text-dark p-1 fs-5">Alat Kesehatan</a>
-            <a href="#contact" class="text-dark p-1 fs-5">Kosmetika</a>
-            <a href="#contact" class="text-dark p-1 fs-5">Obat Herbal</a>
-            <a href="#contact" class="text-dark p-1 fs-5">Produk Ibu dan Bayi</a>
-            <a href="#contact" class="text-dark p-1 fs-5">Susu</a>
+            @foreach ($kategoris as $kategori)
+                <a href="{{ URL::to('kategori/' . $kategori->slug_kategori) }}"
+                    class="text-dark p-1 fs-5">{{ $kategori->nama_kategori }}</a>
+            @endforeach
         </div>
-
         <div class="col-9 main">
             <!-- produk Terbaru-->
             <div class="row mt-4">

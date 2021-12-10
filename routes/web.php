@@ -86,34 +86,39 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::delete('produkimage/{id}', [ProdukController::class, 'deleteimage']);
 
     // slideshow
-    Route::resource('slideshow', [SlideshowController::class]);
+    Route::resource('slideshow', SlideshowController::class);
 
     // produk promo
-    Route::resource('promo', [ProdukPromoController::class]);
+    Route::resource('promo', ProdukPromoController::class);
 
     // load async produk
     Route::get('loadprodukasync/{id}', [ProdukController::class, 'loadasync']);
 });
 
-Route::get('/', [BerandaController::class, 'index'])->name('beranda');
+Route::group(['prefix' => ''], function () {
+    Route::get('/', [BerandaController::class, 'index'])->name('beranda');
 
-Route::get('/Kategori', [BerandaController::class, 'kategori'])->name('beranda.kategori');
-Route::get('/Kategori/{slug}', [BerandaController::class, 'produkPerKategori'])->name('beranda.produkPerKategori');
+    Route::get('/Kategori', [BerandaController::class, 'kategori'])->name('beranda.kategori');
+    Route::get('/Kategori/{kategori:slug_kategori}', [BerandaController::class, 'produkPerKategori'])->name('beranda.produkPerKategori');
 
-Route::get('/Produk', [BerandaController::class, 'produk'])->name('produk');
-Route::get('/Produk/{slug}', [BerandaController::class, 'produkDetail'])->name('beranda.produkDetail');
+    Route::get('/Produk', [BerandaController::class, 'produk'])->name('produk');
+    Route::get('/Produk/{produk:slug_produk}', [BerandaController::class, 'produkDetail'])->name('beranda.produkDetail');
 
-Route::get('/Informasi',  [ApotekController::class, 'informasi'])->name('informasi');
-Route::get('/Informasi/{informasi:id}',  [ApotekController::class, 'detailInformasi']);
+    Route::get('/Informasi',  [ApotekController::class, 'informasi'])->name('informasi');
+    Route::get('/Informasi/{informasi:id}',  [ApotekController::class, 'detailInformasi']);
 
-Route::get('/KirimResep', [ApotekController::class, 'kirimResep'])->name('kirimResep')->middleware('auth');
-Route::post('/SimpanResep', [ApotekController::class, 'simpanResep'])->name('simpanResep');
+    Route::get('/KirimResep', [ApotekController::class, 'kirimResep'])->name('kirimResep')->middleware('auth');
+    Route::post('/SimpanResep', [ApotekController::class, 'simpanResep'])->name('simpanResep');
 
-Route::get('/UsulkanProduk', [ApotekController::class, 'usulkanProduk'])->name('usulkanProduk')->middleware('auth');
-Route::post('/SimpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk'])->name('simpanUsulanProduk');
+    Route::get('/UsulkanProduk', [ApotekController::class, 'usulkanProduk'])->name('usulkanProduk')->middleware('auth');
+    Route::post('/SimpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk'])->name('simpanUsulanProduk');
 
-Route::get('/Keluhan', [ApotekController::class, 'keluhan'])->name('keluhan')->middleware('auth');
-Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan'])->name('simpanKeluhan');
+    Route::get('/Keluhan', [ApotekController::class, 'keluhan'])->name('keluhan')->middleware('auth');
+    Route::post('/SimpanKeluhan', [ApotekController::class, 'simpanKeluhan'])->name('simpanKeluhan');
+});
+
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
