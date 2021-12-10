@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ImageController;
-use App\Http\Controllers\ApotekController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\LaporanController;
@@ -103,17 +102,17 @@ Route::group(['prefix' => ''], function () {
     Route::get('/produk', [BerandaController::class, 'produk'])->name('home.produk');
     Route::get('/produk/{id}', [BerandaController::class, 'produkDetail'])->name('home.produkDetail');
 
-    Route::get('/informasi',  [ApotekController::class, 'informasi'])->name('home.informasi');
-    Route::get('/informasi/{informasi:id}',  [ApotekController::class, 'informasiDetail'])->name('home.informasiDetail');
+    Route::get('/informasi',  [BerandaController::class, 'informasi'])->name('home.informasi');
+    Route::get('/informasi/{informasi:id}',  [BerandaController::class, 'informasiDetail'])->name('home.informasiDetail');
 
-    Route::get('/kirimResep', [ApotekController::class, 'kirimResep'])->name('home.kirimResep')->middleware('auth');
-    Route::post('/simpanResep', [ApotekController::class, 'simpanResep'])->name('home.simpanResep');
+    Route::get('/kirimResep', [BerandaController::class, 'kirimResep'])->name('home.kirimResep')->middleware('auth');
+    Route::post('/simpanResep', [BerandaController::class, 'simpanResep'])->name('home.simpanResep');
 
-    Route::get('/usulkanProduk', [ApotekController::class, 'usulkanProduk'])->name('home.usulkanProduk')->middleware('auth');
-    Route::post('/simpanUsulanProduk', [ApotekController::class, 'simpanUsulanProduk'])->name('home.simpanUsulanProduk')->name('home.');
+    Route::get('/usulkanProduk', [BerandaController::class, 'usulkanProduk'])->name('home.usulkanProduk')->middleware('auth');
+    Route::post('/simpanUsulanProduk', [BerandaController::class, 'simpanUsulanProduk'])->name('home.simpanUsulanProduk')->name('home.');
 
-    Route::get('/keluhan', [ApotekController::class, 'keluhan'])->name('home.keluhan')->middleware('auth');
-    Route::post('/simpanKeluhan', [ApotekController::class, 'simpanKeluhan'])->name('home.simpanKeluhan');
+    Route::get('/keluhan', [BerandaController::class, 'keluhan'])->name('home.keluhan')->middleware('auth');
+    Route::post('/simpanKeluhan', [BerandaController::class, 'simpanKeluhan'])->name('home.simpanKeluhan');
 });
 
 Auth::routes();
