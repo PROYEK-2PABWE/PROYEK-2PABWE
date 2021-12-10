@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\ApotekController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\BerandaController;
@@ -11,8 +12,9 @@ use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ImageController;
+use App\Http\Controllers\SlideshowController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\ProdukPromoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -82,6 +84,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     // hapus image produk
     Route::delete('produkimage/{id}', [ProdukController::class, 'deleteimage']);
+
+    // slideshow
+    Route::resource('slideshow', [SlideshowController::class]);
+
+    // produk promo
+    Route::resource('promo', [ProdukPromoController::class]);
+
+    // load async produk
+    Route::get('loadprodukasync/{id}', [ProdukController::class, 'loadasync']);
 });
 
 Route::get('/', [BerandaController::class, 'index'])->name('beranda');

@@ -214,4 +214,14 @@ class ProdukController extends Controller
         //end update jadi banner produk
         return back()->with('success', 'Data berhasil dihapus');
     }
+
+    public function loadasync($id)
+    {
+        $respon = [
+            'status' => 'success',
+            'msg' => 'Data ditemukan',
+            'itemproduk' => Produk::findOrFail($id)
+        ];
+        return response()->json($respon, 200);
+    }
 }
