@@ -109,7 +109,7 @@ Route::group(['prefix' => ''], function () {
     Route::post('/simpanResep', [BerandaController::class, 'simpanResep'])->name('home.simpanResep');
 
     Route::get('/usulkanProduk', [BerandaController::class, 'usulkanProduk'])->name('home.usulkanProduk')->middleware('auth');
-    Route::post('/simpanUsulanProduk', [BerandaController::class, 'simpanUsulanProduk'])->name('home.simpanUsulanProduk')->name('home.');
+    Route::post('/simpanUsulanProduk', [BerandaController::class, 'simpanUsulanProduk'])->name('home.simpanUsulanProduk');
 
     Route::get('/keluhan', [BerandaController::class, 'keluhan'])->name('home.keluhan')->middleware('auth');
     Route::post('/simpanKeluhan', [BerandaController::class, 'simpanKeluhan'])->name('home.simpanKeluhan');
