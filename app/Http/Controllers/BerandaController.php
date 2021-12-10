@@ -35,19 +35,6 @@ class BerandaController extends Controller
         ]);
     }
 
-    public function kategori()
-    {
-        $itemkategori = Kategori::orderBy('nama_kategori', 'asc')->limit(6)->get();
-        $itemproduk = Produk::orderBy('created_at', 'desc')->limit(6)->get();
-
-        return view('beranda.kategori', [
-            'title' => 'Kategori Produk',
-            'itemkategori' => $itemkategori,
-            'itemproduk' => $itemproduk,
-            'kategoris' => Kategori::all()
-        ]);
-    }
-
     public function kategoriBySlug(Request $request, $slug)
     {
         $itemproduk = Produk::orderBy('nama_produk', 'desc')

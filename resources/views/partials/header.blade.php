@@ -1,6 +1,9 @@
 <link rel="stylesheet" href={{ asset('css/header.css') }}>
 
 <script src="{{ asset('js/TweenMax.min.js') }}"></script>
+<?php $listkategori = \App\Models\Kategori::orderBy('nama_kategori', 'asc')
+    ->where('status', 'publish')
+    ->get(); ?>
 <!-- Header -->
 <!-- Top Bar -->
 <div class="top_bar">
@@ -110,12 +113,11 @@
                             <li class="hassubs"> <a href="#" class="text-light">Kategori<i
                                         class="fas fa-chevron-down"></i></a>
                                 <ul>
-                                    <li><a href="{{ route('home.kategori') }}">Semua<i
-                                                class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="#">Obat<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="#">Alat Kesehatan<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="#">Obat Herbal<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="#">Suplemen<i class="fas fa-chevron-down"></i></a></li>
+                                    @foreach ($listkategori as $kategori)
+                                        <li><a href="{{ URL::to('kategori/' . $kategori->slug_kategori) }}">Semua<i
+                                                    class="fa fa-angle-down"></i></a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li><a href="{{ route('home') }}" class="text-light">Beranda<i
@@ -162,11 +164,11 @@
                         <li class="page_menu_item has-children"> <a href="#">Kategori<i
                                     class="fa fa-angle-down"></i></a>
                             <ul class="page_menu_selection">
-                                <li><a href="{{ route('home.kategori') }}">Semua<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li><a href="#">Obat<i class="fa fa-angle-down"></i></a></li>
-                                <li><a href="#">Alat Kesehatan<i class="fa fa-angle-down"></i></a></li>
-                                <li><a href="#">Obat Herbal<i class="fa fa-angle-down"></i></a></li>
+                                @foreach ($listkategori as $kategori)
+                                    <li><a href="{{ URL::to('kategori/' . $kategori->slug_kategori) }}">Semua<i
+                                                class="fa fa-angle-down"></i></a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </li>
                         <li class="page_menu_item"> <a href="{{ route('home.informasi') }}">Informasi<i

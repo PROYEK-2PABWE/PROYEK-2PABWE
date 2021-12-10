@@ -96,7 +96,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 Route::group(['prefix' => ''], function () {
     Route::get('/', [BerandaController::class, 'index'])->name('home');
 
-    Route::get('/kategori', [BerandaController::class, 'kategori'])->name('home.kategori');
     Route::get('/kategori/{slug}', [BerandaController::class, 'kategoriBySlug'])->name('home.kategoriBySlug');
 
     Route::get('/produk', [BerandaController::class, 'produk'])->name('home.produk');
