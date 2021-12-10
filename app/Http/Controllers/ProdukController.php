@@ -2,8 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
+use App\Models\Produk;
+use App\Models\Kategori;
+use App\Models\ProdukImage;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\ImageController;
 
 class ProdukController extends Controller
 {
@@ -15,8 +22,9 @@ class ProdukController extends Controller
     public function index(Request $request)
     {
         return view('produk.index', [
-            'title' => 'Produk'
-        ]);
+            'title' => 'Produk',
+            'itemproduk' => Produk::orderBy('created_at', 'desc')->paginate(20)
+        ])->with('no', ($request->input('page', 1) - 1) * 20);
     }
 
     /**
@@ -27,7 +35,8 @@ class ProdukController extends Controller
     public function create()
     {
         return view('produk.create', [
-            'title' => 'Form Produk Baru'
+            'title' => 'Form Produk Baru',
+            'itemkategori' => Kategori::orderBy('nama_kategori', 'asc')->get()
         ]);
     }
 
@@ -39,7 +48,31 @@ class ProdukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'kode_produk' => ['required', 'unique:produk'],
+            'nama_produk' => ['required'],
+            'slug_produk' => ['required'],
+            'deskripsi_produk' => ['required'],
+            'kategori_id' => ['required'],
+            'qty' => ['required', 'numeric'],
+            'satuan' => ['required'],
+            'harga' => ['required', 'numeric'],
+        ]);
+
+        Produk::create([
+            'slug_produk' => Str::slug($request->slug_produk),
+            'user_id' =>  $request->user()->id,
+            'status' => 'publish',
+            'kode_produk' => $request->kode_produk,
+            'nama_produk' => $request->nama_produk,
+            'deskripsi_produk' => $request->deskripsi_produk,
+            'kategori_id' => $request->kategori_id,
+            'qty' => $request->qty,
+            'satuan' => $request->satuan,
+            'harga' => $request->harga,
+        ]);
+
+        return redirect()->route('produk.index')->with('success', 'Data berhasil disimpan');
     }
 
     /**
@@ -51,7 +84,8 @@ class ProdukController extends Controller
     public function show($id)
     {
         return view('produk.show', [
-            'title' => 'Foto Produk'
+            'title' => 'Foto Produk',
+            'itemproduk' => Produk::findOrFail($id)
         ]);
     }
 
@@ -64,7 +98,9 @@ class ProdukController extends Controller
     public function edit($id)
     {
         return view('produk.edit', [
-            'title' => 'Form Edit Produk'
+            'title' => 'Form Edit Produk',
+            'itemproduk' => Produk::findOrFail($id),
+            'itemkategori' => Kategori::orderBy('nama_kategori', 'asc')->get()
         ]);
     }
 
@@ -77,7 +113,40 @@ class ProdukController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'kode_produk' => 'required|unique:produk,id,' . $id,
+            'nama_produk' => 'required',
+            'slug_produk' => 'required',
+            'deskripsi_produk' => 'required',
+            'kategori_id' => 'required',
+            'qty' => 'required|numeric',
+            'satuan' => 'required',
+            'harga' => 'required|numeric'
+        ]);
+
+        // kalo ga ada error page not found 404
+        $slug = Str::slug($request->slug_produk); //slug kita gunakan nanti pas buka produk
+        // kita validasi dulu, biar tidak ada slug yang sama
+        $validasislug = Produk::where('id', '!=', $id) //yang id-nya tidak sama dengan $id
+            ->where('slug_produk', $slug)
+            ->first();
+        if ($validasislug) {
+            return back()->with('error', 'Slug sudah ada, coba yang lain');
+        } else {
+            Produk::findOrFail($id)->update([
+                'kode_produk' => $request->kode_produk,
+                'nama_produk' => $request->nama_produk,
+                'slug_produk' => Str::slug($request->slug_produk),
+                'deskripsi_produk' => $request->deskripsi_produk,
+                'kategori_id' => $request->kategori_id,
+                'qty' => $request->qty,
+                'satuan' => $request->satuan,
+                'harga' => $request->harga,
+                'user_id' =>  $request->user()->id,
+                'status' => 'publish',
+            ]);
+            return redirect()->route('produk.index')->with('success', 'Data berhasil diupdate');
+        }
     }
 
     /**
@@ -88,6 +157,61 @@ class ProdukController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // kalo ga ada error page not found 404
+        if (Produk::findOrFail($id)->delete()) {
+            return back()->with('success', 'Data berhasil dihapus');
+        } else {
+            return back()->with('error', 'Data gagal dihapus');
+        }
+    }
+
+
+    public function uploadimage(Request $request)
+    {
+        $request->validate([
+            'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+            'produk_id' => ['required'],
+        ]);
+
+        $itemproduk = Produk::where('user_id', $request->user()->id)
+            ->where('id', $request->produk_id)
+            ->first();
+        if ($itemproduk) {
+            $path = $request->file('image')->store('public/images');
+            ProdukImage::create([
+                'foto' => $path,
+                'produk_id' => $request->produk_id
+            ]);
+            $itemproduk->update(['foto' => $path]);
+            return back()->with('success', 'Image berhasil diupload');
+        } else {
+            return back()->with('error', 'Kategori tidak ditemukan');
+        }
+    }
+
+    public function deleteimage(Request $request, $id)
+    {
+        // ambil data produk image by id
+        $itemprodukimage = ProdukImage::findOrFail($id);
+        // ambil produk by produk_id kalau tidak ada maka error 404
+        $itemproduk = Produk::findOrFail($itemprodukimage->produk_id);
+        // kita cari dulu database berdasarkan url gambar
+        $itemgambar = Image::where('url', $itemprodukimage->foto)->first();
+        // hapus imagenya
+        if ($itemgambar) {
+            Storage::delete($itemgambar->url);
+            $itemgambar->delete();
+        }
+        // baru update hapus produk image
+        $itemprodukimage->delete();
+        //ambil 1 buah produk image buat diupdate jadi banner produk
+        $itemsisaprodukimage = ProdukImage::where('produk_id', $itemproduk->id)->first();
+        if ($itemsisaprodukimage) {
+            $itemproduk->update(['foto' => $itemsisaprodukimage->foto]);
+        } else {
+            $itemproduk->update(['foto' => null]);
+        }
+        //end update jadi banner produk
+        return back()->with('success', 'Data berhasil dihapus');
     }
 }

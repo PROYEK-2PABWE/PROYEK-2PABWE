@@ -25,11 +25,16 @@ class Produk extends Model
 
     public function kategori()
     {
-        return $this->belongsTo('App\Kategori', 'kategori_id');
+        return $this->belongsTo(Kategori::class, 'kategori_id');
     }
 
     public function user()
     {
-        return $this->belongsTo('App\User', 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function images()
+    {
+        return $this->hasMany(ProdukImage::class, 'produk_id');
     }
 }

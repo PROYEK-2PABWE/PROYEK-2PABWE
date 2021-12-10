@@ -21,8 +21,8 @@
 
     @include('partials.footer')
 
-    <script src="{{ asset('js/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
 </body>

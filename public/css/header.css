@@ -1384,3 +1384,10 @@ select option {
 a:hover {
     color: #27baca !important;
 }
+
+.sticky-top-1 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3.5rem;
+    z-index: 1020;
+}

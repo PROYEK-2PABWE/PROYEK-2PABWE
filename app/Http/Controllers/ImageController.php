@@ -11,33 +11,31 @@ class ImageController extends Controller
 {
     public function index(Request $request)
     {
-        $itemuser = $request->user();
-        $itemgambar = Image::where('user_id', $itemuser->id)->paginate(20);
-        $data = array(
+        return view('image.index', [
             'title' => 'Data Image',
-            'itemgambar' => $itemgambar
-        );
-        return view('image.index', $data)->with('no', ($request->input('page', 1) - 1) * 20);
+            'itemgambar' => Image::where('user_id', $request->user()->id)->paginate(20)
+        ])->with('no', ($request->input('page', 1) - 1) * 20);
     }
+
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        $request->validate([
+            'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048']
         ]);
-        $itemuser = $request->user();
-        $fileupload = $request->file('image');
-        $folder = 'assets/images';
-        $itemgambar = $this->upload($fileupload, $itemuser, $folder);
-        // $inputan = $request->all();
-        // $inputan['user_id'] = $itemuser->id;
-        // Image::create($inputan);
+
+        $path = $request->file('image')->store('public/images');
+
+        Image::create([
+            'url' => $path,
+            'user_id' => $request->user()->id
+        ]);
+
         return back()->with('success', 'Image berhasil diupload');
     }
 
     public function destroy(Request $request, $id)
     {
-        $itemuser = $request->user();
-        $itemgambar = Image::where('user_id', $itemuser->id)
+        $itemgambar = Image::where('user_id', $request->user()->id)
             ->where('id', $id)
             ->first();
         if ($itemgambar) {
@@ -47,13 +45,5 @@ class ImageController extends Controller
         } else {
             return back()->with('error', 'Data tidak ditemukan');
         }
-    }
-
-    public function upload($fileupload, $itemuser, $folder)
-    {
-        $path = $fileupload->store('files');
-        $inputangambar['url'] = $path;
-        $inputangambar['user_id'] = $itemuser->id;
-        return Image::create($inputangambar);
     }
 }

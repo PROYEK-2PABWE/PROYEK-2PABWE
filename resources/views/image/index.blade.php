@@ -38,7 +38,8 @@
                         <div class="row">
                             @foreach ($itemgambar as $gambar)
                                 <div class="col col-lg-3 col-md-3 mb-2">
-                                    <img src="{{ \Storage::url($gambar->url) }}" alt="img" class="img-thumbnail mb-2">
+                                    <img src="{{ asset(Storage::url($gambar->url)) }}" alt="img"
+                                        class="img-thumbnail mb-2">
                                     <form action="{{ url('/admin/image/' . $gambar->id) }}" method="post"
                                         style="display:inline;">
                                         @csrf
@@ -55,4 +56,6 @@
             </div>
         </div>
     </div>
+    <img src="{{ asset('/storage/files/od4fMfpBreUcwvNMC93r7vVEg88gKtXzfZThPaHk.png') }}" alt="">
+    <img src="/storage/files/od4fMfpBreUcwvNMC93r7vVEg88gKtXzfZThPaHk.png" alt="">
 @endsection

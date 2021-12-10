@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Image;
 use App\Models\Kategori;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\ImageController;
 
 class KategoriController extends Controller
 {
@@ -142,6 +145,49 @@ class KategoriController extends Controller
             } else {
                 return back()->with('error', 'Data gagal dihapus');
             }
+        }
+    }
+
+    public function uploadimage(Request $request)
+    {
+        $request->validate([
+            'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+            'kategori_id' => ['required'],
+        ]);
+
+        $itemkategori = Kategori::where('user_id', $request->user()->id)
+            ->where('id', $request->kategori_id)
+            ->first();
+
+        if ($itemkategori) {
+            $path = $request->file('image')->store('public/images');
+            $itemkategori->update([
+                'foto' => $path
+            ]);
+            return back()->with('success', 'Image berhasil diupload');
+        } else {
+            return back()->with('error', 'Kategori tidak ditemukan');
+        }
+    }
+
+    public function deleteimage(Request $request, $id)
+    {
+        $itemkategori = Kategori::where('user_id', $request->user()->id)
+            ->where('id', $id)
+            ->first();
+        if ($itemkategori) {
+            // kita cari dulu database berdasarkan url gambar
+            $itemgambar = Image::where('url', $itemkategori->foto)->first();
+            // hapus imagenya
+            if ($itemgambar) {
+                Storage::delete($itemgambar->url);
+                $itemgambar->delete();
+            }
+            // baru update foto kategori
+            $itemkategori->update(['foto' => null]);
+            return back()->with('success', 'Data berhasil dihapus');
+        } else {
+            return back()->with('error', 'Data tidak ditemukan');
         }
     }
 }

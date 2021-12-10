@@ -35,7 +35,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::group(['prefix' => 'admins', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/', [DashboardController::class, 'index']);
 
     // route kategori
@@ -69,7 +69,19 @@ Route::group(['prefix' => 'admins', 'middleware' => 'auth'], function () {
     Route::post('image', [ImageController::class, 'store']);
 
     // hapus image by id
-    Route::delete('image/{id}', [ImageController::class, 'detroy']);
+    Route::delete('image/{id}', [ImageController::class, 'destroy']);
+
+    // upload image kategori
+    Route::post('imagekategori',  [KategoriController::class, 'uploadimage']);
+
+    // hapus image kategori
+    Route::delete('imagekategori/{id}', [KategoriController::class, 'deleteimage']);
+
+    // upload image produk
+    Route::post('produkimage', [ProdukController::class, 'uploadimage']);
+
+    // hapus image produk
+    Route::delete('produkimage/{id}', [ProdukController::class, 'deleteimage']);
 });
 
 Route::get('/', [BerandaController::class, 'index'])->name('beranda');

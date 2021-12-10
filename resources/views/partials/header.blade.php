@@ -23,9 +23,12 @@
 
                 <div class="top_bar_content ml-auto">
                     <div class="top_bar_user">
+
+
                         <?php
+                        
                         if (Auth::check()) {
-                            echo '<div class="dropdown"><button class="btn btn-default dropdown-toggle px-5 mt-2" type="button" data-toggle="dropdown" style="box-shadow: 0.5px 1px 0.5px 0.25px grey;">Trivena Panjaitan<span class="caret"></span></button><ul class="dropdown-menu"><li class="nav-item d-flex"><a href="#" class="nav-link d-flex" onclick="event.preventDefault(); document.getElementById(`logout-form`).submit();"><i class="nav-icon fas fa-sign-out-alt m-auto"></i><p class="ms-2 my-auto">Sign Out</p></a></li></ul></div>';
+                            echo '<div class="dropdown"><button type="button" class="btn btn-default dropdown-toggle px-5 my-2" data-bs-toggle="dropdown" style="box-shadow: 0.5px 1px 0.5px 0.25px grey;">Trivena Panjaitan</button><ul class="dropdown-menu"><li><a href="#" class="dropdown-item d-flex" onclick="event.preventDefault(); document.getElementById(`logout-form`).submit();"><i class="nav-icon fas fa-sign-out-alt m-auto"></i><p class="m-auto">Sign Out</p></a></li></ul></div>';
                         } else {
                             echo '<div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div><div><a href="register">Register</a></div><div><a href="login">Log in</a></div>';
                         }
@@ -80,7 +83,7 @@
             </div>
 
             <!-- Cart -->
-            <div class="cart">
+            <div class="cart mt-3">
                 <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                     <div class="cart_icon">
                         <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/cart.png" alt="">
@@ -144,7 +147,7 @@
     </div>
 </nav>
 <!-- Menu -->
-<div class="page_menu">
+<div class="page_menu sticky-top-1">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -194,4 +197,3 @@
 
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/header.js') }}"></script>
-<script src="{{ asset('js/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
