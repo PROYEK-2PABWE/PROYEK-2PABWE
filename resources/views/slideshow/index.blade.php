@@ -38,7 +38,7 @@
                                             </td>
                                             <td>
                                                 @if ($slide->foto != null)
-                                                    <img src="{{ \Storage::url($slide->foto) }}"
+                                                    <img src="{{ Storage::url($slide->foto) }}"
                                                         alt="{{ $slide->caption_title }}" width='150px'
                                                         class="img-thumbnail">
                                                 @endif
@@ -50,7 +50,7 @@
                                                 {{ $slide->caption_content }}
                                             </td>
                                             <td>
-                                                <form action="{{ route('slideshow.destroy', $slide->id) }}" method="post"
+                                                <form action="{{ route('slideShow.destroy', $slide->id) }}" method="post"
                                                     style="display:inline;">
                                                     @csrf
                                                     {{ method_field('delete') }}
@@ -69,7 +69,8 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-4">
-                                <form action="{{ url('/admin/slideshow') }}" method="post" enctype="multipart/form-data">
+                                <form action="{{ route('slideShow.store') }}" method="post"
+                                    enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <label for="foto">Foto</label>
