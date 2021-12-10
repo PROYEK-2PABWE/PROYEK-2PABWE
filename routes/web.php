@@ -59,6 +59,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     // setting profil
     Route::get('setting', [UserController::class, 'setting']);
 
+    // upload image profil
+    Route::post('imageProfil',  [UserController::class, 'uploadImage']);
+
+    // hapus image kategori
+    Route::delete('imageProfil/profil', [UserController::class, 'deleteImage']);
+
     // form laporan
     Route::get('laporan', [LaporanController::class, 'index']);
 

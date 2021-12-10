@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
             'name' => 'Trivena Panjaitan',
             'email' => 'trivenapanjaitan7.1.3@gmail.com',
             'password' => Hash::make('jesus4ever'),
+            'phone' => '085261740277',
             'alamat' => 'Jl. Ir. Bisuk Siahaan, Parmaksian',
             'role' => 'admin'
         ]);

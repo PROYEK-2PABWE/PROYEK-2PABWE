@@ -158,7 +158,7 @@ class KategoriController extends Controller
             ->first();
 
         if ($itemkategori) {
-            $path = $request->file('image')->store('public/images');
+            $path = $request->file('image')->store('public/images/kategori');
             $itemkategori->update([
                 'foto' => $path
             ]);

@@ -176,7 +176,7 @@ class ProdukController extends Controller
             ->where('id', $request->produk_id)
             ->first();
         if ($itemproduk) {
-            $path = $request->file('image')->store('public/images');
+            $path = $request->file('image')->store('public/images/produk');
             ProdukImage::create([
                 'foto' => $path,
                 'produk_id' => $request->produk_id

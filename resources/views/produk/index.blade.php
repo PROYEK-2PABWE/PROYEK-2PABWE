@@ -61,7 +61,7 @@
                                             </td>
                                             <td>
                                                 @if ($produk->foto != null)
-                                                    <img src="{{ \Storage::url($produk->foto) }}"
+                                                    <img src="{{ Storage::url($produk->foto) }}"
                                                         alt="{{ $produk->nama_produk }}" width='150px'
                                                         class="img-thumbnail">
                                                 @endif

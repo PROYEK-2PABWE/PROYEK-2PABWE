@@ -50,7 +50,7 @@
                         <h3 class="card-title">Foto Produk</h3>
                     </div>
                     <div class="card-body">
-                        <form action="{{ url('/admin/produkimage') }}" method="post" enctype="multipart/form-data"
+                        <form action="{{ url('/admin/produkImage') }}" method="post" enctype="multipart/form-data"
                             class="form-inline">
                             @csrf
                             <div class="form-group">
@@ -85,8 +85,8 @@
                         <div class="row">
                             @foreach ($itemproduk->images as $image)
                                 <div class="col-md-3 mb-2">
-                                    <img src="{{ \Storage::url($image->foto) }}" alt="image" class="img-thumbnail mb-2">
-                                    <form action="{{ url('/admin/produkimage/' . $image->id) }}" method="post"
+                                    <img src="{{ Storage::url($image->foto) }}" alt="image" class="img-thumbnail mb-2">
+                                    <form action="{{ url('/admin/produkImage/' . $image->id) }}" method="post"
                                         style="display:inline;">
                                         @csrf
                                         {{ method_field('delete') }}

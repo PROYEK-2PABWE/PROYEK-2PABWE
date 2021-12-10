@@ -23,7 +23,7 @@ class ImageController extends Controller
             'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048']
         ]);
 
-        $path = $request->file('image')->store('public/images');
+        $path = $request->file('image')->store('public/images/image');
 
         Image::create([
             'url' => $path,

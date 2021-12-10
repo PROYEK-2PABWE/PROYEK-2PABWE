@@ -66,11 +66,11 @@
                                             <td>
                                                 <!-- image kategori -->
                                                 @if ($kategori->foto != null)
-                                                    <img src="{{ \Storage::url($kategori->foto) }}"
+                                                    <img src="{{ Storage::url($kategori->foto) }}"
                                                         alt="{{ $kategori->nama_kategori }}" width='150px'
                                                         class="img-thumbnail mb-2">
                                                     <br>
-                                                    <form action="{{ url('/admin/imagekategori/' . $kategori->id) }}"
+                                                    <form action="{{ url('/admin/imageKategori/' . $kategori->id) }}"
                                                         method="post" style="display:inline;">
                                                         @csrf
                                                         {{ method_field('delete') }}
@@ -79,7 +79,7 @@
                                                         </button>
                                                     </form>
                                                 @else
-                                                    <form action="{{ url('/admin/imagekategori') }}" method="post"
+                                                    <form action="{{ url('/admin/imageKategori') }}" method="post"
                                                         enctype="multipart/form-data" class="form-inline">
                                                         @csrf
                                                         <div class="form-group">

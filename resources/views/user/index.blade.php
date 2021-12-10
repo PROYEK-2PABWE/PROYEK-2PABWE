@@ -6,18 +6,18 @@
                 <div class="card card-primary card-outline">
                     <div class="card-body box-profile">
                         <div class="text-center">
-                            <img src="{{ asset('img/user1-128x128.jpg') }}" alt="profil"
-                                class="profile-user-img img-responsive img-circle">
+                            <img src="{{ Storage::url(Auth::user()->foto) }}" alt="profil"
+                                class="profile-user-img img-responsive img-circle img-thumbnail">
                         </div>
-                        <h3 class="profile-username text-center">Fadlur Rohman</h3>
-                        <p class="text-muted text-center">Member sejak : 20 Des 2020</p>
+                        <h3 class="profile-username text-center">{{ Auth::user()->name }}</h3>
+                        <p class="text-muted text-center"> Member sejak : {{ Auth::user()->created_at }}</p>
                         <hr>
                         <strong>
                             <i class="fas fa-map-marker mr-2"></i>
                             Alamat
                         </strong>
                         <p class="text-muted">
-                            Jekulo, Kab Kudus
+                            {{ Auth::user()->alamat }}
                         </p>
                         <hr>
                         <strong>
@@ -25,7 +25,7 @@
                             Email
                         </strong>
                         <p class="text-muted">
-                            f4dlur@gmail.com
+                            {{ Auth::user()->email }}
                         </p>
                         <hr>
                         <strong>
@@ -33,10 +33,10 @@
                             No Tlp
                         </strong>
                         <p class="text-muted">
-                            Jekulo, Kab Kudus
+                            {{ Auth::user()->phone }}
                         </p>
                         <hr>
-                        <a href="{{ URL::to('admins/setting') }}" class="btn btn-primary btn-block">Setting</a>
+                        <a href="{{ URL::to('admin/setting') }}" class="btn btn-primary btn-block">Setting</a>
                     </div>
                 </div>
             </div>
