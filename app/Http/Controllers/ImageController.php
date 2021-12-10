@@ -39,7 +39,7 @@ class ImageController extends Controller
             ->where('id', $id)
             ->first();
         if ($itemgambar) {
-            Storage::delete($itemgambar->url);
+            Storage::delete('public/images/image' . $itemgambar->url);
             $itemgambar->delete();
             return back()->with('success', 'Data berhasil dihapus');
         } else {

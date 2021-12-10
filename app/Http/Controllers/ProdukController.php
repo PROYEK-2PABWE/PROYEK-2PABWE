@@ -198,7 +198,7 @@ class ProdukController extends Controller
         $itemgambar = Image::where('url', $itemprodukimage->foto)->first();
         // hapus imagenya
         if ($itemgambar) {
-            Storage::delete($itemgambar->url);
+            Storage::delete('public/images/produk' . $itemgambar->url);
             $itemgambar->delete();
         }
         // baru update hapus produk image

@@ -44,7 +44,7 @@ class SlideshowController extends Controller
             'image' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $path = $request->file('image')->store('public/images');
+        $path = $request->file('image')->store('public/images/slide');
         Slideshow::create([
             'foto' => $path,
             'caption_title' => $request->caption_title,
@@ -100,7 +100,7 @@ class SlideshowController extends Controller
         $itemslideshow = Slideshow::findOrFail($id);
         // cek kalo foto bukan null
         if ($itemslideshow->foto != null) {
-            Storage::delete($itemslideshow->foto);
+            Storage::delete('public/images/slide' . $itemslideshow->foto);
         }
         if ($itemslideshow->delete()) {
             return back()->with('success', 'Data berhasil dihapus');

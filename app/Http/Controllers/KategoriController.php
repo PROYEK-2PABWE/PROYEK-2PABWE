@@ -178,7 +178,7 @@ class KategoriController extends Controller
             $itemgambar = Image::where('url', $itemkategori->foto)->first();
             // hapus imagenya
             if ($itemgambar) {
-                Storage::delete($itemgambar->url);
+                Storage::delete('public/images/kategori' . $itemgambar->url);
                 $itemgambar->delete();
             }
             // baru update foto kategori
