@@ -1,45 +1,47 @@
 @extends('layouts.main')
 
 @section('container')
-    <!-- carousel -->
-    <div id="carouselID" class="carousel slide w-50 mx-auto" data-bs-ride="carousel">
+    <div class="container">
+        <!-- carousel -->
+        <div id="carouselID" class="carousel slide w-50 mx-auto" data-bs-ride="carousel">
 
-        <!-- Indicators/dots -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselID" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#carouselID" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselID" data-bs-slide-to="2"></button>
-        </div>
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselID" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselID" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselID" data-bs-slide-to="2"></button>
+            </div>
 
-        <!-- The slideshow/carousel -->
-        <div class="carousel-inner">
-            @foreach ($itemslide as $index => $slide)
-                @if ($index == 0)
-                    <div class="carousel-item active">
-                        <img src="{{ Storage::url($slide->foto) }}" alt="Los Angeles" class="d-block"
-                            style="width:100%; height:30em">
-                        <h5>{{ $slide->caption_title }}</h5>
-                        <p>{{ $slide->caption_content }}</p>
-                    </div>
-                @else
-                    <div class="carousel-item">
-                        <img src="{{ Storage::url($slide->foto) }}" alt="Chicago" class="d-block"
-                            style="width:100%; height:30em">
-                        <h5>{{ $slide->caption_title }}</h5>
-                        <p>{{ $slide->caption_content }}</p>
-                    </div>
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                @foreach ($itemslide as $index => $slide)
+                    @if ($index == 0)
+                        <div class="carousel-item active">
+                            <img src="{{ Storage::url($slide->foto) }}" alt="Los Angeles" class="d-block"
+                                style="width:100%; height:30em">
+                            <h5>{{ $slide->caption_title }}</h5>
+                            <p>{{ $slide->caption_content }}</p>
+                        </div>
+                    @else
+                        <div class="carousel-item">
+                            <img src="{{ Storage::url($slide->foto) }}" alt="Chicago" class="d-block"
+                                style="width:100%; height:30em">
+                            <h5>{{ $slide->caption_title }}</h5>
+                            <p>{{ $slide->caption_content }}</p>
+                        </div>
+            </div>
+            @endif
+            @endforeach
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselID" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselID" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-        @endif
-        @endforeach
-        <!-- Left and right controls/icons -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselID" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselID" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
+        <!-- end carousel -->
     </div>
-    <!-- end carousel -->
 
     <!-- kategori produk -->
     <div class="row mt-4">
