@@ -6,6 +6,7 @@ use App\Models\Produk;
 use App\Models\Beranda;
 use App\Models\Keluhan;
 use App\Models\Kategori;
+use App\Models\Wishlist;
 use App\Models\Informasi;
 use App\Models\Slideshow;
 use App\Models\KirimResep;
@@ -13,6 +14,7 @@ use App\Models\ProdukPromo;
 use Illuminate\Http\Request;
 use App\Models\UsulkanProduk;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class BerandaController extends Controller
@@ -89,13 +91,24 @@ class BerandaController extends Controller
         $itemproduk = Produk::where('slug_produk', $id)
             ->where('status', 'publish')
             ->first();
-
         if ($itemproduk) {
-            return view('beranda.produk_detail', [
-                'title' => $itemproduk->nama_produk,
-                'data' => Produk::all(),
-                'itemproduk' => $itemproduk,
-            ]);
+            if (Auth::user()) { //cek kalo user login
+                $itemuser = Auth::user();
+                $itemwishlist = Wishlist::where('produk_id', $itemproduk->id)
+                    ->where('user_id', $itemuser->id)
+                    ->first();
+                $data = array(
+                    'title' => $itemproduk->nama_produk,
+                    'itemproduk' => $itemproduk,
+                    'itemwishlist' => $itemwishlist
+                );
+            } else {
+                $data = array(
+                    'title' => $itemproduk->nama_produk,
+                    'itemproduk' => $itemproduk
+                );
+            }
+            return view('beranda.produk_detail', $data);
         } else {
             // kalo produk ga ada, jadinya tampil halaman tidak ditemukan (error 404)
             return abort('404');

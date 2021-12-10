@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\ProdukController;
@@ -9,9 +10,11 @@ use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SlideshowController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\CartDetailController;
 use App\Http\Controllers\ProdukPromoController;
 
 /*
@@ -91,6 +94,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     // load async produk
     Route::get('loadProdukAsync/{id}', [ProdukController::class, 'loadAsync']);
+
+    // wishlist
+    Route::resource('wishlist', WishlistController::class);
 });
 
 Route::group(['prefix' => ''], function () {
@@ -100,6 +106,8 @@ Route::group(['prefix' => ''], function () {
 
     Route::get('/produk', [BerandaController::class, 'produk'])->name('home.produk');
     Route::get('/produk/{id}', [BerandaController::class, 'produkDetail'])->name('home.produkDetail');
+
+    Route::resource('wishlist', WishlistController::class);
 
     Route::get('/informasi',  [BerandaController::class, 'informasi'])->name('home.informasi');
     Route::get('/informasi/{informasi:id}',  [BerandaController::class, 'informasiDetail'])->name('home.informasiDetail');
@@ -112,6 +120,21 @@ Route::group(['prefix' => ''], function () {
 
     Route::get('/keluhan', [BerandaController::class, 'keluhan'])->name('home.keluhan')->middleware('auth');
     Route::post('/simpanKeluhan', [BerandaController::class, 'simpanKeluhan'])->name('home.simpanKeluhan');
+});
+
+// shopping cart
+Route::group(['middleware' => 'auth'], function () {
+
+    // cart
+    Route::resource('cart', CartController::class);
+    Route::patch('kosongkan/{id}', [CartController::class, 'kosongkan']);
+
+    // cart detail
+    Route::resource('cartdetail', CartDetailController::class);
+});
+
+Route::get('/home', function () {
+    return redirect('/admin');
 });
 
 Auth::routes();

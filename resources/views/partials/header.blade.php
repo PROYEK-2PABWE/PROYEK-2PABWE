@@ -84,17 +84,31 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Cart -->
-            <div class="cart mt-3">
-                <div class="cart_container d-flex flex-row align-items-center justify-content-end">
-                    <div class="cart_icon">
-                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/cart.png" alt="">
-                        <div class="cart_count bg-color-main"><span>3</span></div>
+            <!-- Wishlist -->
+            <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+                <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                    <div class="wishlist d-flex flex-row align-items-center justify-content-end">
+                        <div class="wishlist_icon"><img
+                                src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918681/heart.png" alt="">
+                        </div>
+                        <div class="wishlist_content">
+                            <div class="wishlist_text"><a href="#">Wishlist</a></div>
+                            <div class="wishlist_count">10</div>
+                        </div>
                     </div>
-                    <div class="cart_content">
-                        <div class="cart_text"><a href="#">Cart</a></div>
-                        <!-- <div class="cart_price">$185</div> -->
+                    <!-- Cart -->
+                    <div class="cart mt-3">
+                        <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                            <div class="cart_icon">
+                                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/cart.png"
+                                    alt="">
+                                <div class="cart_count bg-color-main"><span>3</span></div>
+                            </div>
+                            <div class="cart_content">
+                                <div class="cart_text"><a href="#">Cart</a></div>
+                                <!-- <div class="cart_price">$185</div> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,8 +140,8 @@
                                         class="fas fa-chevron-down"></i></a></li>
                             <li><a href="{{ route('home.kirimResep') }}" class="text-light">Kirim Resep<i
                                         class="fas fa-chevron-down"></i></a></li>
-                            <li><a href="{{ route('home.usulkanProduk') }}" class="text-light">Usulkan Produk<i
-                                        class="fas fa-chevron-down"></i></a></li>
+                            <li><a href="{{ route('home.usulkanProduk') }}" class="text-light">Usulkan
+                                    Produk<i class="fas fa-chevron-down"></i></a></li>
                             <li><a href="{{ route('home.keluhan') }}" class="text-light">Keluhan<i
                                         class="fas fa-chevron-down"></i></a>
                             </li>
@@ -175,8 +189,8 @@
                                     class="fa fa-angle-down"></i></a> </li>
                         <li class="page_menu_item"><a href="{{ route('home.kirimResep') }}">Kirim Resep<i
                                     class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item"><a href="{{ route('home.usulkanProduk') }}">Usulkan Produk<i
-                                    class="fa fa-angle-down"></i></a></li>
+                        <li class="page_menu_item"><a href="{{ route('home.usulkanProduk') }}">Usulkan
+                                Produk<i class="fa fa-angle-down"></i></a></li>
                         <li class="page_menu_item"><a href="{{ route('home.keluhan') }}">Keluhan<i
                                     class="fa fa-angle-down"></i></a></li>
                     </ul>
@@ -186,8 +200,8 @@
                             + 3333 4444 5555
                         </div>
                         <div class="menu_contact_item">
-                            <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a
-                                href="mailto:fastsales@gmail.com">info@DelApotek.com</a>
+                            <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div>
+                            <a href="mailto:fastsales@gmail.com">info@DelApotek.com</a>
                         </div>
                     </div>
                 </div>
@@ -195,6 +209,5 @@
         </div>
     </div>
 </div>
-
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/header.js') }}"></script>
