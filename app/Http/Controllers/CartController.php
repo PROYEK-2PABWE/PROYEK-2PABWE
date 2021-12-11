@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CartController extends Controller
 {
@@ -21,7 +22,6 @@ class CartController extends Controller
         return view('cart.index', [
             'title' => 'Shopping Cart',
             'itemcart' => $itemcart
-
         ])->with('no', 1);
     }
 
