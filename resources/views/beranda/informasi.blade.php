@@ -13,23 +13,27 @@
                 </div>
 
                 <div class="col-sm-4 d-flex flex-column">
-                    <div class="text-start w-100 my-2 my-2"><a href="7" class="text-dark fw-bold"><img src="images/17.jpg"
-                                style="float: left; width: 90px;" class="mx-2" />
+                    <div class="text-start w-100 my-2 my-2"><a href="{{ URL::to('informasi/' . $info->find(7)->id) }}"
+                            class="text-dark fw-bold"><img src="images/17.jpg" style="float: left; width: 90px;"
+                                class="mx-2" />
                             {{ $info->find(7)->excerptJudul }} </a>
                     </div>
-                    <div class="text-start w-100 my-2"><a href="8" class="text-dark fw-bold"><img src="images/16.jpg"
-                                style="float: left; width: 90px;" class="mx-2" class="mx-2" />
+                    <div class="text-start w-100 my-2"><a href="{{ URL::to('informasi/' . $info->find(8)->id) }}"
+                            class="text-dark fw-bold"><img src="images/16.jpg" style="float: left; width: 90px;"
+                                class="mx-2" class="mx-2" />
                             {{ $info->find(8)->excerptJudul }} </a>
                     </div>
 
-                    <div class="text-start w-100 my-2"><a href="9" class="text-dark fw-bold"><img src="images/15.jpg"
-                                style="float: left; width: 90px;" class="mx-2" />
+                    <div class="text-start w-100 my-2"><a href="{{ URL::to('informasi/' . $info->find(9)->id) }}"
+                            class="text-dark fw-bold"><img src="images/15.jpg" style="float: left; width: 90px;"
+                                class="mx-2" />
                             {{ $info->find(9)->excerptJudul }} </a>
                     </div>
 
 
-                    <div class="text-start w-100 my-2"><a href="10" class="text-dark fw-bold"><img src="images/18.jpg"
-                                style="float: left; width: 90px;" class="mx-2" />
+                    <div class="text-start w-100 my-2"><a href="{{ URL::to('informasi/' . $info->find(10)->id) }}"
+                            class="text-dark fw-bold"><img src="images/18.jpg" style="float: left; width: 90px;"
+                                class="mx-2" />
                             {{ $info->find(10)->excerptJudul }} </a>
                     </div>
 
@@ -42,8 +46,8 @@
 
                 <!-- row 1 collumns 1-->
                 <div class="col-sm-4 text-center">
-                    <a href="1" class="text-dark"><img src="images/3.JPG" alt="" width="200" height="140"
-                            class="mb-4">
+                    <a href="{{ URL::to('informasi/' . $info->find(1)->id) }}" class="text-dark"><img
+                            src="images/3.JPG" alt="" width="200" height="140" class="mb-4">
                         <h4> {{ $info->find(1)->excerptJudul }} </h4>
                     </a>
                     <p> {{ $info->find(1)->excerptBody }} </p>
@@ -51,8 +55,8 @@
 
                 <!-- row2 collumns 1-->
                 <div class="col-sm-4 text-center">
-                    <a href="2" class="text-dark"><img src="images/4.JPG" alt="" width="200" height="140"
-                            class="mb-4">
+                    <a href="{{ URL::to('informasi/' . $info->find(2)->id) }}" class="text-dark"><img
+                            src="images/4.JPG" alt="" width="200" height="140" class="mb-4">
                         <h4> {{ $info->find(2)->excerptJudul }} </h4>
                     </a>
                     <p> {{ $info->find(2)->excerptBody }} </p>
@@ -60,8 +64,8 @@
 
                 <!-- row3 collumns 1-->
                 <div class="col-sm-4 text-center">
-                    <a href="3" class="text-dark"><img src="images/6.JPG" alt="" width="200" height="140"
-                            class="mb-4">
+                    <a href="{{ URL::to('informasi/' . $info->find(3)->id) }}" class="text-dark"><img
+                            src="images/6.JPG" alt="" width="200" height="140" class="mb-4">
                         <h4> {{ $info->find(3)->excerptJudul }} </h4>
                     </a>
                     <p> {{ $info->find(3)->excerptBody }} </p>
@@ -79,24 +83,24 @@
                 <!-- row1 collumns 2-->
                 <div class="row">
                     <div class="col-sm-4 text-center">
-                        <a href="4" class="text-dark"><img src="images/7.JPG" alt="" width="200" height="140"
-                                class="mb-4">
+                        <a href="{{ URL::to('informasi/' . $info->find(4)->id) }}" class="text-dark"><img
+                                src="images/7.JPG" alt="" width="200" height="140" class="mb-4">
                             <h4> {{ $info->find(4)->excerptJudul }} </h4>
                         </a>
                         <p> {{ $info->find(4)->excerptBody }} </p>
                     </div>
                     <!-- row2 collumns 2-->
                     <div class="col-sm-4 text-center">
-                        <a href="5" class="text-dark"><img src="images/1.JPG" alt="" width="200" height="140"
-                                class="mb-4">
+                        <a href="{{ URL::to('informasi/' . $info->find(5)->id) }}" class="text-dark"><img
+                                src="images/1.JPG" alt="" width="200" height="140" class="mb-4">
                             <h4> {{ $info->find(5)->excerptJudul }} </h4>
                         </a>
                         <p> {{ $info->find(5)->excerptBody }} </p>
                     </div>
                     <!-- row3 collumns 2-->
                     <div class="col-sm-4 text-center">
-                        <a href="6" class="text-dark"><img src="images/5.JPG" alt="" width="200" height="140"
-                                class="mb-4">
+                        <a href="{{ URL::to('informasi/' . $info->find(6)->id) }}" class="text-dark"><img
+                                src="images/5.JPG" alt="" width="200" height="140" class="mb-4">
                             <h4> {{ $info->find(6)->excerptJudul }} </h4>
                         </a>
                         <p> {{ $info->find(6)->excerptBody }} </p>
