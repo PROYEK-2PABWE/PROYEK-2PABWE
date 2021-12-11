@@ -38,7 +38,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'role:admin'], function () {
     Route::get('/', [DashboardController::class, 'index']);
 
     // route kategori

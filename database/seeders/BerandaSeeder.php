@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Beranda;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class BerandaSeeder extends Seeder
 {
@@ -47,6 +47,6 @@ class BerandaSeeder extends Seeder
             ],
         ];
 
-        \DB::table('beranda')->insert($beranda);
+        DB::table('beranda')->insert($beranda);
     }
 }

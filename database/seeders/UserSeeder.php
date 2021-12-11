@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
 
@@ -15,13 +16,25 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'Trivena Panjaitan',
-            'email' => 'trivenapanjaitan7.1.3@gmail.com',
-            'password' => Hash::make('jesus4ever'),
-            'phone' => '085261740277',
-            'alamat' => 'Jl. Ir. Bisuk Siahaan, Parmaksian',
-            'role' => 'admin'
-        ]);
+        $user = [
+            [
+                'name' => 'the admin user',
+                'email' => 'admin@gmail.com',
+                'role' => 'admin',
+                'phone' => '085261740277',
+                'alamat' => 'Jl. Ir. Bisuk Siahaan, Parmaksian',
+                'password' => Hash::make('password'),
+            ],
+            [
+                'name' => 'the member user',
+                'email' => 'member@gmail.com',
+                'role' => 'member',
+                'phone' => '085261740277',
+                'alamat' => 'Jl. Ir. Bisuk Siahaan, Parmaksian',
+                'password' => Hash::make('password'),
+
+            ],
+        ];
+        DB::table('users')->insert($user);
     }
 }

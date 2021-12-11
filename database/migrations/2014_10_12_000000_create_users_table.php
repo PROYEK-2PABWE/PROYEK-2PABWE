@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('phone')->nullable(); //no tlp
             $table->text('alamat')->nullable(); //alamat
+            // $table->enum('role', ['admin', 'member'])->default('member')->after('remember_token');
             $table->string('role')->default('member'); //member non admin
             $table->string('foto')->nullable(); //foto profil
             $table->string('status')->default('aktif'); //aktif atau non aktif, customer bisa kita nonaktifkan tanpa menghapus datanya
