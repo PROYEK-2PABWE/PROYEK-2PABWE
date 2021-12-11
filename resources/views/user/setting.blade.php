@@ -47,7 +47,8 @@
                         @endif
                         <hr>
 
-                        <form action="">
+                        <form action="{{ url('/admin/setting/ubah') }}" method="post">
+                            @csrf
                             <div class="form-group">
                                 <label for="name">Nama</label>
                                 <input type="text" name="name" id="name" class="form-control"
@@ -57,6 +58,11 @@
                                 <label for="phone">No Tlp</label>
                                 <input type="text" name="phone" id="phone" class="form-control"
                                     value="{{ Auth::user()->phone }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Alamat</label>
+                                <input type="text" name="alamat" id="phone" class="form-control"
+                                    value="{{ Auth::user()->alamat }}">
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Update</button>

@@ -54,10 +54,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'role:admin'], function () {
     Route::resource('transaksi', TransaksiController::class);
 
     // profil
-    Route::get('profil', [UserController::class, 'index']);
+    Route::get('profil', [UserController::class, 'index'])->name('profil');
 
     // setting profil
     Route::get('setting', [UserController::class, 'setting']);
+    Route::post('setting/ubah', [UserController::class, 'update']);
 
     // upload image profil
     Route::post('imageProfil',  [UserController::class, 'uploadImage']);
