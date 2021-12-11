@@ -64,7 +64,7 @@
                                 </tbody>
                             </table>
                             <!-- untuk menampilkan link page, tambahkan skrip di bawah ini -->
-                            {{ $itemkategori->links() }}
+                            {{ $itemslideshow->links() }}
                         </div>
                     </div>
                     <div class="card-body">

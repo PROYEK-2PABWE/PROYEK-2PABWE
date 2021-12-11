@@ -30,9 +30,9 @@
                             <h5>{{ $slide->caption_title }}</h5>
                             <p>{{ $slide->caption_content }}</p>
                         </div>
+                    @endif
+                @endforeach
             </div>
-            @endif
-            @endforeach
             <!-- Left and right controls/icons -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselID" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
