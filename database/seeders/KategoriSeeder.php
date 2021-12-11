@@ -22,7 +22,7 @@ class KategoriSeeder extends Seeder
                 'slug_kategori' => 'Semua',
                 'deskripsi_kategori' => 'Bagian ini akan menampilkan berbagai macam produk yang berasal dari beberapa kategori',
                 'status' => 'Publish',
-                'foto' => 'public/images/kategori/Alat.jpg',
+                'foto' => 'public/images/kategori/sehat.jpg',
                 'user_id' => '1'
             ],
             [
@@ -31,7 +31,7 @@ class KategoriSeeder extends Seeder
                 'slug_kategori' => 'Obat',
                 'deskripsi_kategori' => 'Bagian ini akan menampilkan berbagai macam produk yang berasal dari kategori obat',
                 'status' => 'Publish',
-                'foto' => '',
+                'foto' => 'public/images/kategori/medicine.jpg',
                 'user_id' => '1'
             ],
             [
@@ -40,7 +40,7 @@ class KategoriSeeder extends Seeder
                 'slug_kategori' => 'Alat Kesehatan',
                 'deskripsi_kategori' => 'Bagian ini akan menampilkan berbagai macam produk yang berasal dari kategori alat Kesehatan',
                 'status' => 'Publish',
-                'foto' => '',
+                'foto' => 'public/images/kategori/Alat.jpg',
                 'user_id' => '1'
             ],
             [
@@ -49,7 +49,7 @@ class KategoriSeeder extends Seeder
                 'slug_kategori' => 'Obat Herbal',
                 'deskripsi_kategori' => 'Bagian ini akan menampilkan berbagai macam produk yang berasal dari kategori obat herbal',
                 'status' => 'Publish',
-                'foto' =>  '',
+                'foto' =>  'public/images/kategori/Rempah.jpg',
                 'user_id' => '1'
             ],
             [
@@ -58,7 +58,7 @@ class KategoriSeeder extends Seeder
                 'slug_kategori' => 'Kosmetik',
                 'deskripsi_kategori' => 'Bagian ini akan menampilkan berbagai macam produk yang berasal dari kategori kosmetik',
                 'status' => 'Publish',
-                'foto' => '',
+                'foto' => 'public/images/kategori/Kosmetik.jpg',
                 'user_id' => '1'
             ],
         ];
