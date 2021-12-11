@@ -1,9 +1,28 @@
 <link rel="stylesheet" href={{ asset('css/header.css') }}>
 
 <script src="{{ asset('js/TweenMax.min.js') }}"></script>
-<?php $listkategori = \App\Models\Kategori::orderBy('nama_kategori', 'asc')
+<?php
+$listkategori = \App\Models\Kategori::orderBy('nama_kategori', 'desc')
     ->where('status', 'publish')
-    ->get(); ?>
+    ->get();
+
+function totalCart()
+{
+    $cart = \App\Models\CartDetail::all();
+    $totalcart = 0;
+    if ($cart->count() !== 0) {
+        for ($i = 0; $i < $cart->count(); $i++) {
+            $totalcart += $cart->get($i)->qty;
+        }
+    }
+
+    return $totalcart;
+}
+
+$totalcart = totalCart();
+
+$wishlist = \App\Models\Wishlist::count();
+?>
 <!-- Header -->
 <!-- Top Bar -->
 <div class="top_bar">
@@ -26,12 +45,10 @@
 
                 <div class="top_bar_content ml-auto">
                     <div class="top_bar_user">
-
-
                         <?php
-                        
                         if (Auth::check()) {
-                            echo '<div class="dropdown"><button type="button" class="btn btn-default dropdown-toggle px-5 my-2" data-bs-toggle="dropdown" style="box-shadow: 0.5px 1px 0.5px 0.25px grey;">Trivena Panjaitan</button><ul class="dropdown-menu"><li><a href="#" class="dropdown-item d-flex" onclick="event.preventDefault(); document.getElementById(`logout-form`).submit();"><i class="nav-icon fas fa-sign-out-alt m-auto"></i><p class="m-auto">Sign Out</p></a></li></ul></div>';
+                            $name = Auth::user()->name;
+                            echo '<div class="dropdown"><button type="button" class="btn btn-default dropdown-toggle px-5 my-2" data-bs-toggle="dropdown" style="box-shadow: 0.5px 1px 0.5px 0.25px grey;">' . $name . '</button><ul class="dropdown-menu"><li><a href="#" class="dropdown-item d-flex" onclick="event.preventDefault(); document.getElementById(`logout-form`).submit();"><i class="nav-icon fas fa-sign-out-alt m-auto"></i><p class="m-auto">Sign Out</p></a></li></ul></div>';
                         } else {
                             echo '<div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div><div><a href="register">Register</a></div><div><a href="login">Log in</a></div>';
                         }
@@ -92,8 +109,8 @@
                                 src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918681/heart.png" alt="">
                         </div>
                         <div class="wishlist_content">
-                            <div class="wishlist_text"><a href="#">Wishlist</a></div>
-                            <div class="wishlist_count">10</div>
+                            <div class="wishlist_text"><a href="{{ route('wishlist.index') }}">Wishlist</a></div>
+                            <div class="wishlist_count">{{ $wishlist }}</div>
                         </div>
                     </div>
                     <!-- Cart -->
@@ -102,10 +119,10 @@
                             <div class="cart_icon">
                                 <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/cart.png"
                                     alt="">
-                                <div class="cart_count bg-color-main"><span>3</span></div>
+                                <div class="cart_count bg-color-main"><span>{{ $totalcart }}</span></div>
                             </div>
                             <div class="cart_content">
-                                <div class="cart_text"><a href="#">Cart</a></div>
+                                <div class="cart_text"><a href="{{ route('cart.index') }}">Cart</a></div>
                                 <!-- <div class="cart_price">$185</div> -->
                             </div>
                         </div>
@@ -128,7 +145,7 @@
                                         class="fas fa-chevron-down"></i></a>
                                 <ul>
                                     @foreach ($listkategori as $kategori)
-                                        <li><a href="{{ URL::to('kategori/' . $kategori->slug_kategori) }}">Semua<i
+                                        <li><a href="{{ URL::to('kategori/' . $kategori->slug_kategori) }}">{{ $kategori->nama_kategori }}<i
                                                     class="fa fa-angle-down"></i></a>
                                         </li>
                                     @endforeach
@@ -179,7 +196,7 @@
                                     class="fa fa-angle-down"></i></a>
                             <ul class="page_menu_selection">
                                 @foreach ($listkategori as $kategori)
-                                    <li><a href="{{ URL::to('kategori/' . $kategori->slug_kategori) }}">Semua<i
+                                    <li><a href="{{ URL::to('kategori/' . $kategori->slug_kategori) }}">{{ $kategori->nama_kategori }}<i
                                                 class="fa fa-angle-down"></i></a>
                                     </li>
                                 @endforeach

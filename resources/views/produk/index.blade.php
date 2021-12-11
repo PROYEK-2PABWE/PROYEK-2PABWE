@@ -103,8 +103,10 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <div class="w-25 d-flex">
-                                {{ $itemproduk->links() }}
+                            <div class="row">
+                                <div class="col">
+                                    {{ $itemproduk->links() }}
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -124,8 +124,11 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <!-- untuk menampilkan link page, tambahkan skrip di bawah ini -->
-                            {{ $itemkategori->links() }}
+                            <div class="row">
+                                <div class="col">
+                                    {{ $itemkategori->links() }}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
