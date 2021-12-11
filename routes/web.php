@@ -113,7 +113,7 @@ Route::group(['prefix' => ''], function () {
     Route::resource('wishlist', WishlistController::class);
 
     Route::get('/informasi',  [BerandaController::class, 'informasi'])->name('home.informasi');
-    Route::get('/informasi/{informasi:id}',  [BerandaController::class, 'informasiDetail'])->name('home.informasiDetail');
+    Route::get('/informasi/{id}',  [BerandaController::class, 'informasiDetail'])->name('home.informasiDetail');
 
     Route::get('/kirimResep', [BerandaController::class, 'kirimResep'])->name('home.kirimResep')->middleware('auth');
     Route::post('/simpanResep', [BerandaController::class, 'simpanResep'])->name('home.simpanResep');

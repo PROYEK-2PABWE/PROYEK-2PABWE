@@ -2,8 +2,13 @@
 
 namespace App\Models;
 
+<<<<<<< HEAD
 use App\Models\CartDetail;
 use Illuminate\Foundation\Auth\User;
+=======
+use App\Models\User;
+use App\Models\CartDetail;
+>>>>>>> c7cf291c9057971e92973a314b8086837f91b699
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
