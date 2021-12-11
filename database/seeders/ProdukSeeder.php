@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ProdukSeeder extends Seeder
 {
@@ -454,6 +455,6 @@ class ProdukSeeder extends Seeder
                 'status' => 'Publish'
             ],
         ];
-        \DB::table('produk')->insert($produk);
+        DB::table('produk')->insert($produk);
     }
 }

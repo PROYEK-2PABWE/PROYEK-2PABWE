@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Kategori;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class KategoriSeeder extends Seeder
 {
@@ -22,6 +22,7 @@ class KategoriSeeder extends Seeder
                 'slug_kategori' => 'Semua',
                 'deskripsi_kategori' => 'Bagian ini akan menampilkan berbagai macam produk yang berasal dari beberapa kategori',
                 'status' => 'Publish',
+                'foto' => 'public/images/kategori/Alat.jpg',
                 'user_id' => '1'
             ],
             [
@@ -30,6 +31,7 @@ class KategoriSeeder extends Seeder
                 'slug_kategori' => 'Obat',
                 'deskripsi_kategori' => 'Bagian ini akan menampilkan berbagai macam produk yang berasal dari kategori obat',
                 'status' => 'Publish',
+                'foto' => '',
                 'user_id' => '1'
             ],
             [
@@ -38,6 +40,7 @@ class KategoriSeeder extends Seeder
                 'slug_kategori' => 'Alat Kesehatan',
                 'deskripsi_kategori' => 'Bagian ini akan menampilkan berbagai macam produk yang berasal dari kategori alat Kesehatan',
                 'status' => 'Publish',
+                'foto' => '',
                 'user_id' => '1'
             ],
             [
@@ -46,6 +49,7 @@ class KategoriSeeder extends Seeder
                 'slug_kategori' => 'Obat Herbal',
                 'deskripsi_kategori' => 'Bagian ini akan menampilkan berbagai macam produk yang berasal dari kategori obat herbal',
                 'status' => 'Publish',
+                'foto' =>  '',
                 'user_id' => '1'
             ],
             [
@@ -54,9 +58,10 @@ class KategoriSeeder extends Seeder
                 'slug_kategori' => 'Kosmetik',
                 'deskripsi_kategori' => 'Bagian ini akan menampilkan berbagai macam produk yang berasal dari kategori kosmetik',
                 'status' => 'Publish',
+                'foto' => '',
                 'user_id' => '1'
             ],
         ];
-        \DB::table('kategori')->insert($kategori);
+        DB::table('kategori')->insert($kategori);
     }
 }
