@@ -125,7 +125,7 @@ class BerandaController extends Controller
     }
 
     // DETAIL INFORMASI
-    public function detailInformasi(Informasi $informasi)
+    public function informasiDetail(Informasi $informasi)
     {
         return view('beranda.detail_informasi', [
             'title' => 'Informasi Kesehatan',
