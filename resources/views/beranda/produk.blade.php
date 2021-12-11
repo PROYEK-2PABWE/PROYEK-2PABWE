@@ -60,8 +60,8 @@
                     @endforeach
                 </div>
                 <div class="row">
-                    <div class="col">
-                        {{ $itemproduk->links() }}
+                    <div class="col d-felx justify-content-center">
+                        {!! $itemproduk->links() !!}
                     </div>
                 </div>
             </div>

@@ -63,7 +63,8 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            {{ $itemslideshow->links() }}
+                            <!-- untuk menampilkan link page, tambahkan skrip di bawah ini -->
+                            {{ $itemkategori->links() }}
                         </div>
                     </div>
                     <div class="card-body">

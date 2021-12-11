@@ -100,6 +100,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            <!-- untuk menampilkan link page, tambahkan skrip di bawah ini -->
                             {{ $itempromo->links() }}
                         </div>
                     </div>
