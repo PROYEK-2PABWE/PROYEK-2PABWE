@@ -46,12 +46,57 @@ class PromoSeeder extends Seeder
 
     public function run()
     {
-        //Promo-1
         $promo = [
+            //Promo-1
             [
                 'produk_id' => $this->getId('001', '001'),
                 'harga_awal' =>  $this->getHarga('001', '001'),
                 'harga_akhir' =>  $this->getHargaAkhir('001', '001', 10),
+                'diskon_persen' => '10',
+                'diskon_nominal' => '0',
+                'user_id' => '1',
+            ],
+            //Promo-2
+            [
+                'produk_id' => $this->getId('002', '001'),
+                'harga_awal' =>  $this->getHarga('002', '001'),
+                'harga_akhir' =>  $this->getHargaAkhir('002', '001', 50),
+                'diskon_persen' => '50',
+                'diskon_nominal' => '0',
+                'user_id' => '1',
+            ],
+            //Promo-3
+            [
+                'produk_id' => $this->getId('003', '002'),
+                'harga_awal' =>  $this->getHarga('003', '002'),
+                'harga_akhir' =>  $this->getHargaAkhir('003', '002', 75),
+                'diskon_persen' => '75',
+                'diskon_nominal' => '0',
+                'user_id' => '1',
+            ],
+            //Promo-4
+            [
+                'produk_id' => $this->getId('004', '001'),
+                'harga_awal' =>  $this->getHarga('004', '001'),
+                'harga_akhir' =>  $this->getHargaAkhir('004', '001', 50),
+                'diskon_persen' => '50',
+                'diskon_nominal' => '0',
+                'user_id' => '1',
+            ],
+            //Promo-5
+            [
+                'produk_id' => $this->getId('001', '006'),
+                'harga_awal' =>  $this->getHarga('001', '006'),
+                'harga_akhir' =>  $this->getHargaAkhir('001', '006', 50),
+                'diskon_persen' => '50',
+                'diskon_nominal' => '0',
+                'user_id' => '1',
+            ],
+            //Promo-6
+            [
+                'produk_id' => $this->getId('003', '005'),
+                'harga_awal' =>  $this->getHarga('003', '005'),
+                'harga_akhir' =>  $this->getHargaAkhir('003', '005', 10),
                 'diskon_persen' => '10',
                 'diskon_nominal' => '0',
                 'user_id' => '1',
