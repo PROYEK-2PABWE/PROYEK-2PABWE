@@ -125,8 +125,11 @@ class BerandaController extends Controller
     }
 
     // DETAIL INFORMASI
-    public function informasiDetail(Informasi $informasi)
+    public function informasiDetail($id)
     {
+
+        $informasi = Informasi::find($id);
+
         return view('beranda.detail_informasi', [
             'title' => 'Informasi Kesehatan',
             'informasi' => $informasi

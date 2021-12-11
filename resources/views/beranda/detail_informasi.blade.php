@@ -6,9 +6,9 @@
     {!! $informasi->text1 !!}
 
     <center>
-        <img src="{{url('/images/1.jpg')}}" class="m-3">
+        <img src="{{ url('/images/1.jpg') }}" class="m-3">
     </center>
 
     {!! $informasi->text2 !!}
-    
+
 @endsection
