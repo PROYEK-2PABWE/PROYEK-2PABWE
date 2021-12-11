@@ -100,9 +100,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'role:admin'], function () {
 
     // load async produk
     Route::get('loadProdukAsync/{id}', [ProdukController::class, 'loadAsync']);
-
-    // wishlist
-    Route::resource('wishlist', WishlistController::class);
 });
 
 Route::group(['prefix' => ''], function () {
@@ -130,7 +127,8 @@ Route::group(['prefix' => ''], function () {
 
 // shopping cart
 Route::group(['middleware' => 'auth'], function () {
-
+    // wishlist
+    Route::resource('wishlist', WishlistController::class);
     // cart
     Route::resource('cart', CartController::class);
     Route::patch('kosongkan/{id}', [CartController::class, 'kosongkan']);

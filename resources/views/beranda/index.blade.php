@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
+
     <div class="container">
         <!-- carousel -->
         <div id="carouselID" class="carousel slide w-50 mx-auto" data-bs-ride="carousel">
@@ -97,9 +98,26 @@
                             </a>
                             <div class="row mt-4">
                                 <div class="col">
-                                    <button class="btn btn-light">
-                                        <i class="far fa-heart"></i>
-                                    </button>
+                                    @if (!Auth::check())
+                                        <button class="btn btn-light">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                    @else
+                                        <?php
+                                        $itemwishlist = \App\Models\Wishlist::where('produk_id', $promo->produk->id)->where('user_id', Auth::user()->id);
+                                        ?>
+                                        <form action="{{ route('wishlist.store') }}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="produk_id" value={{ $promo->produk->id }}>
+                                            <button type="submit" class="btn btn-sm btn-light">
+                                                @if (isset($itemwishlist) && $itemwishlist)
+                                                    <i class="far fa-heart"></i>
+                                                @else
+                                                    <i class="fas fa-heart"></i>
+                                                @endif
+                                            </button>
+                                        </form>
+                                    @endif
                                 </div>
                                 <div class="col-auto">
                                     <p>
@@ -140,9 +158,27 @@
                                 </a>
                                 <div class="row mt-4">
                                     <div class="col">
-                                        <button class="btn btn-light">
-                                            <i class="far fa-heart"></i>
-                                        </button>
+                                        @if (!Auth::check())
+                                            <button class="btn btn-light">
+                                                <i class="far fa-heart"></i>
+                                            </button>
+                                        @else
+                                            <?php
+                                            $itemwishlist = \App\Models\Wishlist::where('produk_id', $produk->id)->where('user_id', Auth::user()->id);
+                                            ?>
+                                            <form action="{{ route('wishlist.store') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" name="produk_id" value={{ $produk->id }}>
+                                                <button type="submit" class="btn btn-sm btn-light">
+                                                    @if (isset($itemwishlist) && $itemwishlist)
+                                                        <i class="far fa-heart"></i>
+                                                    @else
+                                                        <i class="fas fa-heart"></i>
+                                                    @endif
+                                                </button>
+                                            </form>
+                                        @endif
+
                                     </div>
                                     <div class="col-auto">
                                         <p>
@@ -279,7 +315,8 @@
 
                                 <ul class="p-3 m-3 bg-light rounded-3">
                                     <li><a href="https://www.youtube.com/watch?v=x769gFb0vks"
-                                            class="fs-6">Penggolongan Jenis
+                                            class="fs-6">Penggolongan
+                                            Jenis
                                             Obat</a></li>
                                     <li><a href="https://www.youtube.com/watch?v=wT7v22T1bzA" class="fs-6">Aturan
                                             Minum

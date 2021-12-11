@@ -45,7 +45,7 @@ class BerandaController extends Controller
                 $q->where('slug_kategori', $slug);
             })
             ->paginate(18);
-        $listkategori = Kategori::orderBy('nama_kategori', 'asc')
+        $listkategori = Kategori::orderBy('nama_kategori', 'desc')
             ->where('status', 'publish')
             ->get();
         $itemkategori = Kategori::where('slug_kategori', $slug)

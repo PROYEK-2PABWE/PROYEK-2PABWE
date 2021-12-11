@@ -1,5 +1,5 @@
-@extends('layouts.mainAdmin')
-@section('content')
+@extends('layouts.main')
+@section('container')
     <div class="container-fluid">
         <div class="row">
             <div class="col">
@@ -23,7 +23,8 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Kode Produk</th>
+                                        {{-- <th>Kode Produk</th> --}}
+                                        <th>Gambar Produk</th>
                                         <th>Nama Produk</th>
                                         <th></th>
                                     </tr>
@@ -35,7 +36,9 @@
                                                 {{ ++$no }}
                                             </td>
                                             <td>
-                                                {{ $wish->produk->kode_produk }}
+                                                {{-- {{ $wish->produk->kode_produk }} --}}
+                                                <img src="{{ Storage::url($wish->produk->foto) }}" style="width: 15em"
+                                                    alt="">
                                             </td>
                                             <td>
                                                 {{ $wish->produk->nama_produk }}
