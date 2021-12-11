@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Informasi;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class InformasiSeeder extends Seeder
 {
@@ -87,6 +88,6 @@ class InformasiSeeder extends Seeder
             ],
         ];
 
-        \DB::table('informasi')->insert($informasi);
+        DB::table('informasi')->insert($informasi);
     }
 }
