@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row mt-4">
             <div class="col col-lg-8 col-md-8">
-                <div id="carousel" class="carousel slide" data-ride="carousel">
+                {{-- <div id="carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($itemproduk->images as $index => $image)
                             @if ($index == 0)
@@ -25,6 +25,10 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                </div> --}}
+
+                <div class="">
+                    <img src="{{ \Storage::url($itemproduk->foto) }}" class="d-block w-100" alt="...">
                 </div>
             </div>
             <!-- deskripsi produk -->

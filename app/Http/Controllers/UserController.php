@@ -68,4 +68,21 @@ class UserController extends Controller
             return back()->with('error', 'Data tidak ditemukan');
         }
     }
+
+    public function update(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'alamat' => 'required',
+        ]);
+
+        User::findOrFail($request->user()->id)->update([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'alamat' => $request->alamat,
+        ]);
+
+        return redirect()->route('profil')->with('success', 'Data berhasil diupdate');
+    }
 }
